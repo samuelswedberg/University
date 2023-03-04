@@ -1,0 +1,32 @@
+|Lab5Q1
+a => mux:mux0.SEL
+b => mux:mux0.B
+c => mux:mux0.A
+e => mux:mux1.SEL
+f => mux:mux1.A
+g => mux:mux1.B
+h => mux:mux2.B
+R << mux:mux2.X
+
+
+|Lab5Q1|mux:mux0
+SEL => X.OUTPUTSELECT
+A => X.DATAB
+B => X.DATAA
+X <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5Q1|mux:mux1
+SEL => X.OUTPUTSELECT
+A => X.DATAB
+B => X.DATAA
+X <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab5Q1|mux:mux2
+SEL => X.OUTPUTSELECT
+A => X.DATAB
+B => X.DATAA
+X <= X.DB_MAX_OUTPUT_PORT_TYPE
+
+

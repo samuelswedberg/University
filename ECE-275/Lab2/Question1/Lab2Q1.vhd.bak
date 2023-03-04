@@ -1,0 +1,14 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY Lab2Q1 IS
+		PORT (a, b, c : IN STD_LOGIC;
+					f, g : OUT STD_LOGIC;
+END Lab2Q1
+ARCHITECTURE LogicFunc OF Lab2Q1 IS
+BEGIN
+		f <= ((NOT a) AND b AND c) OR
+				(a AND (NOT b) AND (NOT c)) OR
+				(a AND b AND c);
+		g <= ((NOT a) OR (NOT b)) AND
+				(a OR C);
+END LogicFunc;

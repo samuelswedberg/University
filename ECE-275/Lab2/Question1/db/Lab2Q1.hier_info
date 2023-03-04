@@ -1,0 +1,23 @@
+|Lab2Q1
+a => f.IN0
+a => f.IN0
+a => f.IN0
+a => g.IN0
+a => g.IN0
+b => f.IN0
+b => f.IN1
+b => g.IN1
+b => g.IN0
+c => f.IN1
+c => f.IN1
+c => f.IN0
+c => g.IN1
+c => g.IN1
+d => f.IN1
+d => f.IN1
+d => g.IN1
+d => g.IN1
+f << f.DB_MAX_OUTPUT_PORT_TYPE
+g << g.DB_MAX_OUTPUT_PORT_TYPE
+
+

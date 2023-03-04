@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Reds2/OneDrive/School/College/ECE-275/Lab8/Lab8.vhd
+source_file = 1, C:/Users/Reds2/OneDrive/School/College/ECE-275/Lab8/flipflop.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/Reds2/OneDrive/School/College/ECE-275/Lab8/db/Lab8.cbx.xml
+design_name = hard_block
+design_name = Lab8
+instance = comp, \Q~output\, Q~output, Lab8, 1
+instance = comp, \D~input\, D~input, Lab8, 1
+instance = comp, \CE~input\, CE~input, Lab8, 1
+instance = comp, \Resetn~input\, Resetn~input, Lab8, 1
+instance = comp, \Clock~input\, Clock~input, Lab8, 1
+instance = comp, \uut|Q\, uut|Q, Lab8, 1

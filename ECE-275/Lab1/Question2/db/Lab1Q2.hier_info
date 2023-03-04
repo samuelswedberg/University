@@ -1,0 +1,15 @@
+|Lab1Q2
+f <= And1.DB_MAX_OUTPUT_PORT_TYPE
+b => Or1.IN0
+b => inst6.IN0
+b => Or5.IN1
+d => inst8.IN0
+a => Or1.IN2
+a => inst.IN0
+c => Or2.IN0
+c => Or3.IN0
+c => inst7.IN0
+c => Or6.IN1
+g <= And2.DB_MAX_OUTPUT_PORT_TYPE
+
+

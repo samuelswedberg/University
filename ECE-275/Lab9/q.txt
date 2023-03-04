@@ -1,0 +1,85 @@
+library IEEE;
+
+use IEEE.std_logic_1164.all;
+
+ENTITY flipflop IS
+
+PORT (D, Resetn, Clock : IN STD_LOGIC;
+
+Q : OUT STD_LOGIC);
+
+END flipflop;
+
+ARCHITECTURE Behavior OF flipflop IS
+
+BEGIN
+
+PROCESS (Resetn, Clock)
+
+BEGIN
+
+IF Resetn = '0' THEN
+
+Q <= '0';
+
+ELSIF Clock'EVENT AND Clock = '1' THEN
+
+Q <= D;
+
+END IF;
+
+END PROCESS;
+
+END Behavior;
+
+library IEEE;
+
+use IEEE.std_logic_1164.all;
+
+entity top is
+
+port(Din,CE,clk,Resetn: in std_logic;
+
+Q,Qbar: out std_logic);
+
+end top;
+
+architecture behav of top is
+
+component flipflop is
+
+PORT (D, Resetn, Clock : IN STD_LOGIC;
+
+Q : OUT STD_LOGIC);
+
+END component;
+
+signal notclk: std_logic;
+
+signal D,Q1: std_logic;
+
+begin
+
+uut: flipflop port map(D,Resetn,notclk,Q1);
+
+process(Din,CE)
+
+begin
+
+if CE = '0' then
+
+D<= Q1;
+
+else
+
+D<= Din;
+
+end if;
+
+end process;
+
+Q<=Q1;
+
+Qbar= not Q1;
+
+end behav;

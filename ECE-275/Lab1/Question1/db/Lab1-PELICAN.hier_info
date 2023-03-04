@@ -1,0 +1,14 @@
+|Lab1
+f <= inst.DB_MAX_OUTPUT_PORT_TYPE
+b => And1.IN0
+b => And3.IN1
+b => And4.IN1
+b => And2.IN1
+c => c-prime.IN0
+d => d-prime.IN0
+d => And2.IN2
+a => a-prime.IN0
+a => And3.IN2
+a => And4.IN0
+
+

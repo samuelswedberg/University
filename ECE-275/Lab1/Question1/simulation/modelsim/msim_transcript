@@ -1,0 +1,64 @@
+# Reading pref.tcl
+# do Lab1_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Lab1_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:15:24 on Jan 26,2022
+# vcom -reportprogress 300 -93 -work work Lab1_6_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Compiling entity Lab1
+# -- Compiling architecture structure of Lab1
+# End time: 10:15:24 on Jan 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.lab1
+# vsim work.lab1 
+# Start time: 10:15:37 on Jan 26,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.lab1(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+wave create -driver freeze -pattern clock -initialvalue U -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/lab1/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern clock -initialvalue U -period 200ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/lab1/b
+# Note :: PA Debug File '' not found. PA Dataflow Coloring not enabled.
+wave create -driver freeze -pattern clock -initialvalue U -period 400ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/lab1/c
+wave create -driver freeze -pattern clock -initialvalue U -period 800ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/lab1/d
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/lab1/f
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/lab1/g
+run -all
+# End time: 11:09:55 on Jan 26,2022, Elapsed time: 0:54:18
+# Errors: 0, Warnings: 0
+wave editwrite -file C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/lab1

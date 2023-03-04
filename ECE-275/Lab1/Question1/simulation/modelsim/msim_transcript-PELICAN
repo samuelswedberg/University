@@ -1,0 +1,120 @@
+# Reading pref.tcl
+# do Lab1_run_msim_gate_verilog.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work gate_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {Lab1.vo}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:18 on Jan 19,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." Lab1.vo 
+# -- Compiling module Lab1
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	Lab1
+# End time: 16:16:18 on Jan 19,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.Lab1
+# vsim work.Lab1 
+# Start time: 16:16:31 on Jan 19,2022
+# Loading work.Lab1
+# Loading work.hard_block
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 77
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 90
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 100
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 110
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 120
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 130
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# Error loading design
+# End time: 16:16:32 on Jan 19,2022, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+vsim work.Lab1
+# vsim work.Lab1 
+# Start time: 16:17:06 on Jan 19,2022
+# Loading work.Lab1
+# Loading work.hard_block
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 77
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 90
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 100
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 110
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 120
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 130
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# Error loading design
+vsim work.Lab1
+# End time: 16:17:06 on Jan 19,2022, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# vsim work.Lab1 
+# Start time: 16:17:07 on Jan 19,2022
+# Loading work.Lab1
+# Loading work.hard_block
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_obuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 77
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 90
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 100
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 110
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_io_ibuf' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 120
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) Instantiation of 'cycloneive_lcell_comb' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /Lab1 File: Lab1.vo Line: 130
+#         Searched libraries:
+#             C:/Users/Reds2/OneDrive/School/College/ECE-275/simulation/modelsim/gate_work
+# Error loading design
+# End time: 16:17:07 on Jan 19,2022, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0

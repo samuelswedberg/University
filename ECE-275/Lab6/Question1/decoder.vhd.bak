@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Lab6Q2 is
+	Port ( a,b,c,e,f,g,h : in STD_LOGIC;
+	R : out STD_LOGIC);
+end Lab6Q2;
+
+architecture Behavioral of Lab6Q2 is
+
+component Lab6Q1
+    Port ( A  : in  STD_LOGIC_VECTOR (1 downto 0);
+           X  : out STD_LOGIC_VECTOR (3 downto 0);
+           EN : in  STD_LOGIC);    
+end component;
+
+signal s0,s1:std_logic;
+begin
+
+dec0: Lab6Q1 port map(a, c, b, s0);
+dec1: Lab6Q1 port map(e, f, g, s1);
+
+end Behavioral;

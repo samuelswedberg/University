@@ -1,0 +1,69 @@
+= op;
+
+end tff_with_dff_arc;
+
+You answered
+00
+profile-image
+umang angrish
+
+07/05/2021, 04:01:54
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+entity tff_with_dff is
+
+port(
+
+clk : in STD_LOGIC;
+
+t : in STD_LOGIC;
+
+resetn : in STD_LOGIC;
+
+q : out STD_LOGIC
+
+);
+
+end tff_with_dff;
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY top IS
+port(clk,resetn: in std_logic;
+count_out: out std_logic_vector(2 downto 0));
+END top;
+
+ARCHITECTURE behav OF top IS
+
+-- Component Declaration for the Unit Under Test (UUT)
+
+COMPONENT top is
+
+port(Din,CE,clk,Resetn: in std_logic;
+
+Q,Qbar: out std_logic);
+
+END COMPONENT;
+
+--Inputs
+signal DA,A, nota, notb, notc: std_logic;
+signal DB,B : std_logic;
+signal DC,C : std_logic;
+
+
+
+BEGIN
+
+
+uut: top PORT MAP (DA, '1',clk,resetn,A, nota);
+uut1:top PORT MAP (DB,'1',clk,resetn,B, notb) ;
+uut2:top PORT MAP (DC,'1',clk,resetn,C notc);
+
+DA<= not A;
+DB <= A xor B;
+DC<= (C xor (B and A)) ;
+
+count_out<=A & B & C;
+end behav;

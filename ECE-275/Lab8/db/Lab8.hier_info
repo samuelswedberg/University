@@ -1,0 +1,15 @@
+|Lab8
+D => din.DATAB
+Resetn => flipflop:uut.D
+CE => din.OUTPUTSELECT
+Clock => flipflop:uut.sync_reset
+Q << flipflop:uut.Q
+
+
+|Lab8|flipflop:uut
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clk => Q~reg0.CLK
+sync_reset => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+
+

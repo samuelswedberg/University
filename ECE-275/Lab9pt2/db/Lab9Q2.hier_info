@@ -1,0 +1,51 @@
+|Lab9Q2
+clk => tflipflop:uut.clk
+clk => tflipflop:uut1.clk
+clk => tflipflop:uut2.clk
+resetn => tflipflop:uut.resetn
+resetn => tflipflop:uut1.resetn
+resetn => tflipflop:uut2.resetn
+count_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+count_out[1] <= count_out[1].DB_MAX_OUTPUT_PORT_TYPE
+count_out[2] <= count_out[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab9Q2|tflipflop:uut
+clk => op.CLK
+clk => op~en.CLK
+t => op.IN0
+en => process_0.IN0
+en => op.IN1
+en => op.IN1
+en => op~en.ACLR
+resetn => process_0.IN1
+Q <= op.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= op.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab9Q2|tflipflop:uut1
+clk => op.CLK
+clk => op~en.CLK
+t => op.IN0
+en => process_0.IN0
+en => op.IN1
+en => op.IN1
+en => op~en.ACLR
+resetn => process_0.IN1
+Q <= op.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= op.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab9Q2|tflipflop:uut2
+clk => op.CLK
+clk => op~en.CLK
+t => op.IN0
+en => process_0.IN0
+en => op.IN1
+en => op.IN1
+en => op~en.ACLR
+resetn => process_0.IN1
+Q <= op.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= op.DB_MAX_OUTPUT_PORT_TYPE
+
+
