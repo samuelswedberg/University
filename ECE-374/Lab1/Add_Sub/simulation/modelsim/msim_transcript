@@ -1,0 +1,43 @@
+# Reading pref.tcl
+# do Add_Sub_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab1/Add_Sub/add_sub.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:16:15 on Aug 29,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab1/Add_Sub/add_sub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FullAdder
+# -- Compiling architecture Arch_Full_Adder of FullAdder
+# -- Compiling entity Add_Sub
+# -- Compiling architecture Arch_Add_Sub of Add_Sub
+# End time: 16:16:15 on Aug 29,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.add_sub
+# vsim work.add_sub 
+# Start time: 16:16:27 on Aug 29,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.add_sub(arch_add_sub)
+# Loading work.fulladder(arch_full_adder)
+wave create -driver freeze -pattern clock -initialvalue U -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/add_sub/Cin
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 3 0 -starttime 0ps -endtime 1000ps sim:/add_sub/X
+wave create -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 100ps -step 1 -repeat forever -range 3 0 -starttime 0ps -endtime 1000ps sim:/add_sub/Y
+add wave -position insertpoint  \
+sim:/add_sub/S
+run -all
+# End time: 12:41:21 on Aug 31,2023, Elapsed time: 44:24:54
+# Errors: 0, Warnings: 0
