@@ -1,0 +1,286 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Mon Sep 25 14:47:56 2023
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4620
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	0
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109  000000                     main@i	equ	??_main+0
+   110+                          	global	main@i
+   111+ 000000                     main@j	equ	??_main+2
+   112                           	global	main@j
+   113                           ;Data sizes: Strings 0, constant 0, data 0, bss 
+                                 0, persistent 0 stack 4
+   114                           	global	_main
+   115                           	global	??_main
+   116                           	global	?_main
+   117                                   psect   text0,class=CODE,space=0,reloc=2
+   118                           
+   119                           	opt lm
+   120                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw4\hw4p1.c"
+   121                           	line	5
+   122  000000                     	__size_of_main	equ	__end_of_main-_main
+   123                           ;hw4p1.c: 4: void main(void)
+   124                           ;hw4p1.c: 5: {
+   125                           	
+   126  00FF6E                     _main:		; BSR set to: ?
+   127+                          
+   128+                          	opt stack 31
+   129+                          	line	6
+   130+ 00FF6E  0E00               	movlw	low(0)
+   131  00FF70  6E94               	movwf	((c:3988)),c	;volatile
+   132                           	line	8
+   133                           ;hw4p1.c: 7: unsigned int i, j;
+   134                           ;hw4p1.c: 8: for(i=0; i<20; i++)
+   135  00FF72  0E00               	movlw	low(0)
+   136+ 00FF74  0100               	movlb	0	; () banked
+   137  00FF76  0100               	movlb	0	; () banked
+   138  00FF78  6FFC               	movwf	((main@i))&0ffh
+   139+ 00FF7A  0E00               	movlw	high(0)
+   140  00FF7C  0100               	movlb	0	; () banked
+   141  00FF7E  6FFD               	movwf	((main@i+1))&0ffh
+   142+ 00FF80  0E14               	movlw	014h
+   143  00FF82  0100               	movlb	0	; () banked
+   144  00FF84  0100               	movlb	0	; () banked
+   145+ 00FF86  5DFC               	subwf	((main@i))&0ffh,w
+   146  00FF88  0E00               	movlw	0
+   147  00FF8A  0100               	movlb	0	; () banked
+   148+ 00FF8C  59FD               	subwfb	((main@i+1))&0ffh,w
+   149  00FF8E  A0D8               	btfss	status,0
+   150  00FF90  D001               	goto	u51
+   151+ 00FF92  D001               	goto	u50
+   152  00FF94                     u51:
+   153  00FF94  D001               	goto	l110
+   154+ 00FF96                     u50:
+   155  00FF96  D032               	goto	l111
+   156                           	line	9
+   157                           	
+   158  00FF98                     l110:		; BSR set to: ?
+   159+                          
+   160+                          	line	10
+   161+                          ;hw4p1.c: 9: {
+   162+                          ;hw4p1.c: 10: RC0 = !RC0;
+   163+ 00FF98  7082               	btg	c:(31760/8),(31760)&7	;volatile
+   164                           	line	11
+   165                           ;hw4p1.c: 11: for(j=0; j<1785; j++);
+   166  00FF9A  0E00               	movlw	low(0)
+   167  00FF9C  0100               	movlb	0	; () banked
+   168+ 00FF9E  0100               	movlb	0	; () banked
+   169  00FFA0  6FFE               	movwf	((main@j))&0ffh
+   170  00FFA2  0E00               	movlw	high(0)
+   171+ 00FFA4  0100               	movlb	0	; () banked
+   172  00FFA6  6FFF               	movwf	((main@j+1))&0ffh
+   173  00FFA8  0EF9               	movlw	0F9h
+   174+ 00FFAA  0100               	movlb	0	; () banked
+   175  00FFAC  0100               	movlb	0	; () banked
+   176  00FFAE  5DFE               	subwf	((main@j))&0ffh,w
+   177+ 00FFB0  0E06               	movlw	06h
+   178  00FFB2  0100               	movlb	0	; () banked
+   179  00FFB4  59FF               	subwfb	((main@j+1))&0ffh,w
+   180+ 00FFB6  A0D8               	btfss	status,0
+   181  00FFB8  D001               	goto	u61
+   182  00FFBA  D001               	goto	u60
+   183+ 00FFBC                     u61:
+   184  00FFBC  D001               	goto	l113
+   185  00FFBE                     u60:
+   186+ 00FFBE  D00F               	goto	l114
+   187                           	
+   188  00FFC0                     l113:		; BSR set to: ?
+   189                           
+   190  00FFC0  0100               	movlb	0	; () banked
+   191+ 00FFC2  0100               	movlb	0	; () banked
+   192  00FFC4  4BFE               	infsnz	((main@j))&0ffh
+   193  00FFC6  2BFF               	incf	((main@j+1))&0ffh
+   194+ 00FFC8  0EF9               	movlw	0F9h
+   195  00FFCA  0100               	movlb	0	; () banked
+   196  00FFCC  0100               	movlb	0	; () banked
+   197+ 00FFCE  5DFE               	subwf	((main@j))&0ffh,w
+   198  00FFD0  0E06               	movlw	06h
+   199  00FFD2  0100               	movlb	0	; () banked
+   200+ 00FFD4  59FF               	subwfb	((main@j+1))&0ffh,w
+   201  00FFD6  A0D8               	btfss	status,0
+   202  00FFD8  D001               	goto	u71
+   203+ 00FFDA  D001               	goto	u70
+   204  00FFDC                     u71:
+   205  00FFDC  D7F1               	goto	l113
+   206+ 00FFDE                     u70:
+   207                           	
+   208  00FFDE                     l114:		; BSR set to: ?
+   209                           
+   210                           	line	8
+   211  00FFDE  0100               	movlb	0	; () banked
+   212+ 00FFE0  0100               	movlb	0	; () banked
+   213  00FFE2  4BFC               	infsnz	((main@i))&0ffh
+   214  00FFE4  2BFD               	incf	((main@i+1))&0ffh
+   215+ 00FFE6  0E14               	movlw	014h
+   216  00FFE8  0100               	movlb	0	; () banked
+   217  00FFEA  0100               	movlb	0	; () banked
+   218+ 00FFEC  5DFC               	subwf	((main@i))&0ffh,w
+   219  00FFEE  0E00               	movlw	0
+   220  00FFF0  0100               	movlb	0	; () banked
+   221+ 00FFF2  59FD               	subwfb	((main@i+1))&0ffh,w
+   222  00FFF4  A0D8               	btfss	status,0
+   223  00FFF6  D001               	goto	u81
+   224+ 00FFF8  D001               	goto	u80
+   225  00FFFA                     u81:
+   226  00FFFA  D7CE               	goto	l110
+   227+ 00FFFC                     u80:
+   228                           	
+   229  00FFFC                     l111:		; BSR set to: ?
+   230                           
+   231                           	line	13
+   232                           ;hw4p1.c: 12: }
+   233                           ;hw4p1.c: 13: }
+   234  00FFFC                     l109:
+   235+                          			; BSR set to: ?
+   236+                          
+   237+                          	global	start
+   238+ 00FFFC  EF00  F004         	goto	start
+   239                           	opt stack 0
+   240                           GLOBAL __end_of_main
+   241  010000                     	__end_of_main:
+   242                           	FNSIZE	_main,4,0
+   243                           ; =============== function _main ends ==========
+                                 ==
+   244                           
+   245                           	signat	_main,88
+   246                           	FNROOT	_main
+   247                                   psect   const,class=CODE,space=0,reloc=2
+   248                           	global	_TRISC
+   249  000000                     _TRISC	equ	0xF94
+   250+                          	global	_RC0
+   251+ 000000                     _RC0	equ	0x7C10
+   252                           	psect	intsave_regs,class=BIGRAM,space=1
+   253                           	PSECT	param0,class=BANK0,space=1
+   254                           	GLOBAL	__Lparam0
+   255                           	FNCONF	param0,??,?
+   256                           GLOBAL	__Lparam, __Hparam
+   257                           GLOBAL	__Lparam0, __Hparam0
+   258  000000                     __Lparam	EQU	__Lparam0
+   259  000000                     __Hparam	EQU	__Hparam0
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Mon Sep 25 14:47:56 2023
+
+           u50 FF96             u51 FF94             u60 FFBE  
+           u61 FFBC             u70 FFDE             u71 FFDC  
+           u80 FFFC             u81 FFFA            l110 FF98  
+          l111 FFFC            l113 FFC0            l114 FFDE  
+          l109 FFFC            _RC0 007C10           _main FF6E  
+         start 0800          ?_main 00FC          _TRISC 000F94  
+        main@i 00FC          main@j 00FE          status 000FD8  
+ __end_of_main 0000         ??_main 00FC  __activetblptr 000000  
+       __Ldata 000000   __mediumconst 1000     __accesstop 0080  
+      __Hparam 0100        __Lparam 00FC        __ramtop 1000  
+__Lmediumconst 1000    __smallconst 1000       __Hparam0 0100  
+     __Lparam0 00FC   __Lsmallconst 1000  

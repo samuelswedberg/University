@@ -1,0 +1,13 @@
+|assignment1
+x => z.DATAA
+x => ns.b.DATAB
+x => Selector0.IN3
+x => Selector1.IN3
+x => ns.a.DATAB
+x => Selector0.IN1
+x => Selector1.IN1
+x => Selector1.IN2
+clk => state~1.DATAIN
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

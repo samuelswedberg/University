@@ -1,0 +1,20 @@
+vsim sam.add3
+# vsim sam.add3 
+# Start time: 12:38:45 on Sep 18,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading sam.add3(behavioral)
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/add3/A
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 100ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/add3/B
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 200ps -step 1 -repeat forever -starttime 0ps -endtime 1000ps sim:/add3/C
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/add3/D
+run -all
+# End time: 17:02:43 on Sep 18,2023, Elapsed time: 4:23:58
+# Errors: 0, Warnings: 1

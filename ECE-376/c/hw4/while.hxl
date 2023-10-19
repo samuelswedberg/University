@@ -1,0 +1,27 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  0h - 7FFh
+  804h - FF6Dh
+  
+ while.hex ranges:
+  800h - 803h
+  FF6Eh - FFFFh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = while.hex
+00000000: ----------------------------------------------------------------
+00000800: 1111------------------------------------------------------------
+0000FF40: ----------------------------------------------111111111111111111
+0000FF80: 1111111111111111111111111111111111111111111111111111111111111111
+0000FFC0: 1111111111111111111111111111111111111111111111111111111111111111

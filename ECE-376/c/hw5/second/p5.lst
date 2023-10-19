@@ -1,0 +1,380 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Mon Oct 02 16:25:21 2023
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4620
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	0
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109  000000                     main@A2D	equ	??_main+0
+   110                           	global	main@A2D
+   111  000000                     A2D_Read@i	equ	??_A2D_Read+0
+   112                           	global	A2D_Read@i
+   113  000000                     A2D_Read@c	equ	?_A2D_Read+0
+   114                           	global	A2D_Read@c
+   115                           ;Data sizes: Strings 0, constant 0, data 0, bss 
+                                 0, persistent 0 stack 7
+   116                           	global	_main
+   117                           	global	??_main
+   118                           	global	?_main
+   119                                   psect   text0,class=CODE,space=0,reloc=2
+   120                           
+   121                           	opt lm
+   122                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw5\second\p5.c"
+   123                           	line	18
+   124  000000                     	__size_of_main	equ	__end_of_main-_main
+   125                           ;p5.c: 17: void main(void)
+   126                           ;p5.c: 18: {
+   127                           	
+   128  00FF38                     _main:		; BSR set to: ?
+   129                           
+   130                           	opt stack 31
+   131                           	line	20
+   132                           ;p5.c: 19: unsigned int A2D;
+   133                           ;p5.c: 20: TRISC = 0;
+   134  00FF38  0E00               	movlw	low(0)
+   135  00FF3A  6E94               	movwf	((c:3988)),c	;volatile
+   136                           	line	21
+   137                           ;p5.c: 21: ADCON1 = 0x0F;
+   138  00FF3C  0100               	movlb	0	; () banked
+   139  00FF3E  6FFB               	movwf	(??_main+2+0)&0ffh
+   140  00FF40  0E0F               	movlw	low(0Fh)
+   141  00FF42  6EC1               	movwf	((c:4033)),c
+   142  00FF44  0100               	movlb	0	; () banked
+   143  00FF46  51FB               	movf	(??_main+2+0)&0ffh,w
+   144                           	line	23
+   145                           ;p5.c: 23: TRISA = 0xFF;
+   146  00FF48  6892               	setf	((c:3986)),c	;volatile
+   147                           	line	24
+   148                           ;p5.c: 24: TRISE = 0x0F;
+   149  00FF4A  0E0F               	movlw	low(0Fh)
+   150  00FF4C  6E96               	movwf	((c:3990)),c	;volatile
+   151                           	line	25
+   152                           ;p5.c: 25: ADCON2 = 0x95;
+   153  00FF4E  0100               	movlb	0	; () banked
+   154  00FF50  6FFB               	movwf	(??_main+2+0)&0ffh
+   155  00FF52  0E95               	movlw	low(095h)
+   156  00FF54  6EC0               	movwf	((c:4032)),c
+   157  00FF56  0100               	movlb	0	; () banked
+   158  00FF58  51FB               	movf	(??_main+2+0)&0ffh,w
+   159                           	line	26
+   160                           ;p5.c: 26: ADCON1 = 0x07;
+   161  00FF5A  0100               	movlb	0	; () banked
+   162  00FF5C  6FFB               	movwf	(??_main+2+0)&0ffh
+   163  00FF5E  0E07               	movlw	low(07h)
+   164  00FF60  6EC1               	movwf	((c:4033)),c
+   165  00FF62  0100               	movlb	0	; () banked
+   166  00FF64  51FB               	movf	(??_main+2+0)&0ffh,w
+   167                           	line	27
+   168                           ;p5.c: 27: ADCON0 = 0x01;
+   169  00FF66  0E01               	movlw	low(01h)
+   170  00FF68  6EC2               	movwf	((c:4034)),c	;volatile
+   171                           	line	29
+   172                           ;p5.c: 29: while(1) {
+   173                           	
+   174  00FF6A                     l118:		; BSR set to: ?
+   175                           
+   176                           	line	30
+   177                           ;p5.c: 30: A2D = A2D_Read(0);
+   178  00FF6A  0100               	movlb	0	; () banked
+   179  00FF6C  6FFB               	movwf	(??_main+2+0)&0ffh
+   180  00FF6E  0E00               	movlw	low(0)
+   181  00FF70  0100               	movlb	0	; () banked
+   182  00FF72  0100               	movlb	0	; () banked
+   183  00FF74  6FFC               	movwf	((?_A2D_Read))&0ffh
+   184  00FF76  0100               	movlb	0	; () banked
+   185  00FF78  51FB               	movf	(??_main+2+0)&0ffh,w
+   186  00FF7A  ECC8  F07F         	call	_A2D_Read	;wreg free
+   187  00FF7E  C0FC  F0F9         	movff	0+?_A2D_Read,(main@A2D)
+   188  00FF82  C0FD  F0FA         	movff	1+?_A2D_Read,(main@A2D+1)
+   189                           	line	31
+   190                           ;p5.c: 31: PORTC = PORTC + 1;
+   191  00FF86  2882               	incf	((c:3970)),c,w	;volatile
+   192  00FF88  6E82               	movwf	((c:3970)),c	;volatile
+   193                           	line	32
+   194                           	
+   195  00FF8A                     l117:		; BSR set to: ?
+   196                           
+   197                           	line	29
+   198  00FF8A  D7EF               	goto	l118
+   199                           	global	start
+   200  00FF8C  EF00  F004         	goto	start
+   201                           	opt stack 0
+   202                           GLOBAL __end_of_main
+   203  00FF90                     	__end_of_main:
+   204                           	FNSIZE	_main,3,0
+   205                           ; =============== function _main ends ==========
+                                 ==
+   206                           
+   207                                   psect   text1,class=CODE,space=0,reloc=2
+   208                           	line	33
+   209                           
+   210                           	opt lm
+   211                           	signat	_main,88
+   212                           	global	_A2D_Read
+   213                           	global	??_A2D_Read
+   214                           	global	?_A2D_Read
+   215                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw5\second\p5.c"
+   216                           	line	5
+   217  000000                     	__size_of_A2D_Read	equ	__end_of_A2D_Read-_A2D_R
+                                 ead
+   218                           ;p5.c: 4: unsigned int A2D_Read(unsigned char c)
+   219                           ;p5.c: 5: {
+   220                           	
+   221  00FF90                     _A2D_Read:		; BSR set to: ?
+   222                           
+   223                           	opt stack 30
+   224                           	line	8
+   225  00FF90  0100               	movlb	0	; () banked
+   226  00FF92  0100               	movlb	0	; () banked
+   227  00FF94  51FC               	movf	((A2D_Read@c))&0ffh,w
+   228  00FF96  0B0F               	andlw	low(0Fh)
+   229  00FF98  0100               	movlb	0	; () banked
+   230  00FF9A  0100               	movlb	0	; () banked
+   231  00FF9C  6FFC               	movwf	((A2D_Read@c))&0ffh
+   232                           	line	9
+   233                           ;p5.c: 9: ADCON0 = (c << 2) + 0x01;
+   234  00FF9E  C0FC  F0FF         	movff	(A2D_Read@c),??_A2D_Read+1+0
+   235  00FFA2  90D8               	bcf	status,0
+   236  00FFA4  0100               	movlb	0	; () banked
+   237  00FFA6  37FF               	rlcf	(??_A2D_Read+1+0)&0ffh
+   238  00FFA8  90D8               	bcf	status,0
+   239  00FFAA  0100               	movlb	0	; () banked
+   240  00FFAC  37FF               	rlcf	(??_A2D_Read+1+0)&0ffh
+   241                           
+   242  00FFAE  0100               	movlb	0	; () banked
+   243  00FFB0  29FF               	incf	(??_A2D_Read+1+0)&0ffh,w
+   244  00FFB2  6EC2               	movwf	((c:4034)),c	;volatile
+   245                           	line	10
+   246                           ;p5.c: 10: for (i=0; i<3; i++);
+   247  00FFB4  0100               	movlb	0	; () banked
+   248  00FFB6  6FFF               	movwf	(??_A2D_Read+1+0)&0ffh
+   249  00FFB8  0E00               	movlw	low(0)
+   250  00FFBA  0100               	movlb	0	; () banked
+   251  00FFBC  0100               	movlb	0	; () banked
+   252  00FFBE  6FFE               	movwf	((A2D_Read@i))&0ffh
+   253  00FFC0  0100               	movlb	0	; () banked
+   254  00FFC2  51FF               	movf	(??_A2D_Read+1+0)&0ffh,w
+   255  00FFC4  0E02               	movlw	(03h-1)
+   256  00FFC6  0100               	movlb	0	; () banked
+   257  00FFC8  0100               	movlb	0	; () banked
+   258  00FFCA  65FE               	cpfsgt	((A2D_Read@i))&0ffh
+   259  00FFCC  D001               	goto	u41
+   260  00FFCE  D001               	goto	u40
+   261  00FFD0                     u41:
+   262  00FFD0  D001               	goto	l110
+   263  00FFD2                     u40:
+   264  00FFD2  D00A               	goto	l111
+   265                           	
+   266  00FFD4                     l110:		; BSR set to: ?
+   267                           
+   268  00FFD4  0100               	movlb	0	; () banked
+   269  00FFD6  0100               	movlb	0	; () banked
+   270  00FFD8  2BFE               	incf	((A2D_Read@i))&0ffh
+   271  00FFDA  0E02               	movlw	(03h-1)
+   272  00FFDC  0100               	movlb	0	; () banked
+   273  00FFDE  0100               	movlb	0	; () banked
+   274  00FFE0  65FE               	cpfsgt	((A2D_Read@i))&0ffh
+   275  00FFE2  D001               	goto	u51
+   276  00FFE4  D001               	goto	u50
+   277  00FFE6                     u51:
+   278  00FFE6  D7F6               	goto	l110
+   279  00FFE8                     u50:
+   280                           	
+   281  00FFE8                     l111:		; BSR set to: ?
+   282                           
+   283                           	line	11
+   284                           ;p5.c: 11: GODONE = 1;
+   285  00FFE8  82C2               	bsf	c:(32273/8),(32273)&7	;volatile
+   286                           	line	12
+   287                           ;p5.c: 12: while(GODONE);
+   288  00FFEA  D000               	goto	l113
+   289                           	
+   290  00FFEC                     l113:		; BSR set to: ?
+   291                           
+   292  00FFEC  B2C2               	btfsc	c:(32273/8),(32273)&7	;volatile
+   293  00FFEE  D001               	goto	u61
+   294  00FFF0  D001               	goto	u60
+   295  00FFF2                     u61:
+   296  00FFF2  D7FC               	goto	l113
+   297  00FFF4                     u60:
+   298                           	
+   299  00FFF4                     l115:		; BSR set to: ?
+   300                           
+   301                           	line	13
+   302  00FFF4  CFC3 F0FC          	movff	(c:4035),(?_A2D_Read)	;volatile
+   303  00FFF8  CFC4 F0FD          	movff	(c:4035+1),(?_A2D_Read+1)	;volatile
+   304  00FFFC  D000               	goto	l109
+   305                           	line	14
+   306                           ;p5.c: 14: }
+   307  00FFFE                     l109:
+   308                           			; BSR set to: ?
+   309                           
+   310  00FFFE  0012               	return
+   311                           	opt stack 0
+   312                           GLOBAL __end_of_A2D_Read
+   313  010000                     	__end_of_A2D_Read:
+   314                           	FNSIZE	_A2D_Read,2,2
+   315                           ; =============== function _A2D_Read ends ======
+                                 ======
+   316                           
+   317                           	signat	_A2D_Read,4218
+   318                           	FNCALL	_main,_A2D_Read
+   319                           	FNROOT	_main
+   320                                   psect   const,class=CODE,space=0,reloc=2
+   321                           	global	_ADRES
+   322  000000                     _ADRES	equ	0xFC3
+   323                           	global	_ADCON0
+   324  000000                     _ADCON0	equ	0xFC2
+   325                           	global	_ADCON1
+   326  000000                     _ADCON1	equ	0xFC1
+   327                           	global	_ADCON2
+   328  000000                     _ADCON2	equ	0xFC0
+   329                           	global	_PORTC
+   330  000000                     _PORTC	equ	0xF82
+   331                           	global	_TRISA
+   332  000000                     _TRISA	equ	0xF92
+   333                           	global	_TRISC
+   334  000000                     _TRISC	equ	0xF94
+   335                           	global	_TRISE
+   336  000000                     _TRISE	equ	0xF96
+   337                           	global	_GODONE
+   338  000000                     _GODONE	equ	0x7E11
+   339                           	psect	intsave_regs,class=BIGRAM,space=1
+   340                           	PSECT	param0,class=BANK0,space=1
+   341                           	GLOBAL	__Lparam0
+   342                           	FNCONF	param0,??,?
+   343                           GLOBAL	__Lparam, __Hparam
+   344                           GLOBAL	__Lparam0, __Hparam0
+   345  000000                     __Lparam	EQU	__Lparam0
+   346  000000                     __Hparam	EQU	__Hparam0
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Mon Oct 02 16:25:21 2023
+
+               u40 FFD2                 u41 FFD0                 u50 FFE8  
+               u51 FFE6                 u60 FFF4                 u61 FFF2  
+              l110 FFD4                l111 FFE8                l113 FFEC  
+              l115 FFF4                l109 FFFE                l117 FF8A  
+              l118 FF6A   __end_of_A2D_Read 0000               _main FF38  
+             start 0800              ?_main 00F9              _ADRES 000FC3  
+            _PORTC 000F82              _TRISA 000F92              _TRISC 000F94  
+            _TRISE 000F96          A2D_Read@c 00FC          A2D_Read@i 00FE  
+            status 000FD8       __end_of_main FF90             ??_main 00F9  
+    __activetblptr 000000             _ADCON0 000FC2             _ADCON1 000FC1  
+           _ADCON2 000FC0             _GODONE 007E11             __Ldata 000000  
+        ?_A2D_Read 00FC       __mediumconst 1000         __accesstop 0080  
+       ??_A2D_Read 00FE            __Hparam 0100            __Lparam 00F9  
+          __ramtop 1000            main@A2D 00F9      __Lmediumconst 1000  
+         _A2D_Read FF90        __smallconst 1000           __Hparam0 0100  
+         __Lparam0 00F9       __Lsmallconst 1000  

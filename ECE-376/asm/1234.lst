@@ -1,4 +1,4 @@
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  1
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -43,7 +43,7 @@ Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected process
 000822                00027 Loop:
 000822 EF11 F004      00028       goto Loop
                       00029       end
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  2
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  2
 
 
 SYMBOL TABLE
@@ -102,7 +102,7 @@ C1OUT                             00000006
 C2INV                             00000005
 C2OUT                             00000007
 CCP1                              00000002
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  3
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  3
 
 
 SYMBOL TABLE
@@ -161,7 +161,7 @@ CVR2                              00000002
 CVR3                              00000003
 CVRCON                            00000FB5
 CVREN                             00000007
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  4
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  4
 
 
 SYMBOL TABLE
@@ -220,7 +220,7 @@ GO_DONE                           00000001
 GO_NOT_DONE                       00000001
 HLVDCON                           00000FD2
 HLVDEN                            00000004
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  5
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  5
 
 
 SYMBOL TABLE
@@ -279,7 +279,7 @@ KBI0                              00000004
 KBI1                              00000005
 KBI2                              00000006
 KBI3                              00000007
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  6
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  6
 
 
 SYMBOL TABLE
@@ -338,7 +338,7 @@ LVDL3                             00000003
 LVV0                              00000000
 LVV1                              00000001
 LVV2                              00000002
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  7
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  7
 
 
 SYMBOL TABLE
@@ -397,7 +397,7 @@ PDC3                              00000003
 PDC4                              00000004
 PDC5                              00000005
 PDC6                              00000006
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  8
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  8
 
 
 SYMBOL TABLE
@@ -456,7 +456,7 @@ PSSBD0                            00000000
 PSSBD1                            00000001
 PWM1CON                           00000FB7
 R                                 00000002
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE  9
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE  9
 
 
 SYMBOL TABLE
@@ -515,7 +515,7 @@ RE2                               00000002
 RE3                               00000003
 RI                                00000004
 RSEN                              00000001
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 10
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 10
 
 
 SYMBOL TABLE
@@ -574,7 +574,7 @@ STKPTR1                           00000001
 STKPTR2                           00000002
 STKPTR3                           00000003
 STKPTR4                           00000004
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 11
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 11
 
 
 SYMBOL TABLE
@@ -633,7 +633,7 @@ TMR0ON                            00000007
 TMR1                              00000FCE
 TMR1CS                            00000001
 TMR1H                             00000FCF
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 12
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 12
 
 
 SYMBOL TABLE
@@ -692,7 +692,7 @@ TRISC7                            00000007
 TRISD                             00000F95
 TRISD0                            00000000
 TRISD1                            00000001
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 13
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 13
 
 
 SYMBOL TABLE
@@ -751,7 +751,7 @@ _CCP2MX_PORTC_3H                  000000FF
 _CONFIG1H                         00300001
 _CONFIG2H                         00300003
 _CONFIG2L                         00300002
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 14
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 14
 
 
 SYMBOL TABLE
@@ -810,7 +810,7 @@ _LVP_ON_4L                        000000FF
 _MCLRE_OFF_3H                     0000007F
 _MCLRE_ON_3H                      000000FF
 _OSC_ECIO6_1H                     000000F5
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 15
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 15
 
 
 SYMBOL TABLE
@@ -867,7 +867,7 @@ _XINST_OFF_4L                     000000BF
 _XINST_ON_4L                      000000FF
 __18F452                          00000001
 __DEBUG                           1
-MPASM  5.51                          1234.ASM   9-7-2023  17:49:55         PAGE 16
+MPASM  5.51                          1234.ASM   9-11-2023  14:54:02         PAGE 16
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)

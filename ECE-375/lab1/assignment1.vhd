@@ -1,0 +1,60 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity assignment1 is
+	port(x,clk : in std_logic;
+			z : out std_logic);
+	end assignment1;
+	
+architecture behavorial of assignment1 is
+	type FSM is (a, b, c, d);
+	signal state, ns : FSM;
+	
+	begin
+	process(state,x)
+	begin
+		case state is
+			when a =>
+			if x='0' then
+				z <= '0';
+				ns <= c;
+			else
+				z <= '0';
+				ns <= b;
+			end if;
+			when b =>
+			if x='0' then
+				z <= '0';
+				ns <= d;
+			else
+				z <='1';
+				ns <= b;
+			end if;
+			when c =>
+			if x='0' then
+				z <= '0';
+				ns <= d;
+			else
+				z <='1';
+				ns <= c;
+			end if;
+			when d =>
+			if x='0' then
+				z <= '0';
+				ns <= a;
+			else
+				z <= '0';
+				ns <= d;
+			end if;
+		end case;
+	end process;
+	
+	process(clk)
+		begin
+			if clk'event and clk='1' then
+				state <= ns;
+			end if;
+		end process;
+end behavorial;
+			
+				

@@ -1,0 +1,3 @@
+Message[301] C:\PROGRAM FILES (X86)\MICROCHIP\MPASM SUITE\P18F4620.INC 33 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Warning[202] A:\ONEDRIVE\SCHOOL\COLLEGE\JUNIOR\FA23\EMB SYS\ASM\ECE376HW3\PROBLEM5.ASM 97 : Argument out of range.  Least significant bits used.
+Warning[202] A:\ONEDRIVE\SCHOOL\COLLEGE\JUNIOR\FA23\EMB SYS\ASM\ECE376HW3\PROBLEM5.ASM 101 : Argument out of range.  Least significant bits used.

@@ -1,0 +1,67 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FSM2 is
+	port(reset, start, clk : in std_logic;
+			red, yellow, green: out std_logic);
+	end FSM2;
+	
+architecture behavorial of FSM2 is
+	type FSM is (a, b, c);
+	signal state, ns : FSM;
+	
+	begin
+	process(state,reset,start)
+	begin
+		case state is
+			when a =>
+			if reset='1' then
+				red <= '1';
+				yellow <='0';
+				green <='0';
+				ns <= a;
+			else if start='1'
+				red <='1';
+				yellow <='0';
+				green <='0';
+				ns <= b;
+			end if;
+			
+			when b =>
+			if reset='1' then
+				red <='1';
+				yellow <='0';
+				green <='0';
+				ns <= a;
+			else
+				red <='0';
+				yellow <='1';
+				green <='0';
+				ns <= c;
+			end if;
+			
+			when c =>
+			if reset='1' then
+				red <='1';
+				yellow <='0';
+				green <='0';
+				ns <= a;
+			else
+				red <='0'
+				yellow <='0';
+				green <='1';
+				ns <= a;
+			end if;
+			
+		end case;
+	end process;
+	
+	process(clk)
+		begin
+			if clk'event and clk='1' then
+				state <= ns;
+			end if;
+		end process;
+end behavorial;
+			
+				

@@ -1,0 +1,454 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/simulation/modelsim
+Eadd_isa
+Z1 w1696974526
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z4 DPx4 work 10 components 0 22 c]FcAE:kI51<ONo3>Q0Y91
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+R0
+Z7 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/add_isa.vhd
+Z8 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/add_isa.vhd
+l0
+L5 1
+VAfhd;maWGN4kA8hM2ik<a3
+!s100 zAfA7zeBVW0GbN;[Af0ZD1
+Z9 OV;C;2020.1;71
+31
+Z10 !s110 1697577251
+!i10b 1
+Z11 !s108 1697577251.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/add_isa.vhd|
+Z13 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/add_isa.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Abehaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 add_isa 0 22 Afhd;maWGN4kA8hM2ik<a3
+!i122 6
+l18
+L10 38
+VGU7mCJd@zUhJF=2HYoJ>=0
+!s100 n]<agS3<RDhiNd42QRdS?0
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Pcomponents
+R2
+R3
+R5
+R6
+!i122 5
+w1696973653
+R0
+8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/components.vhd
+FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/components.vhd
+l0
+L5 1
+Vc]FcAE:kI51<ONo3>Q0Y91
+!s100 OB0S>idgP^`nPPcbnB1TI3
+R9
+31
+R10
+!i10b 1
+R11
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/components.vhd|
+!s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/components.vhd|
+!i113 1
+R14
+R15
+Edec2to4
+Z16 w1694551309
+R5
+R6
+!i122 4
+R0
+Z17 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/dec2to4.vhd
+Z18 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/dec2to4.vhd
+l0
+L6 1
+V7obXTbi9S>EeXNbj1:@Bf2
+!s100 NbZK8dGF6nXNm>[=`JC>_0
+R9
+31
+R10
+!i10b 1
+R11
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/dec2to4.vhd|
+Z20 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/dec2to4.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 dec2to4 0 22 7obXTbi9S>EeXNbj1:@Bf2
+!i122 4
+l13
+L12 8
+VhN8DPKlKgnC?VE[1n^h@G0
+!s100 LmmfXEm2d@d@EW5E?AC=j3
+R9
+31
+R10
+!i10b 1
+R11
+R19
+R20
+!i113 1
+R14
+R15
+Efulladd
+R16
+R5
+R6
+!i122 3
+R0
+Z21 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/fulladd.vhd
+Z22 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/fulladd.vhd
+l0
+L6 1
+VziY8cfTYCVz8^A`EWKZ2^1
+!s100 cXj=L=BeW98zYAJRLH9@j1
+R9
+31
+R10
+!i10b 1
+Z23 !s108 1697577250.000000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/fulladd.vhd|
+Z25 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/fulladd.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 fulladd 0 22 ziY8cfTYCVz8^A`EWKZ2^1
+!i122 3
+l12
+L11 5
+V;4A99eQYCR7B]KEjGZg0E2
+!s100 3Td1GOE:Li?fBdDZM`>ez2
+R9
+31
+R10
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R14
+R15
+Einstruction_memory
+w1697577017
+R2
+R3
+R4
+DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R5
+R6
+!i122 10
+R0
+8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/instruction_memory.vhd
+FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/instruction_memory.vhd
+l0
+L8 1
+V<LM=NWoj7SeK`WOZ:ge102
+!s100 FUE5I95cMAaTeae4:ielR2
+R9
+31
+!s110 1697577253
+!i10b 1
+Z26 !s108 1697577252.000000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/instruction_memory.vhd|
+!s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/instruction_memory.vhd|
+!i113 1
+R14
+R15
+Emux2to1
+R16
+R5
+R6
+!i122 2
+R0
+Z27 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux2to1.vhd
+Z28 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux2to1.vhd
+l0
+L6 1
+V]F]hTDio`OR<=VY3ZSjfn2
+!s100 2Y]BJOJ>nfG@D@kF6<KcB0
+R9
+31
+Z29 !s110 1697577250
+!i10b 1
+R23
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux2to1.vhd|
+Z31 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux2to1.vhd|
+!i113 1
+R14
+R15
+Alogicfunc
+R5
+R6
+DEx4 work 7 mux2to1 0 22 ]F]hTDio`OR<=VY3ZSjfn2
+!i122 2
+l15
+L13 14
+Vm2f86Nge<14h;NWU_K>[>1
+!s100 ;W^SCehM[9I;kQINc0CEK0
+R9
+31
+R29
+!i10b 1
+R23
+R30
+R31
+!i113 1
+R14
+R15
+Emux4to1
+R16
+R2
+R3
+R4
+R5
+R6
+!i122 9
+R0
+Z32 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux4to1.vhd
+Z33 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux4to1.vhd
+l0
+L6 1
+V81WhnCONI:cWkiKH_1fkR1
+!s100 nT:OzDKVMaJZ1zaY`OLXK2
+R9
+31
+Z34 !s110 1697577252
+!i10b 1
+R26
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux4to1.vhd|
+Z36 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/mux4to1.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 7 mux4to1 0 22 81WhnCONI:cWkiKH_1fkR1
+!i122 9
+l17
+L13 9
+VkD?H>aM:]4=h8BFlGTZP00
+!s100 <lJc1_mQ>`X>fQB]PmRX52
+R9
+31
+R34
+!i10b 1
+R26
+R35
+R36
+!i113 1
+R14
+R15
+Eregister_file
+Z37 w1697576451
+R2
+R3
+R4
+R5
+R6
+!i122 8
+R0
+Z38 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/register_file.vhd
+Z39 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/register_file.vhd
+l0
+L6 1
+Ve7HQgG3ff8;CjnQSG<FQb1
+!s100 [Th0f3?l;UUR2KNP]lJ6a2
+R9
+31
+R34
+!i10b 1
+R26
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/register_file.vhd|
+Z41 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/register_file.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 13 register_file 0 22 e7HQgG3ff8;CjnQSG<FQb1
+!i122 8
+l41
+L12 151
+V289Ba]2=2G41JchTiJHfT0
+!s100 `<gY_[[8<ZG@d?8ST4hBg1
+R9
+31
+R34
+!i10b 1
+R26
+R40
+R41
+!i113 1
+R14
+R15
+Eregn
+Z42 w1694551310
+R5
+R6
+!i122 1
+R0
+Z43 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/regN.vhd
+Z44 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/regN.vhd
+l0
+L5 1
+V<n2ab<HDD_k2>QBCPM]9>3
+!s100 9WISHEa<GU>hb:hkoFU>l1
+R9
+31
+R29
+!i10b 1
+R23
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/regN.vhd|
+Z46 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/regN.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 4 regn 0 22 <n2ab<HDD_k2>QBCPM]9>3
+!i122 1
+l13
+L12 9
+V6fP>odf>[FfYhH6bzlTP=2
+!s100 H_Fd<a^^4ZRKjV6>Zi4<R0
+R9
+31
+R29
+!i10b 1
+R23
+R45
+R46
+!i113 1
+R14
+R15
+Eripple_carry
+Z47 w1695159661
+R2
+R3
+R4
+R5
+R6
+!i122 7
+R0
+Z48 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/ripple_carry.vhd
+Z49 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/ripple_carry.vhd
+l0
+L8 1
+Vc:T[_OcQda0N;EmHS<fze2
+!s100 NecK9P_@beN7`aT5X@S9T3
+R9
+31
+R34
+!i10b 1
+R11
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/ripple_carry.vhd|
+Z51 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/ripple_carry.vhd|
+!i113 1
+R14
+R15
+Astruc_behaviour
+R2
+R3
+R4
+R5
+R6
+DEx4 work 12 ripple_carry 0 22 c:T[_OcQda0N;EmHS<fze2
+!i122 7
+l19
+L15 16
+V4STiRj]]X9d3]hilNIo8P1
+!s100 IkhTL=8iecm<EU0TC^[U;3
+R9
+31
+R34
+!i10b 1
+R11
+R50
+R51
+!i113 1
+R14
+R15
+Etrin
+R42
+R5
+R6
+!i122 0
+R0
+Z52 8C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/trin.vhd
+Z53 FC:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/trin.vhd
+l0
+L6 1
+V3^=UTL66lAo[Zc29Y`UBR1
+!s100 09[YhPg2Q7CoUYLlSBnMB2
+R9
+31
+Z54 !s110 1697577249
+!i10b 1
+Z55 !s108 1697577249.000000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/trin.vhd|
+Z57 !s107 C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Comp Org/Lab4/add_isa/trin.vhd|
+!i113 1
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 4 trin 0 22 3^=UTL66lAo[Zc29Y`UBR1
+!i122 0
+l14
+L13 4
+VUNPXCA:^CdmT0L>^RH;nj2
+!s100 KkF5k=d^9m5`cKFZjo2Pg0
+R9
+31
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R14
+R15

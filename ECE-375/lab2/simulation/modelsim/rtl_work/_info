@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/simulation/modelsim
+Efsm2
+Z1 w1696272417
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/FSM2.vhd
+Z5 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/FSM2.vhd
+l0
+L4 1
+VcOP^T7DlT]NKeo5l?e=NM3
+!s100 fKXoVP[ICzXgGReiK2Hj20
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1696812856
+!i10b 1
+Z8 !s108 1696812856.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/FSM2.vhd|
+!s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/FSM2.vhd|
+!i113 1
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Abehavorial
+R2
+R3
+DEx4 work 4 fsm2 0 22 cOP^T7DlT]NKeo5l?e=NM3
+!i122 2
+l13
+L9 50
+VJ0dNimWlG3=@7<E`6BKH43
+!s100 8^VMc`DP;CQGJRfd=bmdC3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/FSM2.vhd|
+!i113 1
+R10
+R11
+Elab2
+Z13 w1696812079
+R2
+R3
+!i122 0
+R0
+Z14 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Lab2.vhd
+Z15 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Lab2.vhd
+l0
+L4 1
+VD[Q6eOYjB=7mcDF9b2kcl2
+!s100 826O<HkiYMUk9F3Q4G;;51
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Lab2.vhd|
+Z17 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Lab2.vhd|
+!i113 1
+R10
+R11
+Abehavorial
+R2
+R3
+DEx4 work 4 lab2 0 22 D[Q6eOYjB=7mcDF9b2kcl2
+!i122 0
+l21
+L9 16
+VlIC@MaCZK0Sdi_[jjK6bP3
+!s100 Wg5:[L7<]aSQeWgGWW=bo3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R10
+R11
+Etimer
+Z18 w1696812112
+R2
+R3
+!i122 1
+R0
+Z19 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Timer.vhd
+Z20 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Timer.vhd
+l0
+L4 1
+Ve3YYIJAW3=o2>9B7SgdL30
+!s100 okGnU>`5TN<94Yh@44=ik3
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Timer.vhd|
+Z22 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab2/Timer.vhd|
+!i113 1
+R10
+R11
+Abehavioral
+R2
+R3
+DEx4 work 5 timer 0 22 e3YYIJAW3=o2>9B7SgdL30
+!i122 1
+l12
+L9 35
+VXbXn@H58?4[UGbPZQfoID3
+!s100 hN3BhC6z<6Ia>5c8n?IOY0
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R10
+R11

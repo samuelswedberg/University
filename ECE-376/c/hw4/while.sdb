@@ -1,0 +1,18 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"5 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw4\hw4p1.c
+[v _main `(v  1 e 0 0 ]
+"136 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"627
+[v _RC0 `VNb  1 e 0 @31760 ]
+"5 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw4\hw4p1.c
+[v _main `(v  1 e 0 0 ]
+{
+"7
+[v _i `ui  1 a 2 0 ]
+[v _j `ui  1 a 2 2 ]
+"13
+} 4

@@ -1,0 +1,6 @@
+
+State Machine - |Lab2|FSM2:f1|state
+Name state.c state.b state.a 
+state.a 0 0 0 
+state.b 0 1 1 
+state.c 1 0 1 

@@ -1,0 +1,52 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Sep 15 17:23:40 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000800    program   0x000096
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000800    0x000895      
+            150 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       L1   0x000808    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L2   0x000814    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L3   0x000824    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L4   0x000830    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L5   0x00084c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L6   0x000854    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L7   0x00085c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W0   0x000874    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W1   0x000870    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W2   0x00086c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                     Wait   0x00086a    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       L1   0x000808    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L2   0x000814    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L3   0x000824    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L4   0x000830    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L5   0x00084c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L6   0x000854    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       L7   0x00085c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                     Wait   0x00086a    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W2   0x00086c    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W1   0x000870    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+                       W0   0x000874    program     static A:\OneDrive\School\College\Junior\Fa23\Emb Sys\asm\TEST1\test1.asm
+
+

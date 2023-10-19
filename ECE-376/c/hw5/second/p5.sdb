@@ -1,0 +1,42 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"5 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw5\second\p5.c
+[v _A2D_Read `(ui  1 e 2 0 ]
+"18
+[v _main `(v  1 e 0 0 ]
+"88 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _ADRES `VNui  1 e 2 @4035 ]
+"89
+[v _ADCON0 `VNuc  1 e 1 @4034 ]
+"90
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"91
+[v _ADCON2 `Nuc  1 e 1 @4032 ]
+"133
+[v _TRISE `VNuc  1 e 1 @3990 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"150
+[v _PORTC `VNuc  1 e 1 @3970 ]
+"292
+[v _GODONE `VNb  1 e 0 @32273 ]
+"18 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw5\second\p5.c
+[v _main `(v  1 e 0 0 ]
+{
+"19
+[v _A2D `ui  1 a 2 0 ]
+"33
+} 2
+"5
+[v _A2D_Read `(ui  1 e 2 0 ]
+{
+"7
+[v _i `uc  1 a 1 0 ]
+"5
+[v _c `uc  1 p 1 0 ]
+"14
+} 1

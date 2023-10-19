@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Lab3 is
+	port(clk, Ld : in std_logic;
+			Memin: in std_logic_vector(5 downto 0);
+			ReadArr : in std_logic_vector(2 downto 0);
+			Memout, : out std_logic_vector(5 downto 0);
+	end Lab3;
+	
+architecture behavorial of tristate is
+	begin
+
+	
+
+end behavorial;
+			
+				

@@ -1,0 +1,257 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"16 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\lcd_portd.c
+[v _Wait_ms `(v  1 e 0 0 ]
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+"32
+[v _LCD_Strobe `(v  1 e 0 0 ]
+"44
+[v _LCD_Inst `(v  1 e 0 0 ]
+"54
+[v _LCD_Move `(v  1 e 0 0 ]
+"62
+[v _LCD_Write `(v  1 e 0 0 ]
+"73
+[v _LCD_Init `(v  1 e 0 0 ]
+"106
+[v _SCI_Out `(v  1 e 0 0 ]
+"127
+[v _SCI_CRLF `(v  1 e 0 0 ]
+"14 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\p1.c
+[v _A2D_Read `(ui  1 e 2 0 ]
+"27
+[v _main `(v  1 e 0 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"13 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\float.c
+[v ___ftunpack `(uc  1 e 1 0 ]
+"33
+[v ___ftpack `(v  1 e 0 0 ]
+"18 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"7 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\p1.c
+[v _MSG0 `DC[21]uc  1 e 21 0 ]
+"88 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _ADRES `VNui  1 e 2 @4035 ]
+"89
+[v _ADCON0 `VNuc  1 e 1 @4034 ]
+"90
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"91
+[v _ADCON2 `Nuc  1 e 1 @4032 ]
+"115
+[v _SPBRG `Nuc  1 e 1 @4015 ]
+"117
+[v _TXREG `VNuc  1 e 1 @4013 ]
+"118
+[v _TXSTA `VNuc  1 e 1 @4012 ]
+"119
+[v _RCSTA `VNuc  1 e 1 @4011 ]
+"133
+[v _TRISE `VNuc  1 e 1 @3990 ]
+"134
+[v _TRISD `VNuc  1 e 1 @3989 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"137
+[v _TRISB `VNuc  1 e 1 @3987 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"148
+[v _PORTD `VNuc  1 e 1 @3971 ]
+"292
+[v _GODONE `VNb  1 e 0 @32273 ]
+"338
+[v _BRG16 `Nb  1 e 0 @32195 ]
+"402
+[v _TRMT `VNb  1 e 0 @32097 ]
+"403
+[v _BRGH `Nb  1 e 0 @32098 ]
+"405
+[v _SYNC `Nb  1 e 0 @32100 ]
+"491
+[v _TXIE `Nb  1 e 0 @31980 ]
+"492
+[v _RCIE `Nb  1 e 0 @31981 ]
+"617
+[v _RD1 `VNb  1 e 0 @31769 ]
+"618
+[v _RD2 `VNb  1 e 0 @31770 ]
+"619
+[v _RD3 `VNb  1 e 0 @31771 ]
+"27 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\p1.c
+[v _main `(v  1 e 0 0 ]
+{
+"29
+[v _VOLT `i  1 a 2 0 ]
+"28
+[v _A2D `i  1 a 2 2 ]
+"30
+[v _i `ui  1 a 2 4 ]
+"67
+} 6
+"18 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+{
+"19
+[v _sign1 `uc  1 a 1 0 ]
+[v _exp1 `uc  1 a 1 1 ]
+[v _cntr `uc  1 a 1 2 ]
+"20
+[v _f3 `f  1 a 3 3 ]
+"18
+[v _f1 `f  1 p 3 0 ]
+[v _f2 `f  1 p 3 3 ]
+"46
+} 6
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+{
+"17
+[v _f1 `f  1 a 3 0 ]
+"16
+[v _c `i  1 p 2 0 ]
+"28
+} 3
+"14 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\p1.c
+[v _A2D_Read `(ui  1 e 2 0 ]
+{
+"16
+[v _i `uc  1 a 1 0 ]
+"14
+[v _c `uc  1 p 1 0 ]
+"23
+} 1
+"127 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\lcd_portd.c
+[v _SCI_CRLF `(v  1 e 0 0 ]
+{
+"130
+} 0
+"106
+[v _SCI_Out `(v  1 e 0 0 ]
+{
+"107
+[v _i `uc  1 a 1 0 ]
+[v _A `[10]uc  1 a 10 1 ]
+"106
+[v _DATA `l  1 p 4 0 ]
+[v _D `uc  1 p 1 4 ]
+[v _N `uc  1 p 1 5 ]
+"123
+} 11
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+{
+"17
+[v _sign1 `uc  1 a 1 0 ]
+[v _exp1 `uc  1 a 1 1 ]
+"18
+[v _lval `ul  1 a 4 2 ]
+"16
+[v _f1 `f  1 p 3 0 ]
+"40
+} 6
+"62 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\lcd_portd.c
+[v _LCD_Write `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"69
+} 0
+"73
+[v _LCD_Init `(v  1 e 0 0 ]
+{
+"83
+} 0
+"54
+[v _LCD_Move `(v  1 e 0 0 ]
+{
+[v _Row `uc  1 p 1 0 ]
+[v _Col `uc  1 p 1 1 ]
+"59
+} 0
+"44
+[v _LCD_Inst `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"51
+} 0
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+{
+"6
+[v _sign `uc  1 a 1 0 ]
+[v _counter `uc  1 a 1 1 ]
+"5
+[v _dividend `l  1 p 4 0 ]
+[v _divisor `l  1 p 4 4 ]
+"30
+} 2
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+[v _sign `uc  1 a 1 1 ]
+"6
+[v _quotient `l  1 a 4 2 ]
+"5
+[v _dividend `l  1 p 4 0 ]
+[v _divisor `l  1 p 4 4 ]
+"37
+} 6
+"13 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\float.c
+[v ___ftunpack `(uc  1 e 1 0 ]
+{
+"14
+[v _sign `uc  1 a 1 0 ]
+"13
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `*.buc  1 p 2 2 ]
+"27
+} 1
+"16 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+{
+[v _f1 `f  1 p 3 0 ]
+"20
+} 0
+"33 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\float.c
+[v ___ftpack `(v  1 e 0 0 ]
+{
+[v _arg `*.bum  1 p 2 0 ]
+[v _exp `uc  1 p 1 2 ]
+"55
+} 0
+"16 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\h7\lcd_portd.c
+[v _Wait_ms `(v  1 e 0 0 ]
+{
+"17
+[v _i `ui  1 a 2 0 ]
+[v _j `ui  1 a 2 2 ]
+"16
+[v _X `ui  1 p 2 0 ]
+"21
+} 4
+"32
+[v _LCD_Strobe `(v  1 e 0 0 ]
+{
+"39
+} 0
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+{
+"26
+[v _x `uc  1 a 1 0 ]
+"28
+} 1

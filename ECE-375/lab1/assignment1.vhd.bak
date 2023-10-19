@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity assignment1 is
+	port(x,clk : in std_logic;
+			z : out std_logic);
+	end assignment1;
+	
+architecture behavorial of assignment1 is
+	signal state, ns : integer;
+		range 0:3:z=0;
+begin
+	process(state,x)

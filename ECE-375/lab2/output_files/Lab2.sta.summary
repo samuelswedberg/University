@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.219
+TNS   : -65.834
+
+Type  : Slow 1200mV 85C Model Setup 'reset'
+Slack : -2.430
+TNS   : -6.823
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reset'
+Slack : 0.814
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -0.619
+TNS   : -14.329
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reset'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.812
+TNS   : -56.408
+
+Type  : Slow 1200mV 0C Model Setup 'reset'
+Slack : -2.372
+TNS   : -6.799
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.619
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reset'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -0.483
+TNS   : -10.944
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reset'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.819
+TNS   : -19.487
+
+Type  : Fast 1200mV 0C Model Setup 'reset'
+Slack : -0.665
+TNS   : -1.755
+
+Type  : Fast 1200mV 0C Model Hold 'reset'
+Slack : 0.304
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.415
+TNS   : -10.598
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : -0.136
+TNS   : -2.489
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -35.183
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reset'
+Slack : -3.000
+TNS   : -3.489
+
+------------------------------------------------------------

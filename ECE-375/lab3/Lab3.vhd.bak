@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Lab3 is
+	port(reset, start, clk, done: in std_logic;
+			red, yellow, green: out std_logic);
+	end Lab3;
+	
+architecture behavorial of Lab3 is
+
+end behavorial;
+			
+				

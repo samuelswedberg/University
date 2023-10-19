@@ -1,0 +1,16 @@
+_Wait_ms: CODE, 7444 0 126
+_LCD_Inst: CODE, 7570 0 78
+_ReadKey: CODE, 7648 0 76
+_main: CODE, 4138 0 828
+___awdiv: CODE, 6862 0 304
+_LCD_Out: CODE, 6470 0 392
+_GetKey: CODE, 4966 0 660
+___aldiv: CODE, 5626 0 452
+_NeoPixel_Display: CODE, 7784 0 58
+_LCD_Move: CODE, 7312 0 132
+_LCD_Strobe: CODE, 7896 0 20
+_LCD_Pause: CODE, 7842 0 54
+___almod: CODE, 6078 0 392
+_LCD_Write: CODE, 7724 0 60
+_LCD_Init: CODE, 7166 0 146
+Total: 3778
