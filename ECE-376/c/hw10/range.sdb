@@ -1,0 +1,224 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"18 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\range.c
+[v F1459 `(v  1 t 0 ]
+"16 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\lcd_portd.c
+[v _Wait_ms `(v  1 e 0 0 ]
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+"32
+[v _LCD_Strobe `(v  1 e 0 0 ]
+"44
+[v _LCD_Inst `(v  1 e 0 0 ]
+"54
+[v _LCD_Move `(v  1 e 0 0 ]
+"62
+[v _LCD_Write `(v  1 e 0 0 ]
+"73
+[v _LCD_Init `(v  1 e 0 0 ]
+"87
+[v _LCD_Out `(v  1 e 0 0 ]
+"18 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\range.c
+[v _IntServe `I(v  1 e 0 0 ]
+"61
+[v _main `(v  1 e 0 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+"4 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\range.c
+[v _MSG0 `DC[21]uc  1 e 21 0 ]
+"5
+[v _MSG1 `DC[21]uc  1 e 21 0 ]
+"7
+[v _PWM `ui  1 e 2 @2 ]
+"8
+[v _TIME `ui  1 e 2 @0 ]
+"65 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _TMR0 `VNui  1 e 2 @4054 ]
+"66
+[v _T0CON `Nuc  1 e 1 @4053 ]
+"75
+[v _TMR1 `VNui  1 e 2 @4046 ]
+"76
+[v _T1CON `Nuc  1 e 1 @4045 ]
+"90
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"117
+[v _TXREG `VNuc  1 e 1 @4013 ]
+"133
+[v _TRISE `VNuc  1 e 1 @3990 ]
+"134
+[v _TRISD `VNuc  1 e 1 @3989 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"137
+[v _TRISB `VNuc  1 e 1 @3987 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"148
+[v _PORTD `VNuc  1 e 1 @3971 ]
+"162
+[v _TMR0IF `VNb  1 e 0 @32658 ]
+"165
+[v _TMR0IE `Nb  1 e 0 @32661 ]
+"166
+[v _PEIE `Nb  1 e 0 @32662 ]
+"167
+[v _GIE `Nb  1 e 0 @32663 ]
+"174
+[v _TMR0IP `Nb  1 e 0 @32650 ]
+"201
+[v _T0CS `Nb  1 e 0 @32429 ]
+"203
+[v _TMR0ON `Nb  1 e 0 @32431 ]
+"242
+[v _TMR1ON `Nb  1 e 0 @32360 ]
+"243
+[v _TMR1CS `Nb  1 e 0 @32361 ]
+"402
+[v _TRMT `VNb  1 e 0 @32097 ]
+"463
+[v _TMR1IP `Nb  1 e 0 @31992 ]
+"475
+[v _TMR1IF `VNb  1 e 0 @31984 ]
+"487
+[v _TMR1IE `Nb  1 e 0 @31976 ]
+"616
+[v _RD0 `VNb  1 e 0 @31768 ]
+"617
+[v _RD1 `VNb  1 e 0 @31769 ]
+"618
+[v _RD2 `VNb  1 e 0 @31770 ]
+"619
+[v _RD3 `VNb  1 e 0 @31771 ]
+"620
+[v _RD4 `VNb  1 e 0 @31772 ]
+"621
+[v _RD5 `VNb  1 e 0 @31773 ]
+"622
+[v _RD6 `VNb  1 e 0 @31774 ]
+"637
+[v _RB0 `VNb  1 e 0 @31752 ]
+"638
+[v _RB1 `VNb  1 e 0 @31753 ]
+"639
+[v _RB2 `VNb  1 e 0 @31754 ]
+"640
+[v _RB3 `VNb  1 e 0 @31755 ]
+"641
+[v _RB4 `VNb  1 e 0 @31756 ]
+"642
+[v _RB5 `VNb  1 e 0 @31757 ]
+"643
+[v _RB6 `VNb  1 e 0 @31758 ]
+"644
+[v _RB7 `VNb  1 e 0 @31759 ]
+"647
+[v _RA0 `VNb  1 e 0 @31744 ]
+"648
+[v _RA1 `VNb  1 e 0 @31745 ]
+"649
+[v _RA2 `VNb  1 e 0 @31746 ]
+"650
+[v _RA3 `VNb  1 e 0 @31747 ]
+"651
+[v _RA4 `VNb  1 e 0 @31748 ]
+"652
+[v _RA5 `VNb  1 e 0 @31749 ]
+"61 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\range.c
+[v _main `(v  1 e 0 0 ]
+{
+"62
+[v _i `uc  1 a 1 0 ]
+"114
+} 1
+"54 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\lcd_portd.c
+[v _LCD_Move `(v  1 e 0 0 ]
+{
+[v _Row `uc  1 p 1 0 ]
+[v _Col `uc  1 p 1 1 ]
+"59
+} 0
+"87
+[v _LCD_Out `(v  1 e 0 0 ]
+{
+"88
+[v _i `uc  1 a 1 0 ]
+[v _A `[10]uc  1 a 10 1 ]
+"87
+[v _DATA `l  1 p 4 0 ]
+[v _D `uc  1 p 1 4 ]
+[v _N `uc  1 p 1 5 ]
+"103
+} 11
+"73
+[v _LCD_Init `(v  1 e 0 0 ]
+{
+"83
+} 0
+"62
+[v _LCD_Write `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"69
+} 0
+"44
+[v _LCD_Inst `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"51
+} 0
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+[v _sign `uc  1 a 1 1 ]
+"6
+[v _quotient `l  1 a 4 2 ]
+"5
+[v _dividend `l  1 p 4 0 ]
+[v _divisor `l  1 p 4 4 ]
+"37
+} 6
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\almod.c
+[v ___almod `(l  1 e 4 0 ]
+{
+"6
+[v _sign `uc  1 a 1 0 ]
+[v _counter `uc  1 a 1 1 ]
+"5
+[v _dividend `l  1 p 4 0 ]
+[v _divisor `l  1 p 4 4 ]
+"30
+} 2
+"32 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\lcd_portd.c
+[v _LCD_Strobe `(v  1 e 0 0 ]
+{
+"39
+} 0
+"16
+[v _Wait_ms `(v  1 e 0 0 ]
+{
+"17
+[v _i `ui  1 a 2 0 ]
+[v _j `ui  1 a 2 2 ]
+"16
+[v _X `ui  1 p 2 0 ]
+"21
+} 4
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+{
+"26
+[v _x `uc  1 a 1 0 ]
+"28
+} 1
+"18 A:\OneDrive\School\College\Junior\Fa23\Emb Sys\c\hw10\range.c
+[v _IntServe `I(v  1 e 0 0 ]
+{
+"56
+} 0

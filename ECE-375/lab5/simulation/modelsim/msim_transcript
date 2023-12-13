@@ -1,0 +1,61 @@
+# Reading pref.tcl
+# do lab5_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Digi 2/lab5/lab5.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:50:02 on Nov 27,2023
+# vcom -reportprogress 300 -93 -work work C:/Users/Reds2/OneDrive/School/College/Junior/Fa23/Digi 2/lab5/lab5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity lab5
+# -- Compiling architecture behav of lab5
+# End time: 12:50:02 on Nov 27,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.lab5
+# vsim work.lab5 
+# Start time: 12:50:13 on Nov 27,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.lab5(behav)
+wave create -driver freeze -pattern constant -value 10000 -range 5 0 -starttime 0ps -endtime 1000ps sim:/lab5/m
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# Value length (5) does not equal array index length (6).
+# 
+#Invalid value to -value switch: 10000
+# Usage: wave create -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+wave create -driver freeze -pattern constant -value 100001 -range 5 0 -starttime 0ps -endtime 1000ps sim:/lab5/m
+wave create -driver freeze -pattern constant -value 000011 -range 5 0 -starttime 0ps -endtime 1000ps sim:/lab5/r
+add wave -position insertpoint  \
+sim:/lab5/result
+run
+run
+run
+run
+run
+run
+run
+wave create -driver freeze -pattern constant -value 000101 -range 5 0 -starttime 0ps -endtime 1000ps sim:/lab5/m
+wave create -driver freeze -pattern constant -value 000100 -range 5 0 -starttime 0ps -endtime 1000ps sim:/lab5/r
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 12:54:22 on Nov 27,2023, Elapsed time: 0:04:09
+# Errors: 0, Warnings: 0

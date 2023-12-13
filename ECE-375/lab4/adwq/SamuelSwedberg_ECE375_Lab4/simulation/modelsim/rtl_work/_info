@@ -1,0 +1,272 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Reds2/Downloads/lab4/simulation/modelsim
+Pcomponents
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+w1699298742
+R0
+8C:/Users/Reds2/Downloads/lab4/components.vhd
+FC:/Users/Reds2/Downloads/lab4/components.vhd
+l0
+L5 1
+Vd>3=gHfB0:01M65KNeo]X0
+!s100 bg1?WkIZO`MXoio;TA`@]2
+Z5 OV;C;2020.1;71
+31
+Z6 !s110 1699935087
+!i10b 1
+Z7 !s108 1699935087.000000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/components.vhd|
+!s107 C:/Users/Reds2/Downloads/lab4/components.vhd|
+!i113 1
+Z8 o-93 -work work
+Z9 tExplicit 1 CvgOpt 0
+Efsm
+Z10 w1699297574
+R1
+R2
+Z11 DPx4 work 10 components 0 22 d>3=gHfB0:01M65KNeo]X0
+R3
+R4
+!i122 4
+R0
+Z12 8C:/Users/Reds2/Downloads/lab4/FSM.vhd
+Z13 FC:/Users/Reds2/Downloads/lab4/FSM.vhd
+l0
+L5 1
+VRQN6WWkzd73om1SjD^>F>0
+!s100 I<HAj>^]KkDAhG5>1LUQl1
+R5
+31
+Z14 !s110 1699935088
+!i10b 1
+Z15 !s108 1699935088.000000
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/FSM.vhd|
+Z17 !s107 C:/Users/Reds2/Downloads/lab4/FSM.vhd|
+!i113 1
+R8
+R9
+Abehavorial
+R1
+R2
+R11
+R3
+R4
+DEx4 work 3 fsm 0 22 RQN6WWkzd73om1SjD^>F>0
+!i122 4
+l15
+L10 48
+VS?kX_J?<1V@W]zhcWmW1R1
+!s100 ]]iG6o0VjgQ?9249GnMP_1
+R5
+31
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R8
+R9
+Efulladd
+Z18 w1698688616
+R1
+R2
+R11
+R3
+R4
+!i122 2
+R0
+Z19 8C:/Users/Reds2/Downloads/lab4/FullAdd.vhd
+Z20 FC:/Users/Reds2/Downloads/lab4/FullAdd.vhd
+l0
+L5 1
+VWlWe[a7_IS>_cMa0RU>5c1
+!s100 i_2mJG[C7g;TnDLzOjTdY2
+R5
+31
+R6
+!i10b 1
+R7
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/FullAdd.vhd|
+Z22 !s107 C:/Users/Reds2/Downloads/lab4/FullAdd.vhd|
+!i113 1
+R8
+R9
+Alogicfunc
+R1
+R2
+R11
+R3
+R4
+DEx4 work 7 fulladd 0 22 WlWe[a7_IS>_cMa0RU>5c1
+!i122 2
+l11
+L10 5
+Vzn_k_9@[:lci4lBN<4B;o0
+!s100 JH2d_0QGm=4fnN:81H9_a2
+R5
+31
+R6
+!i10b 1
+R7
+R21
+R22
+!i113 1
+R8
+R9
+Elab4
+Z23 w1699934964
+R11
+Z24 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+R3
+R4
+!i122 3
+R0
+Z25 8C:/Users/Reds2/Downloads/lab4/Lab4.vhd
+Z26 FC:/Users/Reds2/Downloads/lab4/Lab4.vhd
+l0
+L7 1
+V4P`EU3cKNPmbeSomZCSX<2
+!s100 QUYT6Cf50i9z@:3U<B0>81
+R5
+31
+R14
+!i10b 1
+R15
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/Lab4.vhd|
+Z28 !s107 C:/Users/Reds2/Downloads/lab4/Lab4.vhd|
+!i113 1
+R8
+R9
+Abehavorial
+R11
+R24
+R1
+R2
+R3
+R4
+DEx4 work 4 lab4 0 22 4P`EU3cKNPmbeSomZCSX<2
+!i122 3
+l20
+L15 34
+VH38ORkUXZ1z9OUFjl>]T73
+!s100 1VKzPAPkzd09<kQCO]^9a2
+R5
+31
+R14
+!i10b 1
+R15
+R27
+R28
+!i113 1
+R8
+R9
+Emux2to1
+Z29 w1699297286
+R1
+R2
+R11
+R3
+R4
+!i122 5
+R0
+Z30 8C:/Users/Reds2/Downloads/lab4/mux2to1.vhd
+Z31 FC:/Users/Reds2/Downloads/lab4/mux2to1.vhd
+l0
+L6 1
+VF`T8GzA]zT4nVz`JAiN6]2
+!s100 Wd^0FV7Nk>TJPVL0_]:ne2
+R5
+31
+R14
+!i10b 1
+R15
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/mux2to1.vhd|
+!s107 C:/Users/Reds2/Downloads/lab4/mux2to1.vhd|
+!i113 1
+R8
+R9
+Alogicfunc
+R1
+R2
+R11
+R3
+R4
+DEx4 work 7 mux2to1 0 22 F`T8GzA]zT4nVz`JAiN6]2
+!i122 5
+l14
+L13 13
+VMeMHO8GVAgl0z7eSVG9R52
+!s100 _;HG5AFL=K@J26CAkiE7Q3
+R5
+31
+R14
+!i10b 1
+R15
+R32
+Z33 !s107 C:/Users/Reds2/Downloads/lab4/mux2to1.vhd|
+!i113 1
+R8
+R9
+Eripple_carry
+Z34 w1698690596
+R1
+R2
+R11
+R3
+R4
+!i122 1
+R0
+Z35 8C:/Users/Reds2/Downloads/lab4/ripple_carry.vhd
+Z36 FC:/Users/Reds2/Downloads/lab4/ripple_carry.vhd
+l0
+L7 1
+VRCCjJJ`K^2j;4Tg:R3P5<2
+!s100 NKQG=Ia4Xj[HYY=6gLg2O2
+R5
+31
+R6
+!i10b 1
+R7
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Reds2/Downloads/lab4/ripple_carry.vhd|
+Z38 !s107 C:/Users/Reds2/Downloads/lab4/ripple_carry.vhd|
+!i113 1
+R8
+R9
+Astruc_behaviour
+R1
+R2
+R11
+R3
+R4
+DEx4 work 12 ripple_carry 0 22 RCCjJJ`K^2j;4Tg:R3P5<2
+!i122 1
+l18
+L14 25
+V20oRKS^Czz5H?7H?jaV=j3
+!s100 co`dYj3l_[eWAO;aBlK6k0
+R5
+31
+R6
+!i10b 1
+R7
+R37
+R38
+!i113 1
+R8
+R9

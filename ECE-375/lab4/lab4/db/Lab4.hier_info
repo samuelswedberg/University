@@ -1,0 +1,251 @@
+|Lab4
+start => FSM:fsm1.start
+clk => FSM:fsm1.clk
+productFPGA[0] <= FSM:fsm1.prodOut[0]
+productFPGA[1] <= FSM:fsm1.prodOut[1]
+productFPGA[2] <= FSM:fsm1.prodOut[2]
+productFPGA[3] <= FSM:fsm1.prodOut[3]
+productFPGA[4] <= FSM:fsm1.prodOut[4]
+productFPGA[5] <= FSM:fsm1.prodOut[5]
+productFPGA[6] <= FSM:fsm1.prodOut[6]
+productFPGA[7] <= FSM:fsm1.prodOut[7]
+productFPGA[8] <= FSM:fsm1.prodOut[8]
+productFPGA[9] <= FSM:fsm1.prodOut[9]
+productFPGA[10] <= FSM:fsm1.prodOut[10]
+productFPGA[11] <= FSM:fsm1.prodOut[11]
+productFPGA[12] <= FSM:fsm1.prodOut[12]
+productFPGA[13] <= FSM:fsm1.prodOut[13]
+productFPGA[14] <= FSM:fsm1.prodOut[14]
+productFPGA[15] <= FSM:fsm1.prodOut[15]
+
+
+|Lab4|FSM:fsm1
+clk => state~1.DATAIN
+start => Selector29.IN3
+start => prodIntermed[15].IN0
+start => Selector18.IN0
+start => Selector20.IN0
+lsb => ~NO_FANOUT~
+mp[0] => prodIntermed[8].DATAB
+mp[1] => prodIntermed[9].DATAB
+mp[2] => prodIntermed[10].DATAB
+mp[3] => prodIntermed[11].DATAB
+mp[4] => prodIntermed[12].DATAB
+mp[5] => prodIntermed[13].DATAB
+mp[6] => prodIntermed[14].DATAB
+mp[7] => prodIntermed[15].DATAB
+mc[0] => ~NO_FANOUT~
+mc[1] => ~NO_FANOUT~
+mc[2] => ~NO_FANOUT~
+mc[3] => ~NO_FANOUT~
+mc[4] => ~NO_FANOUT~
+mc[5] => ~NO_FANOUT~
+mc[6] => ~NO_FANOUT~
+mc[7] => ~NO_FANOUT~
+sel <= comb.DB_MAX_OUTPUT_PORT_TYPE
+prodOut[0] <= prodIntermed[0].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[1] <= prodIntermed[1].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[2] <= prodIntermed[2].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[3] <= prodIntermed[3].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[4] <= prodIntermed[4].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[5] <= prodIntermed[5].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[6] <= prodIntermed[6].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[7] <= prodIntermed[7].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[8] <= prodIntermed[8].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[9] <= prodIntermed[9].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[10] <= prodIntermed[10].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[11] <= prodIntermed[11].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[12] <= prodIntermed[12].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[13] <= prodIntermed[13].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[14] <= prodIntermed[14].DB_MAX_OUTPUT_PORT_TYPE
+prodOut[15] <= prodIntermed[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|mux2to1:mux
+sel => process_0.IN0
+sel => process_0.IN0
+en => process_0.IN1
+en => process_0.IN1
+a[0] => f.DATAA
+a[1] => f.DATAA
+a[2] => f.DATAA
+a[3] => f.DATAA
+a[4] => f.DATAA
+a[5] => f.DATAA
+a[6] => f.DATAA
+a[7] => f.DATAA
+b[0] => f.DATAB
+b[0] => f.DATAB
+b[1] => f.DATAB
+b[1] => f.DATAB
+b[2] => f.DATAB
+b[2] => f.DATAB
+b[3] => f.DATAB
+b[3] => f.DATAB
+b[4] => f.DATAB
+b[4] => f.DATAB
+b[5] => f.DATAB
+b[5] => f.DATAB
+b[6] => f.DATAB
+b[6] => f.DATAB
+b[7] => f.DATAB
+b[7] => f.DATAB
+f[0] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[4] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[5] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[6] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[7] <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder
+Cin => z[0].IN0
+Cin => z[1].IN0
+Cin => z[2].IN0
+Cin => z[3].IN0
+Cin => z[4].IN0
+Cin => z[5].IN0
+Cin => z[6].IN0
+Cin => z[7].IN0
+Cin => fulladd:stage1.Cin
+x[0] => fulladd:stage1.x
+x[1] => fulladd:stage2.x
+x[2] => fulladd:stage3.x
+x[3] => fulladd:stage4.x
+x[4] => fulladd:stage5.x
+x[5] => fulladd:stage6.x
+x[6] => fulladd:stage7.x
+x[7] => fulladd:stage8.x
+y[0] => z[0].IN1
+y[1] => z[1].IN1
+y[2] => z[2].IN1
+y[3] => z[3].IN1
+y[4] => z[4].IN1
+y[5] => z[5].IN1
+y[6] => z[6].IN1
+y[7] => z[7].IN1
+s[0] <= fulladd:stage1.s
+s[1] <= fulladd:stage2.s
+s[2] <= fulladd:stage3.s
+s[3] <= fulladd:stage4.s
+s[4] <= fulladd:stage5.s
+s[5] <= fulladd:stage6.s
+s[6] <= fulladd:stage7.s
+s[7] <= fulladd:stage8.s
+Cout <= fulladd:stage8.Cout
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage1
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage2
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage3
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage4
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage5
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage6
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage7
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4|ripple_carry:adder|FullAdd:stage8
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

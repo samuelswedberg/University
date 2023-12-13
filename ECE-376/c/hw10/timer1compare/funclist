@@ -1,0 +1,21 @@
+_Wait_ms: CODE, 9246 0 126
+_LCD_Inst: CODE, 9490 0 78
+_IntServe: CODE, 8558 0 240
+_main: CODE, 4140 0 876
+___ftdiv: CODE, 6734 0 398
+___ftmul: CODE, 6294 0 440
+_LCD_Out: CODE, 7524 0 392
+___ftpack: CODE, 8240 0 318
+___aldiv: CODE, 5842 0 452
+_LCD_Move: CODE, 9114 0 132
+_LCD_Strobe: CODE, 9750 0 20
+___fttol: CODE, 7916 0 324
+_LCD_Pause: CODE, 9696 0 54
+___almod: CODE, 7132 0 392
+___ftunpack: CODE, 8798 0 170
+_LCD_Write: CODE, 9636 0 60
+___ftsub: CODE, 9568 0 68
+_LCD_Init: CODE, 8968 0 146
+___ftadd: CODE, 5016 0 826
+___lwtoft: CODE, 9372 0 118
+Total: 5630

@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.components.all;
+
+entity forwarding_unit is
+    port(ID_EX.ReadPort1, ID_EX.ReadPort2, EX_Mem_writeAddr, ID_EX_RegWrite, Ex_Mem_RegWrite, Mem_WB_writeAddr : in std_logic;
+            forwardA, forwardB : out std_logic_vector(1 downto 0));
+end forwarding_unit;
+
+architecture behaviour of forwarding_unit is
+
+
+end behaviour;

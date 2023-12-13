@@ -1,0 +1,1297 @@
+Timing Analyzer report for Lab4
+Mon Nov 13 21:58:48 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'start'
+ 13. Slow 1200mV 85C Model Setup: 'FSM:fsm1|prodIntermed[0]'
+ 14. Slow 1200mV 85C Model Setup: 'clk'
+ 15. Slow 1200mV 85C Model Hold: 'FSM:fsm1|prodIntermed[0]'
+ 16. Slow 1200mV 85C Model Hold: 'start'
+ 17. Slow 1200mV 85C Model Hold: 'clk'
+ 18. Slow 1200mV 85C Model Metastability Summary
+ 19. Slow 1200mV 0C Model Fmax Summary
+ 20. Slow 1200mV 0C Model Setup Summary
+ 21. Slow 1200mV 0C Model Hold Summary
+ 22. Slow 1200mV 0C Model Recovery Summary
+ 23. Slow 1200mV 0C Model Removal Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Slow 1200mV 0C Model Setup: 'start'
+ 26. Slow 1200mV 0C Model Setup: 'FSM:fsm1|prodIntermed[0]'
+ 27. Slow 1200mV 0C Model Setup: 'clk'
+ 28. Slow 1200mV 0C Model Hold: 'FSM:fsm1|prodIntermed[0]'
+ 29. Slow 1200mV 0C Model Hold: 'start'
+ 30. Slow 1200mV 0C Model Hold: 'clk'
+ 31. Slow 1200mV 0C Model Metastability Summary
+ 32. Fast 1200mV 0C Model Setup Summary
+ 33. Fast 1200mV 0C Model Hold Summary
+ 34. Fast 1200mV 0C Model Recovery Summary
+ 35. Fast 1200mV 0C Model Removal Summary
+ 36. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 37. Fast 1200mV 0C Model Setup: 'start'
+ 38. Fast 1200mV 0C Model Setup: 'FSM:fsm1|prodIntermed[0]'
+ 39. Fast 1200mV 0C Model Setup: 'clk'
+ 40. Fast 1200mV 0C Model Hold: 'FSM:fsm1|prodIntermed[0]'
+ 41. Fast 1200mV 0C Model Hold: 'start'
+ 42. Fast 1200mV 0C Model Hold: 'clk'
+ 43. Fast 1200mV 0C Model Metastability Summary
+ 44. Multicorner Timing Analysis Summary
+ 45. Board Trace Model Assignments
+ 46. Input Transition Times
+ 47. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 48. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 49. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 50. Setup Transfers
+ 51. Hold Transfers
+ 52. Report TCCS
+ 53. Report RSKM
+ 54. Unconstrained Paths Summary
+ 55. Clock Status Summary
+ 56. Unconstrained Output Ports
+ 57. Unconstrained Output Ports
+ 58. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; Lab4                                                ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.06        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processors 3-16        ;   0.4%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                             ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; Clock Name               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                      ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+; clk                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                      ;
+; FSM:fsm1|prodIntermed[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FSM:fsm1|prodIntermed[0] } ;
+; start                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { start }                    ;
++--------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------+
+
+
++----------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                             ;
++------------+-----------------+--------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
++------------+-----------------+--------------------------+------+
+; 223.81 MHz ; 223.81 MHz      ; FSM:fsm1|prodIntermed[0] ;      ;
++------------+-----------------+--------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary               ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; start                    ; -7.217 ; -47.798       ;
+; FSM:fsm1|prodIntermed[0] ; -3.728 ; -66.255       ;
+; clk                      ; -2.300 ; -4.599        ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary               ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; FSM:fsm1|prodIntermed[0] ; 0.080 ; 0.000         ;
+; start                    ; 1.321 ; 0.000         ;
+; clk                      ; 2.758 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; clk                      ; -3.000 ; -8.140        ;
+; start                    ; -3.000 ; -3.000        ;
+; FSM:fsm1|prodIntermed[0] ; 0.394  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'start'                                                                                                             ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; -7.217 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.405      ; 8.972      ;
+; -7.202 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.405      ; 8.957      ;
+; -6.908 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.405      ; 8.663      ;
+; -4.257 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 4.849      ; 8.456      ;
+; -3.569 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 4.849      ; 8.268      ;
+; -3.155 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 4.850      ; 7.050      ;
+; -3.081 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 2.406      ; 4.532      ;
+; -2.926 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 2.406      ; 4.377      ;
+; -2.542 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; 0.500        ; 2.259      ; 4.402      ;
+; -2.529 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; 0.500        ; 2.585      ; 4.683      ;
+; -2.511 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; 0.500        ; 2.586      ; 4.684      ;
+; -2.496 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; 0.500        ; 2.587      ; 4.673      ;
+; -2.485 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; 0.500        ; 2.607      ; 4.681      ;
+; -2.477 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 4.850      ; 6.872      ;
+; -2.476 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; 0.500        ; 2.259      ; 4.315      ;
+; -2.472 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; 0.500        ; 2.261      ; 4.316      ;
+; -2.467 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; 0.500        ; 2.258      ; 4.313      ;
+; -2.379 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; 0.500        ; 2.258      ; 4.225      ;
+; -2.326 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; 0.500        ; 2.258      ; 4.199      ;
+; -2.261 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.325      ; 3.173      ;
+; -2.250 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.299      ; 3.118      ;
+; -2.246 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; 0.500        ; 2.604      ; 4.612      ;
+; -2.240 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; 0.500        ; 2.604      ; 4.605      ;
+; -2.204 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; 0.500        ; 2.607      ; 4.572      ;
+; -2.182 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; 0.500        ; 2.606      ; 4.537      ;
+; -2.159 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.450      ; 3.199      ;
+; -2.121 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.495      ; 3.205      ;
+; -2.094 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.119      ; 2.796      ;
+; -2.067 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.115      ; 2.770      ;
+; -2.015 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.166      ; 2.761      ;
+; -1.982 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; 0.500        ; 2.258      ; 3.828      ;
+; -1.980 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.115      ; 2.683      ;
+; -1.971 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.159      ; 2.731      ;
+; -1.912 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.166      ; 2.666      ;
+; -1.889 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.120      ; 2.758      ;
+; -1.854 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.653      ; 3.268      ;
+; -1.853 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; 0.500        ; 2.261      ; 3.863      ;
+; -1.754 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.338      ; 2.707      ;
+; -1.695 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.655      ; 3.112      ;
+; -1.666 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.656      ; 3.071      ;
+; -1.650 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.655      ; 3.066      ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'FSM:fsm1|prodIntermed[0]'                                                                                                       ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -3.728 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.869      ; 4.684      ;
+; -3.713 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.870      ; 4.673      ;
+; -3.702 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.890      ; 4.681      ;
+; -3.468 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.392     ; 3.173      ;
+; -3.463 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.887      ; 4.612      ;
+; -3.457 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.887      ; 4.605      ;
+; -3.421 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.890      ; 4.572      ;
+; -3.399 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.889      ; 4.537      ;
+; -3.374 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.705     ; 0.549      ;
+; -3.366 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.267     ; 3.199      ;
+; -3.328 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.222     ; 3.205      ;
+; -3.061 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.064     ; 3.268      ;
+; -2.944 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.660     ; 0.549      ;
+; -2.943 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.981     ; 0.548      ;
+; -2.941 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.980     ; 0.548      ;
+; -2.935 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.975     ; 0.548      ;
+; -2.932 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.977     ; 0.548      ;
+; -2.912 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.798     ; 0.576      ;
+; -2.902 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.062     ; 3.112      ;
+; -2.873 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.061     ; 3.071      ;
+; -2.857 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.062     ; 3.066      ;
+; -2.564 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.464     ; 0.562      ;
+; -2.553 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.433     ; 0.576      ;
+; -2.406 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.480     ; 0.390      ;
+; -2.399 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.474     ; 0.389      ;
+; -2.392 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.480     ; 0.382      ;
+; -2.368 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.434     ; 0.390      ;
+; -2.362 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.434     ; 0.391      ;
+; -2.358 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.432     ; 0.391      ;
+; -1.130 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.029      ; 0.549      ;
+; -0.700 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.074      ; 0.549      ;
+; -0.699 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.247     ; 0.548      ;
+; -0.697 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.246     ; 0.548      ;
+; -0.691 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.241     ; 0.548      ;
+; -0.688 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.243     ; 0.548      ;
+; -0.668 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.064     ; 0.576      ;
+; -0.500 ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.059     ; 0.556      ;
+; -0.489 ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.055     ; 0.528      ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                    ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -2.300 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; 0.500        ; -2.684     ; 0.104      ;
+; -2.299 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; 0.500        ; -2.683     ; 0.104      ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'FSM:fsm1|prodIntermed[0]'                                                                                                       ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.080 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.417      ; 0.497      ;
+; 0.107 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.391      ; 0.498      ;
+; 0.270 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.248      ; 0.518      ;
+; 0.417 ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.059      ; 0.476      ;
+; 0.432 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.065      ; 0.497      ;
+; 0.433 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.064      ; 0.497      ;
+; 0.437 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.059      ; 0.496      ;
+; 0.437 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.060      ; 0.497      ;
+; 0.447 ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.055      ; 0.502      ;
+; 1.958 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.115     ; 0.373      ;
+; 1.959 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.117     ; 0.372      ;
+; 1.961 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.118     ; 0.373      ;
+; 1.995 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.166     ; 0.359      ;
+; 2.001 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.159     ; 0.372      ;
+; 2.007 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.165     ; 0.372      ;
+; 2.115 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.117     ; 0.528      ;
+; 2.129 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.149     ; 0.510      ;
+; 2.267 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.300     ; 0.497      ;
+; 2.294 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.326     ; 0.498      ;
+; 2.457 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.469     ; 0.518      ;
+; 2.585 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.244      ; 2.829      ;
+; 2.588 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.244      ; 2.832      ;
+; 2.616 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.244      ; 2.860      ;
+; 2.619 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.652     ; 0.497      ;
+; 2.620 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.653     ; 0.497      ;
+; 2.624 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.658     ; 0.496      ;
+; 2.624 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.657     ; 0.497      ;
+; 2.776 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.243      ; 3.019      ;
+; 2.862 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.091      ; 2.953      ;
+; 2.981 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.046      ; 3.027      ;
+; 3.049 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; -0.031     ; 3.018      ;
+; 3.058 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.157      ; 4.245      ;
+; 3.095 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.159      ; 4.284      ;
+; 3.125 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.156      ; 4.311      ;
+; 3.128 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.156      ; 4.314      ;
+; 3.188 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.159      ; 4.377      ;
+; 3.261 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.137      ; 4.428      ;
+; 3.298 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 1.139      ; 4.467      ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'start'                                                                                                             ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; 1.321 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.978      ; 2.829      ;
+; 1.324 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.978      ; 2.832      ;
+; 1.339 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.645      ; 2.514      ;
+; 1.352 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.978      ; 2.860      ;
+; 1.452 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.481      ; 2.463      ;
+; 1.476 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.432      ; 2.438      ;
+; 1.489 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; -0.500       ; 2.530      ; 3.549      ;
+; 1.512 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.977      ; 3.019      ;
+; 1.539 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 5.028      ; 6.597      ;
+; 1.549 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.481      ; 2.560      ;
+; 1.557 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.473      ; 2.560      ;
+; 1.562 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; -0.500       ; 2.532      ; 3.624      ;
+; 1.582 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.436      ; 2.548      ;
+; 1.598 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.825      ; 2.953      ;
+; 1.624 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.432      ; 2.586      ;
+; 1.653 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.435      ; 2.618      ;
+; 1.717 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.780      ; 3.027      ;
+; 1.731 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.659      ; 2.920      ;
+; 1.785 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.703      ; 3.018      ;
+; 1.824 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; -0.500       ; 2.891      ; 4.245      ;
+; 1.861 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; -0.500       ; 2.893      ; 4.284      ;
+; 1.879 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; -0.500       ; 2.529      ; 3.938      ;
+; 1.891 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; -0.500       ; 2.890      ; 4.311      ;
+; 1.894 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; -0.500       ; 2.890      ; 4.314      ;
+; 1.905 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; -0.500       ; 2.530      ; 3.965      ;
+; 1.954 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; -0.500       ; 2.893      ; 4.377      ;
+; 1.957 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 2.684      ; 4.171      ;
+; 1.994 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; -0.500       ; 2.531      ; 4.055      ;
+; 2.017 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; -0.500       ; 2.530      ; 4.077      ;
+; 2.018 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; -0.500       ; 2.532      ; 4.080      ;
+; 2.019 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; -0.500       ; 2.870      ; 4.419      ;
+; 2.027 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; -0.500       ; 2.871      ; 4.428      ;
+; 2.038 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; -0.500       ; 2.530      ; 4.098      ;
+; 2.064 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; -0.500       ; 2.873      ; 4.467      ;
+; 2.098 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 2.684      ; 4.312      ;
+; 2.211 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 5.028      ; 6.769      ;
+; 2.880 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 5.027      ; 7.937      ;
+; 3.559 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 5.027      ; 8.116      ;
+; 5.856 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.683      ; 8.069      ;
+; 6.036 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.683      ; 8.249      ;
+; 6.131 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.683      ; 8.344      ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                    ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 2.758 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; -0.500       ; -2.405     ; 0.069      ;
+; 2.759 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; -0.500       ; -2.406     ; 0.069      ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                              ;
++------------+-----------------+--------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name               ; Note ;
++------------+-----------------+--------------------------+------+
+; 242.54 MHz ; 242.54 MHz      ; FSM:fsm1|prodIntermed[0] ;      ;
++------------+-----------------+--------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; start                    ; -6.586 ; -46.542       ;
+; FSM:fsm1|prodIntermed[0] ; -3.531 ; -60.545       ;
+; clk                      ; -1.913 ; -3.825        ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; FSM:fsm1|prodIntermed[0] ; 0.095 ; 0.000         ;
+; start                    ; 1.195 ; 0.000         ;
+; clk                      ; 2.425 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary  ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; clk                      ; -3.000 ; -8.140        ;
+; start                    ; -3.000 ; -3.000        ;
+; FSM:fsm1|prodIntermed[0] ; 0.363  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'start'                                                                                                              ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; -6.586 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.064      ; 8.102      ;
+; -6.571 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.064      ; 8.087      ;
+; -6.308 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 2.064      ; 7.824      ;
+; -3.838 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 4.353      ; 7.643      ;
+; -3.393 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 4.353      ; 7.698      ;
+; -3.092 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 4.353      ; 6.593      ;
+; -3.001 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 2.064      ; 4.213      ;
+; -2.822 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 2.064      ; 4.034      ;
+; -2.510 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; 0.500        ; 1.929      ; 4.122      ;
+; -2.475 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; 0.500        ; 2.225      ; 4.371      ;
+; -2.455 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; 0.500        ; 2.244      ; 4.371      ;
+; -2.453 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; 0.500        ; 2.224      ; 4.332      ;
+; -2.451 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; 0.500        ; 2.227      ; 4.351      ;
+; -2.440 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; 0.500        ; 1.930      ; 4.035      ;
+; -2.416 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; 0.500        ; 1.928      ; 4.015      ;
+; -2.413 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; 0.500        ; 1.931      ; 4.012      ;
+; -2.337 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; 0.500        ; 1.928      ; 3.936      ;
+; -2.306 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; 0.500        ; 1.928      ; 3.919      ;
+; -2.247 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; 0.500        ; 2.241      ; 4.305      ;
+; -2.245 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; 0.500        ; 2.241      ; 4.305      ;
+; -2.214 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; 0.500        ; 2.243      ; 4.275      ;
+; -2.190 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; 0.500        ; 2.242      ; 4.239      ;
+; -2.178 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 4.353      ; 6.179      ;
+; -2.077 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.214      ; 2.962      ;
+; -2.062 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.193      ; 2.910      ;
+; -1.994 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.326      ; 2.993      ;
+; -1.950 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.364      ; 2.986      ;
+; -1.921 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.025      ; 2.614      ;
+; -1.906 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; 0.500        ; 1.928      ; 3.505      ;
+; -1.902 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.021      ; 2.594      ;
+; -1.854 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.067      ; 2.586      ;
+; -1.827 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.059      ; 2.569      ;
+; -1.812 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.021      ; 2.504      ;
+; -1.806 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; 0.500        ; 1.931      ; 3.544      ;
+; -1.748 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.026      ; 2.581      ;
+; -1.746 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.066      ; 2.483      ;
+; -1.733 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.507      ; 3.057      ;
+; -1.616 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.221      ; 2.522      ;
+; -1.581 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.509      ; 2.909      ;
+; -1.550 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.509      ; 2.866      ;
+; -1.543 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.508      ; 2.869      ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'FSM:fsm1|prodIntermed[0]'                                                                                                        ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -3.531 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.669      ; 4.371      ;
+; -3.511 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.688      ; 4.371      ;
+; -3.507 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.671      ; 4.351      ;
+; -3.303 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.685      ; 4.305      ;
+; -3.301 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.685      ; 4.305      ;
+; -3.270 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.687      ; 4.275      ;
+; -3.246 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.686      ; 4.239      ;
+; -3.123 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.342     ; 2.962      ;
+; -3.040 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.230     ; 2.993      ;
+; -3.038 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.556     ; 0.497      ;
+; -2.996 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.192     ; 2.986      ;
+; -2.779 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.049     ; 3.057      ;
+; -2.662 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.514     ; 0.497      ;
+; -2.627 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.047     ; 2.909      ;
+; -2.627 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.801     ; 0.496      ;
+; -2.624 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.800     ; 0.495      ;
+; -2.621 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.637     ; 0.540      ;
+; -2.618 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.795     ; 0.495      ;
+; -2.616 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.796     ; 0.495      ;
+; -2.596 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.047     ; 2.866      ;
+; -2.589 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.048     ; 2.869      ;
+; -2.303 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.333     ; 0.526      ;
+; -2.295 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.305     ; 0.541      ;
+; -2.148 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.346     ; 0.360      ;
+; -2.145 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.341     ; 0.361      ;
+; -2.137 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.346     ; 0.353      ;
+; -2.115 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.306     ; 0.360      ;
+; -2.112 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.307     ; 0.362      ;
+; -2.107 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.304     ; 0.361      ;
+; -0.951 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.021      ; 0.497      ;
+; -0.575 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.063      ; 0.497      ;
+; -0.540 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.224     ; 0.496      ;
+; -0.537 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.223     ; 0.495      ;
+; -0.534 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.060     ; 0.540      ;
+; -0.531 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.218     ; 0.495      ;
+; -0.529 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.219     ; 0.495      ;
+; -0.360 ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.054     ; 0.504      ;
+; -0.348 ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.050     ; 0.477      ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                     ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.913 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; 0.500        ; -2.312     ; 0.090      ;
+; -1.912 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; 0.500        ; -2.311     ; 0.090      ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'FSM:fsm1|prodIntermed[0]'                                                                                                        ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.095 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.362      ; 0.457      ;
+; 0.117 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.340      ; 0.457      ;
+; 0.247 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.215      ; 0.462      ;
+; 0.383 ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.054      ; 0.437      ;
+; 0.406 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.050      ; 0.456      ;
+; 0.407 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.049      ; 0.456      ;
+; 0.410 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.046      ; 0.456      ;
+; 0.412 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.044      ; 0.456      ;
+; 0.412 ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.050      ; 0.462      ;
+; 1.826 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.021     ; 0.335      ;
+; 1.828 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.023     ; 0.335      ;
+; 1.830 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.024     ; 0.336      ;
+; 1.860 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.066     ; 0.324      ;
+; 1.866 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.060     ; 0.336      ;
+; 1.869 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.065     ; 0.334      ;
+; 1.963 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.023     ; 0.470      ;
+; 1.977 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.051     ; 0.456      ;
+; 2.121 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.194     ; 0.457      ;
+; 2.143 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.216     ; 0.457      ;
+; 2.273 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.341     ; 0.462      ;
+; 2.302 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.222      ; 2.524      ;
+; 2.309 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.221      ; 2.530      ;
+; 2.330 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.221      ; 2.551      ;
+; 2.432 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.506     ; 0.456      ;
+; 2.433 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.507     ; 0.456      ;
+; 2.436 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.510     ; 0.456      ;
+; 2.438 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.512     ; 0.456      ;
+; 2.483 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.219      ; 2.702      ;
+; 2.555 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.081      ; 2.636      ;
+; 2.676 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.044      ; 2.720      ;
+; 2.730 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; -0.023     ; 2.707      ;
+; 2.851 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.922      ; 3.803      ;
+; 2.886 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.923      ; 3.839      ;
+; 2.912 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.920      ; 3.862      ;
+; 2.920 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.920      ; 3.870      ;
+; 2.971 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.923      ; 3.924      ;
+; 3.042 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.904      ; 3.976      ;
+; 3.077 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.906      ; 4.013      ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'start'                                                                                                              ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; 1.195 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.799      ; 2.524      ;
+; 1.202 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.798      ; 2.530      ;
+; 1.212 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.496      ; 2.238      ;
+; 1.223 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.798      ; 2.551      ;
+; 1.313 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.346      ; 2.189      ;
+; 1.329 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.304      ; 2.163      ;
+; 1.376 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.796      ; 2.702      ;
+; 1.390 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 4.511      ; 5.931      ;
+; 1.407 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.348      ; 2.285      ;
+; 1.412 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.340      ; 2.282      ;
+; 1.434 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.309      ; 2.273      ;
+; 1.448 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.658      ; 2.636      ;
+; 1.475 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.304      ; 2.309      ;
+; 1.501 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.308      ; 2.339      ;
+; 1.538 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; -0.500       ; 2.172      ; 3.240      ;
+; 1.569 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.621      ; 2.720      ;
+; 1.570 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.513      ; 2.613      ;
+; 1.614 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; -0.500       ; 2.175      ; 3.319      ;
+; 1.623 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.554      ; 2.707      ;
+; 1.774 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; -0.500       ; 2.499      ; 3.803      ;
+; 1.809 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; -0.500       ; 2.500      ; 3.839      ;
+; 1.822 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; -0.500       ; 2.171      ; 3.523      ;
+; 1.835 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; -0.500       ; 2.497      ; 3.862      ;
+; 1.841 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; -0.500       ; 2.171      ; 3.542      ;
+; 1.843 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; -0.500       ; 2.497      ; 3.870      ;
+; 1.894 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; -0.500       ; 2.500      ; 3.924      ;
+; 1.929 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; -0.500       ; 2.173      ; 3.632      ;
+; 1.954 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; -0.500       ; 2.175      ; 3.659      ;
+; 1.955 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; -0.500       ; 2.172      ; 3.657      ;
+; 1.963 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 2.312      ; 3.805      ;
+; 1.964 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; -0.500       ; 2.172      ; 3.666      ;
+; 1.965 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; -0.500       ; 2.481      ; 3.976      ;
+; 1.976 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; -0.500       ; 2.480      ; 3.986      ;
+; 2.000 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; -0.500       ; 2.483      ; 4.013      ;
+; 2.040 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 2.312      ; 3.882      ;
+; 2.290 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 4.511      ; 6.331      ;
+; 2.850 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 4.510      ; 7.390      ;
+; 3.295 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 4.510      ; 7.335      ;
+; 5.674 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.311      ; 7.515      ;
+; 5.834 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.311      ; 7.675      ;
+; 5.924 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 2.311      ; 7.765      ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                     ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 2.425 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; -0.500       ; -2.064     ; 0.062      ;
+; 2.425 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; -0.500       ; -2.064     ; 0.062      ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; start                    ; -3.448 ; -12.879       ;
+; FSM:fsm1|prodIntermed[0] ; -1.820 ; -30.659       ;
+; clk                      ; -1.441 ; -2.881        ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                ;
++--------------------------+-------+---------------+
+; Clock                    ; Slack ; End Point TNS ;
++--------------------------+-------+---------------+
+; FSM:fsm1|prodIntermed[0] ; 0.009 ; 0.000         ;
+; start                    ; 0.435 ; 0.000         ;
+; clk                      ; 2.141 ; 0.000         ;
++--------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary  ;
++--------------------------+--------+---------------+
+; Clock                    ; Slack  ; End Point TNS ;
++--------------------------+--------+---------------+
+; clk                      ; -3.000 ; -7.460        ;
+; start                    ; -3.000 ; -3.000        ;
+; FSM:fsm1|prodIntermed[0] ; 0.457  ; 0.000         ;
++--------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'start'                                                                                                              ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; -3.448 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 1.724      ; 5.095      ;
+; -3.442 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 1.724      ; 5.089      ;
+; -3.303 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; 0.500        ; 1.724      ; 4.950      ;
+; -2.037 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 2.886      ; 4.846      ;
+; -1.012 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 1.724      ; 2.488      ;
+; -0.977 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; 0.500        ; 1.724      ; 2.453      ;
+; -0.930 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 2.886      ; 4.239      ;
+; -0.798 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 2.886      ; 3.436      ;
+; -0.754 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 1.000        ; 2.886      ; 3.892      ;
+; -0.683 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; 0.500        ; 1.817      ; 2.535      ;
+; -0.678 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; 0.500        ; 1.819      ; 2.540      ;
+; -0.647 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.027      ; 1.716      ;
+; -0.641 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; 0.500        ; 1.818      ; 2.501      ;
+; -0.635 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.010      ; 1.680      ;
+; -0.600 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.093      ; 1.736      ;
+; -0.594 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; 0.500        ; 1.657      ; 2.294      ;
+; -0.594 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; 0.500        ; 1.660      ; 2.297      ;
+; -0.585 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; 0.500        ; 1.658      ; 2.293      ;
+; -0.569 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; 0.500        ; 1.659      ; 2.270      ;
+; -0.555 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; 0.500        ; 1.830      ; 2.428      ;
+; -0.528 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; 0.500        ; 1.657      ; 2.228      ;
+; -0.475 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; 0.500        ; 1.657      ; 2.190      ;
+; -0.471 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; 0.500        ; 1.827      ; 2.435      ;
+; -0.464 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.119      ; 1.626      ;
+; -0.452 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; 0.500        ; 1.827      ; 2.416      ;
+; -0.446 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.928      ; 1.417      ;
+; -0.436 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.924      ; 1.403      ;
+; -0.434 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; 0.500        ; 1.829      ; 2.400      ;
+; -0.425 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.956      ; 1.423      ;
+; -0.423 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; 0.500        ; 1.828      ; 2.382      ;
+; -0.383 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.951      ; 1.384      ;
+; -0.377 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.955      ; 1.375      ;
+; -0.367 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.924      ; 1.334      ;
+; -0.364 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 0.929      ; 1.424      ;
+; -0.359 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.188      ; 1.684      ;
+; -0.304 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.033      ; 1.395      ;
+; -0.273 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.189      ; 1.599      ;
+; -0.269 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.189      ; 1.589      ;
+; -0.266 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; 0.500        ; 1.188      ; 1.591      ;
+; -0.213 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; 0.500        ; 1.657      ; 1.913      ;
+; -0.173 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; 0.500        ; 1.660      ; 1.964      ;
++--------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'FSM:fsm1|prodIntermed[0]'                                                                                                        ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; -1.820 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.226     ; 0.263      ;
+; -1.583 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.204     ; 0.262      ;
+; -1.578 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.363     ; 0.262      ;
+; -1.577 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.362     ; 0.261      ;
+; -1.574 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.359     ; 0.262      ;
+; -1.572 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.358     ; 0.261      ;
+; -1.561 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.277     ; 0.269      ;
+; -1.407 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.590      ; 2.540      ;
+; -1.397 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.116     ; 0.266      ;
+; -1.385 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.094     ; 0.276      ;
+; -1.370 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.589      ; 2.501      ;
+; -1.366 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.202     ; 1.716      ;
+; -1.322 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.121     ; 0.189      ;
+; -1.322 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.119     ; 0.189      ;
+; -1.319 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.136     ; 1.736      ;
+; -1.315 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.122     ; 0.182      ;
+; -1.301 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.096     ; 0.191      ;
+; -1.298 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.095     ; 0.189      ;
+; -1.297 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; 0.500        ; -1.093     ; 0.190      ;
+; -1.284 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.601      ; 2.428      ;
+; -1.200 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.598      ; 2.435      ;
+; -1.183 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.110     ; 1.626      ;
+; -1.181 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.598      ; 2.416      ;
+; -1.163 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.600      ; 2.400      ;
+; -1.152 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.599      ; 2.382      ;
+; -1.078 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.041     ; 1.684      ;
+; -0.992 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.040     ; 1.599      ;
+; -0.988 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.040     ; 1.589      ;
+; -0.985 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.041     ; 1.591      ;
+; -0.072 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.012      ; 0.263      ;
+; 0.165  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; 0.034      ; 0.262      ;
+; 0.170  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.125     ; 0.262      ;
+; 0.171  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.124     ; 0.261      ;
+; 0.174  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.121     ; 0.262      ;
+; 0.176  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.120     ; 0.261      ;
+; 0.187  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.039     ; 0.269      ;
+; 0.263  ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.031     ; 0.268      ;
+; 0.274  ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 1.000        ; -0.028     ; 0.252      ;
++--------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                     ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.441 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; 0.500        ; -1.868     ; 0.050      ;
+; -1.440 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; 0.500        ; -1.867     ; 0.050      ;
++--------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'FSM:fsm1|prodIntermed[0]'                                                                                                        ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+; 0.009 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.218      ; 0.227      ;
+; 0.027 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.201      ; 0.228      ;
+; 0.116 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.127      ; 0.243      ;
+; 0.183 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.043      ; 0.226      ;
+; 0.185 ; FSM:fsm1|signedbit        ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.031      ; 0.216      ;
+; 0.186 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.041      ; 0.227      ;
+; 0.187 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.039      ; 0.226      ;
+; 0.189 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.037      ; 0.226      ;
+; 0.203 ; FSM:fsm1|productShift[15] ; FSM:fsm1|signedbit        ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.028      ; 0.231      ;
+; 1.218 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.123      ; 1.341      ;
+; 1.225 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.122      ; 1.347      ;
+; 1.233 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.122      ; 1.355      ;
+; 1.269 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.738      ; 2.037      ;
+; 1.289 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.739      ; 2.058      ;
+; 1.299 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.737      ; 2.066      ;
+; 1.317 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.737      ; 2.084      ;
+; 1.321 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.121      ; 1.442      ;
+; 1.331 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.740      ; 2.101      ;
+; 1.344 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.055      ; 1.399      ;
+; 1.367 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.727      ; 2.124      ;
+; 1.391 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.729      ; 2.150      ;
+; 1.449 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; -0.014     ; 1.435      ;
+; 1.451 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 0.000        ; 0.030      ; 1.481      ;
+; 1.562 ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|productShift[9]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.924     ; 0.168      ;
+; 1.564 ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|productShift[8]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.926     ; 0.168      ;
+; 1.566 ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|productShift[10] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.927     ; 0.169      ;
+; 1.588 ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|productShift[14] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.955     ; 0.163      ;
+; 1.590 ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|productShift[12] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.952     ; 0.168      ;
+; 1.592 ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|productShift[13] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.954     ; 0.168      ;
+; 1.638 ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|productShift[11] ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.926     ; 0.242      ;
+; 1.657 ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|productShift[7]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -0.949     ; 0.238      ;
+; 1.708 ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|productShift[0]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.011     ; 0.227      ;
+; 1.726 ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|productShift[1]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.028     ; 0.228      ;
+; 1.815 ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|productShift[2]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.102     ; 0.243      ;
+; 1.882 ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|productShift[4]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.186     ; 0.226      ;
+; 1.885 ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|productShift[5]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.188     ; 0.227      ;
+; 1.886 ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|productShift[3]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.190     ; 0.226      ;
+; 1.888 ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|productShift[6]  ; start                    ; FSM:fsm1|prodIntermed[0] ; -0.500       ; -1.192     ; 0.226      ;
++-------+---------------------------+---------------------------+--------------------------+--------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'start'                                                                                                              ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+; 0.435 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[10] ; clk                      ; start       ; -0.500       ; 1.798      ; 1.763      ;
+; 0.444 ; FSM:fsm1|productShift[15] ; FSM:fsm1|prodIntermed[15] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.197      ; 1.171      ;
+; 0.450 ; FSM:fsm1|productShift[3]  ; FSM:fsm1|prodIntermed[3]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.361      ; 1.341      ;
+; 0.457 ; FSM:fsm1|productShift[4]  ; FSM:fsm1|prodIntermed[4]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.360      ; 1.347      ;
+; 0.465 ; FSM:fsm1|productShift[6]  ; FSM:fsm1|prodIntermed[6]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.360      ; 1.355      ;
+; 0.484 ; FSM:fsm1|productShift[14] ; FSM:fsm1|prodIntermed[14] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.122      ; 1.136      ;
+; 0.501 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[8]  ; clk                      ; start       ; -0.500       ; 1.801      ; 1.832      ;
+; 0.513 ; FSM:fsm1|productShift[10] ; FSM:fsm1|prodIntermed[10] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.093      ; 1.136      ;
+; 0.531 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[3]  ; clk                      ; start       ; -0.500       ; 1.976      ; 2.037      ;
+; 0.534 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[14] ; clk                      ; start       ; -0.500       ; 1.798      ; 1.862      ;
+; 0.539 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[15] ; clk                      ; start       ; -0.500       ; 1.798      ; 1.867      ;
+; 0.540 ; FSM:fsm1|productShift[12] ; FSM:fsm1|prodIntermed[12] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.118      ; 1.188      ;
+; 0.546 ; FSM:fsm1|productShift[13] ; FSM:fsm1|prodIntermed[13] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.123      ; 1.199      ;
+; 0.551 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[4]  ; clk                      ; start       ; -0.500       ; 1.977      ; 2.058      ;
+; 0.553 ; FSM:fsm1|productShift[5]  ; FSM:fsm1|prodIntermed[5]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.359      ; 1.442      ;
+; 0.561 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[6]  ; clk                      ; start       ; -0.500       ; 1.975      ; 2.066      ;
+; 0.569 ; FSM:fsm1|productShift[8]  ; FSM:fsm1|prodIntermed[8]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.098      ; 1.197      ;
+; 0.576 ; FSM:fsm1|productShift[7]  ; FSM:fsm1|prodIntermed[7]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.293      ; 1.399      ;
+; 0.579 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[5]  ; clk                      ; start       ; -0.500       ; 1.975      ; 2.084      ;
+; 0.583 ; FSM:fsm1|productShift[9]  ; FSM:fsm1|prodIntermed[9]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.093      ; 1.206      ;
+; 0.592 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[13] ; clk                      ; start       ; -0.500       ; 1.800      ; 1.922      ;
+; 0.593 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[7]  ; clk                      ; start       ; -0.500       ; 1.978      ; 2.101      ;
+; 0.597 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[9]  ; clk                      ; start       ; -0.500       ; 1.798      ; 1.925      ;
+; 0.601 ; FSM:fsm1|productShift[11] ; FSM:fsm1|prodIntermed[11] ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.096      ; 1.227      ;
+; 0.603 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[11] ; clk                      ; start       ; -0.500       ; 1.801      ; 1.934      ;
+; 0.611 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[12] ; clk                      ; start       ; -0.500       ; 1.799      ; 1.940      ;
+; 0.623 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[0]  ; clk                      ; start       ; -0.500       ; 1.964      ; 2.117      ;
+; 0.629 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[1]  ; clk                      ; start       ; -0.500       ; 1.965      ; 2.124      ;
+; 0.653 ; FSM:fsm1|state.s0         ; FSM:fsm1|prodIntermed[2]  ; clk                      ; start       ; -0.500       ; 1.967      ; 2.150      ;
+; 0.658 ; FSM:fsm1|productShift[0]  ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.203      ; 1.391      ;
+; 0.661 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 1.868      ; 2.059      ;
+; 0.681 ; FSM:fsm1|productShift[1]  ; FSM:fsm1|prodIntermed[1]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.224      ; 1.435      ;
+; 0.683 ; FSM:fsm1|productShift[2]  ; FSM:fsm1|prodIntermed[2]  ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 1.268      ; 1.481      ;
+; 0.697 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s2_515        ; clk                      ; start       ; -0.500       ; 1.868      ; 2.095      ;
+; 0.728 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 2.980      ; 3.738      ;
+; 0.788 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s2_515        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 2.980      ; 3.298      ;
+; 1.060 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; 0.000        ; 2.979      ; 4.069      ;
+; 2.142 ; FSM:fsm1|prodIntermed[0]  ; FSM:fsm1|ns.s3_506        ; FSM:fsm1|prodIntermed[0] ; start       ; -0.500       ; 2.979      ; 4.651      ;
+; 2.724 ; FSM:fsm1|state.s3         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 1.867      ; 4.121      ;
+; 2.810 ; FSM:fsm1|state.s2         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 1.867      ; 4.207      ;
+; 2.856 ; FSM:fsm1|state.s1         ; FSM:fsm1|ns.s3_506        ; clk                      ; start       ; -0.500       ; 1.867      ; 4.253      ;
++-------+---------------------------+---------------------------+--------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                     ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 2.141 ; FSM:fsm1|ns.s3_506 ; FSM:fsm1|state.s3 ; start        ; clk         ; -0.500       ; -1.724     ; 0.031      ;
+; 2.141 ; FSM:fsm1|ns.s2_515 ; FSM:fsm1|state.s2 ; start        ; clk         ; -0.500       ; -1.724     ; 0.031      ;
++-------+--------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                     ;
++---------------------------+----------+-------+----------+---------+---------------------+
+; Clock                     ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack          ; -7.217   ; 0.009 ; N/A      ; N/A     ; -3.000              ;
+;  FSM:fsm1|prodIntermed[0] ; -3.728   ; 0.009 ; N/A      ; N/A     ; 0.363               ;
+;  clk                      ; -2.300   ; 2.141 ; N/A      ; N/A     ; -3.000              ;
+;  start                    ; -7.217   ; 0.435 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS           ; -118.652 ; 0.0   ; 0.0      ; 0.0     ; -11.14              ;
+;  FSM:fsm1|prodIntermed[0] ; -66.255  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  clk                      ; -4.599   ; 0.000 ; N/A      ; N/A     ; -8.140              ;
+;  start                    ; -47.798  ; 0.000 ; N/A      ; N/A     ; -3.000              ;
++---------------------------+----------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin             ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; productFPGA[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[7]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[8]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[9]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[10] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[11] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[12] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[13] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[14] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; productFPGA[15] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; start                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; productFPGA[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; productFPGA[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; productFPGA[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin             ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; productFPGA[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[7]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[8]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[9]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[10] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[11] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[12] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[13] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[14] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; productFPGA[15] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                 ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; start                    ; clk                      ; 0        ; 2        ; 0        ; 0        ;
+; clk                      ; FSM:fsm1|prodIntermed[0] ; 7        ; 0        ; 0        ; 0        ;
+; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 16       ; 0        ; 0        ; 0        ;
+; start                    ; FSM:fsm1|prodIntermed[0] ; 0        ; 15       ; 0        ; 0        ;
+; clk                      ; start                    ; 0        ; 0        ; 21       ; 0        ;
+; FSM:fsm1|prodIntermed[0] ; start                    ; 0        ; 0        ; 18       ; 2        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                  ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; From Clock               ; To Clock                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+; start                    ; clk                      ; 0        ; 2        ; 0        ; 0        ;
+; clk                      ; FSM:fsm1|prodIntermed[0] ; 7        ; 0        ; 0        ; 0        ;
+; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; 16       ; 0        ; 0        ; 0        ;
+; start                    ; FSM:fsm1|prodIntermed[0] ; 0        ; 15       ; 0        ; 0        ;
+; clk                      ; start                    ; 0        ; 0        ; 21       ; 0        ;
+; FSM:fsm1|prodIntermed[0] ; start                    ; 0        ; 0        ; 18       ; 2        ;
++--------------------------+--------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------+
+; Clock Status Summary                                                     ;
++--------------------------+--------------------------+------+-------------+
+; Target                   ; Clock                    ; Type ; Status      ;
++--------------------------+--------------------------+------+-------------+
+; FSM:fsm1|prodIntermed[0] ; FSM:fsm1|prodIntermed[0] ; Base ; Constrained ;
+; clk                      ; clk                      ; Base ; Constrained ;
+; start                    ; start                    ; Base ; Constrained ;
++--------------------------+--------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; productFPGA[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; productFPGA[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; productFPGA[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Mon Nov 13 21:58:47 2023
+Info: Command: quartus_sta Lab4 -c Lab4
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 36 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab4.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name FSM:fsm1|prodIntermed[0] FSM:fsm1|prodIntermed[0]
+    Info (332105): create_clock -period 1.000 -name start start
+Warning (332191): Clock target FSM:fsm1|prodIntermed[0] of clock FSM:fsm1|prodIntermed[0] is fed by another target of the same clock.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -7.217
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.217             -47.798 start 
+    Info (332119):    -3.728             -66.255 FSM:fsm1|prodIntermed[0] 
+    Info (332119):    -2.300              -4.599 clk 
+Info (332146): Worst-case hold slack is 0.080
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.080               0.000 FSM:fsm1|prodIntermed[0] 
+    Info (332119):     1.321               0.000 start 
+    Info (332119):     2.758               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -8.140 clk 
+    Info (332119):    -3.000              -3.000 start 
+    Info (332119):     0.394               0.000 FSM:fsm1|prodIntermed[0] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (332191): Clock target FSM:fsm1|prodIntermed[0] of clock FSM:fsm1|prodIntermed[0] is fed by another target of the same clock.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -6.586
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -6.586             -46.542 start 
+    Info (332119):    -3.531             -60.545 FSM:fsm1|prodIntermed[0] 
+    Info (332119):    -1.913              -3.825 clk 
+Info (332146): Worst-case hold slack is 0.095
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.095               0.000 FSM:fsm1|prodIntermed[0] 
+    Info (332119):     1.195               0.000 start 
+    Info (332119):     2.425               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -8.140 clk 
+    Info (332119):    -3.000              -3.000 start 
+    Info (332119):     0.363               0.000 FSM:fsm1|prodIntermed[0] 
+Info: Analyzing Fast 1200mV 0C Model
+Warning (332191): Clock target FSM:fsm1|prodIntermed[0] of clock FSM:fsm1|prodIntermed[0] is fed by another target of the same clock.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.448
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.448             -12.879 start 
+    Info (332119):    -1.820             -30.659 FSM:fsm1|prodIntermed[0] 
+    Info (332119):    -1.441              -2.881 clk 
+Info (332146): Worst-case hold slack is 0.009
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.009               0.000 FSM:fsm1|prodIntermed[0] 
+    Info (332119):     0.435               0.000 start 
+    Info (332119):     2.141               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -7.460 clk 
+    Info (332119):    -3.000              -3.000 start 
+    Info (332119):     0.457               0.000 FSM:fsm1|prodIntermed[0] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4966 megabytes
+    Info: Processing ended: Mon Nov 13 21:58:48 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

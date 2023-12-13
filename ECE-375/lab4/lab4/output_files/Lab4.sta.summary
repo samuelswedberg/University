@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'start'
+Slack : -7.217
+TNS   : -47.798
+
+Type  : Slow 1200mV 85C Model Setup 'FSM:fsm1|prodIntermed[0]'
+Slack : -3.728
+TNS   : -66.255
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.300
+TNS   : -4.599
+
+Type  : Slow 1200mV 85C Model Hold 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.080
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'start'
+Slack : 1.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 2.758
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -8.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'start'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'start'
+Slack : -6.586
+TNS   : -46.542
+
+Type  : Slow 1200mV 0C Model Setup 'FSM:fsm1|prodIntermed[0]'
+Slack : -3.531
+TNS   : -60.545
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.913
+TNS   : -3.825
+
+Type  : Slow 1200mV 0C Model Hold 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'start'
+Slack : 1.195
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 2.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -8.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'start'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'start'
+Slack : -3.448
+TNS   : -12.879
+
+Type  : Fast 1200mV 0C Model Setup 'FSM:fsm1|prodIntermed[0]'
+Slack : -1.820
+TNS   : -30.659
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.441
+TNS   : -2.881
+
+Type  : Fast 1200mV 0C Model Hold 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.009
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'start'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 2.141
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -7.460
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'start'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:fsm1|prodIntermed[0]'
+Slack : 0.457
+TNS   : 0.000
+
+------------------------------------------------------------

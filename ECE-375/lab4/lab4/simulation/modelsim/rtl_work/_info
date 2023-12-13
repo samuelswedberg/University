@@ -1,0 +1,272 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/simulation/modelsim
+Pcomponents
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+w1699934236
+R0
+8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/components.vhd
+FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/components.vhd
+l0
+L5 1
+VSXJ]_WmTAM8gMEhD[MhT>1
+!s100 SKQBKY;lAJ@cc_:DV_S[K2
+Z5 OV;C;2020.1;71
+31
+Z6 !s110 1699934350
+!i10b 1
+Z7 !s108 1699934350.000000
+!s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/components.vhd|
+!s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/components.vhd|
+!i113 1
+Z8 o-93 -work work
+Z9 tExplicit 1 CvgOpt 0
+Efsm
+Z10 w1699934300
+Z11 DPx4 work 10 components 0 22 SXJ]_WmTAM8gMEhD[MhT>1
+Z12 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+R3
+R4
+!i122 4
+R0
+Z13 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FSM.vhd
+Z14 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FSM.vhd
+l0
+L7 1
+V]9zZG0XE4BQ`^c:QB5R061
+!s100 3EKY2QNh=f3dCXYiTC5m91
+R5
+31
+Z15 !s110 1699934351
+!i10b 1
+R7
+Z16 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FSM.vhd|
+Z17 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FSM.vhd|
+!i113 1
+R8
+R9
+Abehavorial
+R11
+R12
+R1
+R2
+R3
+R4
+DEx4 work 3 fsm 0 22 ]9zZG0XE4BQ`^c:QB5R061
+!i122 4
+l22
+L14 59
+Vl<7c>TU^P6:7[ZS0=ml``3
+!s100 R?UOJZh`<92K@11hg2oA30
+R5
+31
+R15
+!i10b 1
+R7
+R16
+R17
+!i113 1
+R8
+R9
+Efulladd
+Z18 w1698688614
+R1
+R2
+R11
+R3
+R4
+!i122 2
+R0
+Z19 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FullAdd.vhd
+Z20 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FullAdd.vhd
+l0
+L5 1
+VWlWe[a7_IS>_cMa0RU>5c1
+!s100 i_2mJG[C7g;TnDLzOjTdY2
+R5
+31
+R6
+!i10b 1
+R7
+Z21 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FullAdd.vhd|
+Z22 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/FullAdd.vhd|
+!i113 1
+R8
+R9
+Alogicfunc
+R1
+R2
+R11
+R3
+R4
+DEx4 work 7 fulladd 0 22 WlWe[a7_IS>_cMa0RU>5c1
+!i122 2
+l11
+L10 5
+Vzn_k_9@[:lci4lBN<4B;o0
+!s100 JH2d_0QGm=4fnN:81H9_a2
+R5
+31
+R6
+!i10b 1
+R7
+R21
+R22
+!i113 1
+R8
+R9
+Elab4
+Z23 w1699934259
+R1
+R2
+R11
+R3
+R4
+!i122 3
+R0
+Z24 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/Lab4.vhd
+Z25 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/Lab4.vhd
+l0
+L5 1
+VhBPk8EFXG[h0SzQKn13Ni1
+!s100 ii=j:Y70fYbggAWYVAcal0
+R5
+31
+R6
+!i10b 1
+R7
+Z26 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/Lab4.vhd|
+Z27 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/Lab4.vhd|
+!i113 1
+R8
+R9
+Abehavorial
+R1
+R2
+R11
+R3
+R4
+DEx4 work 4 lab4 0 22 hBPk8EFXG[h0SzQKn13Ni1
+!i122 3
+l16
+L11 18
+V8joJ0VNMDo=]eL[KnMn<73
+!s100 IaY>TzS2DDQ4?@z9_GhI83
+R5
+31
+R6
+!i10b 1
+R7
+R26
+R27
+!i113 1
+R8
+R9
+Emux2to1
+Z28 w1699297284
+R1
+R2
+R11
+R3
+R4
+!i122 5
+R0
+Z29 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/mux2to1.vhd
+Z30 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/mux2to1.vhd
+l0
+L6 1
+VF`T8GzA]zT4nVz`JAiN6]2
+!s100 Wd^0FV7Nk>TJPVL0_]:ne2
+R5
+31
+R15
+!i10b 1
+Z31 !s108 1699934351.000000
+Z32 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/mux2to1.vhd|
+!s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/mux2to1.vhd|
+!i113 1
+R8
+R9
+Alogicfunc
+R1
+R2
+R11
+R3
+R4
+DEx4 work 7 mux2to1 0 22 F`T8GzA]zT4nVz`JAiN6]2
+!i122 5
+l14
+L13 13
+VMeMHO8GVAgl0z7eSVG9R52
+!s100 _;HG5AFL=K@J26CAkiE7Q3
+R5
+31
+R15
+!i10b 1
+R31
+R32
+Z33 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/mux2to1.vhd|
+!i113 1
+R8
+R9
+Eripple_carry
+Z34 w1698690595
+R1
+R2
+R11
+R3
+R4
+!i122 1
+R0
+Z35 8A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/ripple_carry.vhd
+Z36 FA:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/ripple_carry.vhd
+l0
+L7 1
+VRCCjJJ`K^2j;4Tg:R3P5<2
+!s100 NKQG=Ia4Xj[HYY=6gLg2O2
+R5
+31
+R6
+!i10b 1
+R7
+Z37 !s90 -reportprogress|300|-93|-work|work|A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/ripple_carry.vhd|
+Z38 !s107 A:/OneDrive/School/College/Junior/Fa23/Digi 2/lab4/ripple_carry.vhd|
+!i113 1
+R8
+R9
+Astruc_behaviour
+R1
+R2
+R11
+R3
+R4
+DEx4 work 12 ripple_carry 0 22 RCCjJJ`K^2j;4Tg:R3P5<2
+!i122 1
+l18
+L14 25
+V20oRKS^Czz5H?7H?jaV=j3
+!s100 co`dYj3l_[eWAO;aBlK6k0
+R5
+31
+R6
+!i10b 1
+R7
+R37
+R38
+!i113 1
+R8
+R9

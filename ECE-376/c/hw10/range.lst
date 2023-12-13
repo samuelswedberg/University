@@ -1,0 +1,2692 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Mon Dec 11 15:32:54 2023
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4620
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	3
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109  000000                     main@i	equ	??_main+0
+   110                           	global	main@i
+   111  000000                     LCD_Move@Row	equ	?_LCD_Move+0
+   112                           	global	LCD_Move@Row
+   113  000000                     LCD_Move@Col	equ	?_LCD_Move+1
+   114                           	global	LCD_Move@Col
+   115  000000                     LCD_Out@i	equ	??_LCD_Out+0
+   116                           	global	LCD_Out@i
+   117  000000                     LCD_Out@A	equ	??_LCD_Out+1
+   118                           	global	LCD_Out@A
+   119  000000                     LCD_Out@DATA	equ	?_LCD_Out+0
+   120                           	global	LCD_Out@DATA
+   121  000000                     LCD_Out@D	equ	?_LCD_Out+4
+   122                           	global	LCD_Out@D
+   123  000000                     LCD_Out@N	equ	?_LCD_Out+5
+   124                           	global	LCD_Out@N
+   125  000000                     LCD_Write@c	equ	?_LCD_Write+0
+   126                           	global	LCD_Write@c
+   127  000000                     LCD_Inst@c	equ	?_LCD_Inst+0
+   128                           	global	LCD_Inst@c
+   129  000000                     ___aldiv@counter	equ	??___aldiv+0
+   130                           	global	___aldiv@counter
+   131  000000                     ___aldiv@sign	equ	??___aldiv+1
+   132                           	global	___aldiv@sign
+   133  000000                     ___aldiv@quotient	equ	??___aldiv+2
+   134                           	global	___aldiv@quotient
+   135  000000                     ___aldiv@dividend	equ	?___aldiv+0
+   136                           	global	___aldiv@dividend
+   137  000000                     ___aldiv@divisor	equ	?___aldiv+4
+   138                           	global	___aldiv@divisor
+   139  000000                     ___almod@sign	equ	??___almod+0
+   140                           	global	___almod@sign
+   141  000000                     ___almod@counter	equ	??___almod+1
+   142                           	global	___almod@counter
+   143  000000                     ___almod@dividend	equ	?___almod+0
+   144                           	global	___almod@dividend
+   145  000000                     ___almod@divisor	equ	?___almod+4
+   146                           	global	___almod@divisor
+   147  000000                     Wait_ms@i	equ	??_Wait_ms+0
+   148                           	global	Wait_ms@i
+   149  000000                     Wait_ms@j	equ	??_Wait_ms+2
+   150                           	global	Wait_ms@j
+   151  000000                     Wait_ms@X	equ	?_Wait_ms+0
+   152                           	global	Wait_ms@X
+   153  000000                     LCD_Pause@x	equ	??_LCD_Pause+0
+   154                           	global	LCD_Pause@x
+   155                           ;Data sizes: Strings 0, constant 42, data 0, bss
+                                  0, persistent 0 stack 51
+   156                           	global	_main
+   157                           	global	??_main
+   158                           	global	?_main
+   159                                   psect   text0,class=CODE,space=0,reloc=2
+   160                           
+   161                           	opt lm
+   162                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\range.c"
+   163                           	line	61
+   164  000000                     	__size_of_main	equ	__end_of_main-_main
+   165                           ;range.c: 60: void main(void)
+   166                           ;range.c: 61: {
+   167                           	
+   168  00102C                     _main:		; BSR set to: ?
+   169                           
+   170                           	opt stack 30
+   171                           	line	65
+   172  00102C  0E00               	movlw	low(0)
+   173  00102E  6E92               	movwf	((c:3986)),c	;volatile
+   174                           	line	66
+   175                           ;range.c: 66: TRISB = 0xFF;
+   176  001030  6893               	setf	((c:3987)),c	;volatile
+   177                           	line	67
+   178                           ;range.c: 67: TRISC = 0;
+   179  001032  0E00               	movlw	low(0)
+   180  001034  6E94               	movwf	((c:3988)),c	;volatile
+   181                           	line	68
+   182                           ;range.c: 68: TRISD = 0;
+   183  001036  0E00               	movlw	low(0)
+   184  001038  6E95               	movwf	((c:3989)),c	;volatile
+   185                           	line	69
+   186                           ;range.c: 69: TRISE = 0;
+   187  00103A  0E00               	movlw	low(0)
+   188  00103C  6E96               	movwf	((c:3990)),c	;volatile
+   189                           	line	70
+   190                           ;range.c: 70: ADCON1 = 0x0F;
+   191  00103E  0101               	movlb	1	; () banked
+   192  001040  6F01               	movwf	(??_main+1+0)&0ffh
+   193  001042  0E0F               	movlw	low(0Fh)
+   194  001044  6EC1               	movwf	((c:4033)),c
+   195  001046  0101               	movlb	1	; () banked
+   196  001048  5101               	movf	(??_main+1+0)&0ffh,w
+   197                           	line	72
+   198                           ;range.c: 72: LCD_Init();
+   199  00104A  EC37  F00C         	call	_LCD_Init	;wreg free
+   200                           	line	74
+   201                           ;range.c: 74: LCD_Move(0,0); for (i=0; i<20; i++
+                                 ) LCD_Write(MSG0[i]);
+   202  00104E  0101               	movlb	1	; () banked
+   203  001050  6F01               	movwf	(??_main+1+0)&0ffh
+   204  001052  0E00               	movlw	low(0)
+   205  001054  0101               	movlb	1	; () banked
+   206  001056  0101               	movlb	1	; () banked
+   207  001058  6F04               	movwf	(0+(?_LCD_Move+01h))&0ffh
+   208  00105A  0101               	movlb	1	; () banked
+   209  00105C  5101               	movf	(??_main+1+0)&0ffh,w
+   210  00105E  0101               	movlb	1	; () banked
+   211  001060  6F02               	movwf	(??_main+2+0)&0ffh
+   212  001062  0E00               	movlw	low(0)
+   213  001064  0101               	movlb	1	; () banked
+   214  001066  0101               	movlb	1	; () banked
+   215  001068  6F03               	movwf	((?_LCD_Move))&0ffh
+   216  00106A  0101               	movlb	1	; () banked
+   217  00106C  5102               	movf	(??_main+2+0)&0ffh,w
+   218  00106E  EC80  F00C         	call	_LCD_Move	;wreg free
+   219  001072  0101               	movlb	1	; () banked
+   220  001074  6F01               	movwf	(??_main+1+0)&0ffh
+   221  001076  0E00               	movlw	low(0)
+   222  001078  0101               	movlb	1	; () banked
+   223  00107A  0101               	movlb	1	; () banked
+   224  00107C  6F00               	movwf	((main@i))&0ffh
+   225  00107E  0101               	movlb	1	; () banked
+   226  001080  5101               	movf	(??_main+1+0)&0ffh,w
+   227  001082  0E13               	movlw	(014h-1)
+   228  001084  0101               	movlb	1	; () banked
+   229  001086  0101               	movlb	1	; () banked
+   230  001088  6500               	cpfsgt	((main@i))&0ffh
+   231  00108A  D001               	goto	u1481
+   232  00108C  D001               	goto	u1480
+   233  00108E                     u1481:
+   234  00108E  D001               	goto	l170
+   235  001090                     u1480:
+   236  001090  D01B               	goto	l171
+   237                           	
+   238  001092                     l170:		; BSR set to: ?
+   239                           
+   240  001092  0E01               	movlw	low((_MSG0))
+   241  001094  0101               	movlb	1	; () banked
+   242  001096  0101               	movlb	1	; () banked
+   243  001098  2500               	addwf	((main@i))&0ffh,w
+   244  00109A  6EF6               	movwf	tblptrl
+   245  00109C  6AF7               	clrf	tblptrh
+   246  00109E  0E10               	movlw	high((_MSG0))
+   247  0010A0  22F7               	addwfc	tblptrh
+   248  0010A2  6AF8               	clrf	tblptru
+   249  0010A4  0E00               	movlw	low highword(__mediumconst)
+   250  0010A6  22F8               	addwfc	tblptru
+   251  0010A8  0008               	tblrd	*
+   252                           	
+   253  0010AA  0101               	movlb	1	; () banked
+   254  0010AC  CFF5 F115          	movff	tablat,(?_LCD_Write)
+   255  0010B0  EC28  F00D         	call	_LCD_Write	;wreg free
+   256  0010B4  0101               	movlb	1	; () banked
+   257  0010B6  0101               	movlb	1	; () banked
+   258  0010B8  2B00               	incf	((main@i))&0ffh
+   259  0010BA  0E13               	movlw	(014h-1)
+   260  0010BC  0101               	movlb	1	; () banked
+   261  0010BE  0101               	movlb	1	; () banked
+   262  0010C0  6500               	cpfsgt	((main@i))&0ffh
+   263  0010C2  D001               	goto	u1491
+   264  0010C4  D001               	goto	u1490
+   265  0010C6                     u1491:
+   266  0010C6  D7E5               	goto	l170
+   267  0010C8                     u1490:
+   268                           	
+   269  0010C8                     l171:		; BSR set to: ?
+   270                           
+   271                           	line	75
+   272                           ;range.c: 75: LCD_Move(1,0); for (i=0; i<20; i++
+                                 ) LCD_Write(MSG1[i]);
+   273  0010C8  0101               	movlb	1	; () banked
+   274  0010CA  6F01               	movwf	(??_main+1+0)&0ffh
+   275  0010CC  0E00               	movlw	low(0)
+   276  0010CE  0101               	movlb	1	; () banked
+   277  0010D0  0101               	movlb	1	; () banked
+   278  0010D2  6F04               	movwf	(0+(?_LCD_Move+01h))&0ffh
+   279  0010D4  0101               	movlb	1	; () banked
+   280  0010D6  5101               	movf	(??_main+1+0)&0ffh,w
+   281  0010D8  0101               	movlb	1	; () banked
+   282  0010DA  6F02               	movwf	(??_main+2+0)&0ffh
+   283  0010DC  0E01               	movlw	low(01h)
+   284  0010DE  0101               	movlb	1	; () banked
+   285  0010E0  0101               	movlb	1	; () banked
+   286  0010E2  6F03               	movwf	((?_LCD_Move))&0ffh
+   287  0010E4  0101               	movlb	1	; () banked
+   288  0010E6  5102               	movf	(??_main+2+0)&0ffh,w
+   289  0010E8  EC80  F00C         	call	_LCD_Move	;wreg free
+   290  0010EC  0101               	movlb	1	; () banked
+   291  0010EE  6F01               	movwf	(??_main+1+0)&0ffh
+   292  0010F0  0E00               	movlw	low(0)
+   293  0010F2  0101               	movlb	1	; () banked
+   294  0010F4  0101               	movlb	1	; () banked
+   295  0010F6  6F00               	movwf	((main@i))&0ffh
+   296  0010F8  0101               	movlb	1	; () banked
+   297  0010FA  5101               	movf	(??_main+1+0)&0ffh,w
+   298  0010FC  0E13               	movlw	(014h-1)
+   299  0010FE  0101               	movlb	1	; () banked
+   300  001100  0101               	movlb	1	; () banked
+   301  001102  6500               	cpfsgt	((main@i))&0ffh
+   302  001104  D001               	goto	u1501
+   303  001106  D001               	goto	u1500
+   304  001108                     u1501:
+   305  001108  D001               	goto	l173
+   306  00110A                     u1500:
+   307  00110A  D01B               	goto	l174
+   308                           	
+   309  00110C                     l173:		; BSR set to: ?
+   310                           
+   311  00110C  0E16               	movlw	low((_MSG1))
+   312  00110E  0101               	movlb	1	; () banked
+   313  001110  0101               	movlb	1	; () banked
+   314  001112  2500               	addwf	((main@i))&0ffh,w
+   315  001114  6EF6               	movwf	tblptrl
+   316  001116  6AF7               	clrf	tblptrh
+   317  001118  0E10               	movlw	high((_MSG1))
+   318  00111A  22F7               	addwfc	tblptrh
+   319  00111C  6AF8               	clrf	tblptru
+   320  00111E  0E00               	movlw	low highword(__mediumconst)
+   321  001120  22F8               	addwfc	tblptru
+   322  001122  0008               	tblrd	*
+   323                           	
+   324  001124  0101               	movlb	1	; () banked
+   325  001126  CFF5 F115          	movff	tablat,(?_LCD_Write)
+   326  00112A  EC28  F00D         	call	_LCD_Write	;wreg free
+   327  00112E  0101               	movlb	1	; () banked
+   328  001130  0101               	movlb	1	; () banked
+   329  001132  2B00               	incf	((main@i))&0ffh
+   330  001134  0E13               	movlw	(014h-1)
+   331  001136  0101               	movlb	1	; () banked
+   332  001138  0101               	movlb	1	; () banked
+   333  00113A  6500               	cpfsgt	((main@i))&0ffh
+   334  00113C  D001               	goto	u1511
+   335  00113E  D001               	goto	u1510
+   336  001140                     u1511:
+   337  001140  D7E5               	goto	l173
+   338  001142                     u1510:
+   339                           	
+   340  001142                     l174:		; BSR set to: ?
+   341                           
+   342                           	line	77
+   343                           ;range.c: 77: Wait_ms(100);
+   344  001142  0E64               	movlw	low(064h)
+   345  001144  0101               	movlb	1	; () banked
+   346  001146  0101               	movlb	1	; () banked
+   347  001148  6F07               	movwf	((?_Wait_ms))&0ffh
+   348  00114A  0E00               	movlw	high(064h)
+   349  00114C  0101               	movlb	1	; () banked
+   350  00114E  6F08               	movwf	((?_Wait_ms+1))&0ffh
+   351  001150  ECC2  F00C         	call	_Wait_ms	;wreg free
+   352                           	line	80
+   353                           ;range.c: 80: T0CS = 0;
+   354  001154  9AD5               	bcf	c:(32429/8),(32429)&7
+   355                           	line	81
+   356                           ;range.c: 81: T0CON = 0x88;
+   357  001156  0101               	movlb	1	; () banked
+   358  001158  6F01               	movwf	(??_main+1+0)&0ffh
+   359  00115A  0E88               	movlw	low(088h)
+   360  00115C  6ED5               	movwf	((c:4053)),c
+   361  00115E  0101               	movlb	1	; () banked
+   362  001160  5101               	movf	(??_main+1+0)&0ffh,w
+   363                           	line	82
+   364                           ;range.c: 82: TMR0ON = 1;
+   365  001162  8ED5               	bsf	c:(32431/8),(32431)&7
+   366                           	line	83
+   367                           ;range.c: 83: TMR0IE = 1;
+   368  001164  8AF2               	bsf	c:(32661/8),(32661)&7
+   369                           	line	84
+   370                           ;range.c: 84: TMR0IP = 1;
+   371  001166  84F1               	bsf	c:(32650/8),(32650)&7
+   372                           	line	85
+   373                           ;range.c: 85: PEIE = 1;
+   374  001168  8CF2               	bsf	c:(32662/8),(32662)&7
+   375                           	line	87
+   376                           ;range.c: 87: T1CON = 0x81;
+   377  00116A  0101               	movlb	1	; () banked
+   378  00116C  6F01               	movwf	(??_main+1+0)&0ffh
+   379  00116E  0E81               	movlw	low(081h)
+   380  001170  6ECD               	movwf	((c:4045)),c
+   381  001172  0101               	movlb	1	; () banked
+   382  001174  5101               	movf	(??_main+1+0)&0ffh,w
+   383                           	line	88
+   384                           ;range.c: 88: TMR1ON = 1;
+   385  001176  80CD               	bsf	c:(32360/8),(32360)&7
+   386                           	line	89
+   387                           ;range.c: 89: TMR1IE = 1;
+   388  001178  809D               	bsf	c:(31976/8),(31976)&7
+   389                           	line	90
+   390                           ;range.c: 90: TMR1IP = 1;
+   391  00117A  809F               	bsf	c:(31992/8),(31992)&7
+   392                           	line	91
+   393                           ;range.c: 91: PEIE = 1;
+   394  00117C  8CF2               	bsf	c:(32662/8),(32662)&7
+   395                           	line	92
+   396                           ;range.c: 92: TMR1CS = 0;
+   397  00117E  92CD               	bcf	c:(32361/8),(32361)&7
+   398                           	line	95
+   399                           ;range.c: 95: GIE = 1;
+   400  001180  8EF2               	bsf	c:(32663/8),(32663)&7
+   401                           	line	96
+   402                           ;range.c: 96: TIME = 0;
+   403  001182  0E00               	movlw	low(0)
+   404  001184  6E00               	movwf	((c:0)),c
+   405  001186  0E00               	movlw	high(0)
+   406  001188  6E01               	movwf	((c:0+1)),c
+   407                           	line	98
+   408                           ;range.c: 98: while(1) {
+   409                           	
+   410  00118A                     l177:		; BSR set to: ?
+   411                           
+   412                           	line	99
+   413                           ;range.c: 99: if (RB0) PWM = 100;
+   414  00118A  A081               	btfss	c:(31752/8),(31752)&7	;volatile
+   415  00118C  D001               	goto	u1521
+   416  00118E  D001               	goto	u1520
+   417  001190                     u1521:
+   418  001190  D004               	goto	l179
+   419  001192                     u1520:
+   420  001192  0E64               	movlw	low(064h)
+   421  001194  6E02               	movwf	((c:2)),c
+   422  001196  0E00               	movlw	high(064h)
+   423  001198  6E03               	movwf	((c:2+1)),c
+   424                           	
+   425  00119A                     l179:		; BSR set to: ?
+   426                           
+   427                           	line	100
+   428                           ;range.c: 100: if (RB1) PWM = 1000;
+   429  00119A  A281               	btfss	c:(31753/8),(31753)&7	;volatile
+   430  00119C  D001               	goto	u1531
+   431  00119E  D001               	goto	u1530
+   432  0011A0                     u1531:
+   433  0011A0  D004               	goto	l180
+   434  0011A2                     u1530:
+   435  0011A2  0EE8               	movlw	low(03E8h)
+   436  0011A4  6E02               	movwf	((c:2)),c
+   437  0011A6  0E03               	movlw	high(03E8h)
+   438  0011A8  6E03               	movwf	((c:2+1)),c
+   439                           	
+   440  0011AA                     l180:		; BSR set to: ?
+   441                           
+   442                           	line	101
+   443                           ;range.c: 101: if (RB2) PWM = 2000;
+   444  0011AA  A481               	btfss	c:(31754/8),(31754)&7	;volatile
+   445  0011AC  D001               	goto	u1541
+   446  0011AE  D001               	goto	u1540
+   447  0011B0                     u1541:
+   448  0011B0  D004               	goto	l181
+   449  0011B2                     u1540:
+   450  0011B2  0ED0               	movlw	low(07D0h)
+   451  0011B4  6E02               	movwf	((c:2)),c
+   452  0011B6  0E07               	movlw	high(07D0h)
+   453  0011B8  6E03               	movwf	((c:2+1)),c
+   454                           	
+   455  0011BA                     l181:		; BSR set to: ?
+   456                           
+   457                           	line	102
+   458                           ;range.c: 102: if (RB3) PWM = 3000;
+   459  0011BA  A681               	btfss	c:(31755/8),(31755)&7	;volatile
+   460  0011BC  D001               	goto	u1551
+   461  0011BE  D001               	goto	u1550
+   462  0011C0                     u1551:
+   463  0011C0  D004               	goto	l182
+   464  0011C2                     u1550:
+   465  0011C2  0EB8               	movlw	low(0BB8h)
+   466  0011C4  6E02               	movwf	((c:2)),c
+   467  0011C6  0E0B               	movlw	high(0BB8h)
+   468  0011C8  6E03               	movwf	((c:2+1)),c
+   469                           	
+   470  0011CA                     l182:		; BSR set to: ?
+   471                           
+   472                           	line	103
+   473                           ;range.c: 103: if (RB4) PWM = 4000;
+   474  0011CA  A881               	btfss	c:(31756/8),(31756)&7	;volatile
+   475  0011CC  D001               	goto	u1561
+   476  0011CE  D001               	goto	u1560
+   477  0011D0                     u1561:
+   478  0011D0  D004               	goto	l183
+   479  0011D2                     u1560:
+   480  0011D2  0EA0               	movlw	low(0FA0h)
+   481  0011D4  6E02               	movwf	((c:2)),c
+   482  0011D6  0E0F               	movlw	high(0FA0h)
+   483  0011D8  6E03               	movwf	((c:2+1)),c
+   484                           	
+   485  0011DA                     l183:		; BSR set to: ?
+   486                           
+   487                           	line	104
+   488                           ;range.c: 104: if (RB5) PWM = 5000;
+   489  0011DA  AA81               	btfss	c:(31757/8),(31757)&7	;volatile
+   490  0011DC  D001               	goto	u1571
+   491  0011DE  D001               	goto	u1570
+   492  0011E0                     u1571:
+   493  0011E0  D004               	goto	l184
+   494  0011E2                     u1570:
+   495  0011E2  0E88               	movlw	low(01388h)
+   496  0011E4  6E02               	movwf	((c:2)),c
+   497  0011E6  0E13               	movlw	high(01388h)
+   498  0011E8  6E03               	movwf	((c:2+1)),c
+   499                           	
+   500  0011EA                     l184:		; BSR set to: ?
+   501                           
+   502                           	line	105
+   503                           ;range.c: 105: if (RB6) PWM = 6000;
+   504  0011EA  AC81               	btfss	c:(31758/8),(31758)&7	;volatile
+   505  0011EC  D001               	goto	u1581
+   506  0011EE  D001               	goto	u1580
+   507  0011F0                     u1581:
+   508  0011F0  D004               	goto	l185
+   509  0011F2                     u1580:
+   510  0011F2  0E70               	movlw	low(01770h)
+   511  0011F4  6E02               	movwf	((c:2)),c
+   512  0011F6  0E17               	movlw	high(01770h)
+   513  0011F8  6E03               	movwf	((c:2+1)),c
+   514                           	
+   515  0011FA                     l185:		; BSR set to: ?
+   516                           
+   517                           	line	106
+   518                           ;range.c: 106: if (RB7) PWM = 9900;
+   519  0011FA  AE81               	btfss	c:(31759/8),(31759)&7	;volatile
+   520  0011FC  D001               	goto	u1591
+   521  0011FE  D001               	goto	u1590
+   522  001200                     u1591:
+   523  001200  D004               	goto	l186
+   524  001202                     u1590:
+   525  001202  0EAC               	movlw	low(026ACh)
+   526  001204  6E02               	movwf	((c:2)),c
+   527  001206  0E26               	movlw	high(026ACh)
+   528  001208  6E03               	movwf	((c:2+1)),c
+   529                           	
+   530  00120A                     l186:		; BSR set to: ?
+   531                           
+   532                           	line	108
+   533                           ;range.c: 108: LCD_Move(0,7); LCD_Out(TIME, 5, 3
+                                 );
+   534  00120A  0101               	movlb	1	; () banked
+   535  00120C  6F01               	movwf	(??_main+1+0)&0ffh
+   536  00120E  0E07               	movlw	low(07h)
+   537  001210  0101               	movlb	1	; () banked
+   538  001212  0101               	movlb	1	; () banked
+   539  001214  6F04               	movwf	(0+(?_LCD_Move+01h))&0ffh
+   540  001216  0101               	movlb	1	; () banked
+   541  001218  5101               	movf	(??_main+1+0)&0ffh,w
+   542  00121A  0101               	movlb	1	; () banked
+   543  00121C  6F02               	movwf	(??_main+2+0)&0ffh
+   544  00121E  0E00               	movlw	low(0)
+   545  001220  0101               	movlb	1	; () banked
+   546  001222  0101               	movlb	1	; () banked
+   547  001224  6F03               	movwf	((?_LCD_Move))&0ffh
+   548  001226  0101               	movlb	1	; () banked
+   549  001228  5102               	movf	(??_main+2+0)&0ffh,w
+   550  00122A  EC80  F00C         	call	_LCD_Move	;wreg free
+   551  00122E  0101               	movlb	1	; () banked
+   552  001230  6F01               	movwf	(??_main+1+0)&0ffh
+   553  001232  0E03               	movlw	low(03h)
+   554  001234  0101               	movlb	1	; () banked
+   555  001236  0101               	movlb	1	; () banked
+   556  001238  6F08               	movwf	(0+(?_LCD_Out+05h))&0ffh
+   557  00123A  0101               	movlb	1	; () banked
+   558  00123C  5101               	movf	(??_main+1+0)&0ffh,w
+   559  00123E  0101               	movlb	1	; () banked
+   560  001240  6F02               	movwf	(??_main+2+0)&0ffh
+   561  001242  0E05               	movlw	low(05h)
+   562  001244  0101               	movlb	1	; () banked
+   563  001246  0101               	movlb	1	; () banked
+   564  001248  6F07               	movwf	(0+(?_LCD_Out+04h))&0ffh
+   565  00124A  0101               	movlb	1	; () banked
+   566  00124C  5102               	movf	(??_main+2+0)&0ffh,w
+   567  00124E  0101               	movlb	1	; () banked
+   568  001250  C000 F103          	movff	(c:0),(?_LCD_Out)
+   569  001254  0101               	movlb	1	; () banked
+   570  001256  C001 F104          	movff	(c:0+1),(?_LCD_Out+1)
+   571  00125A  0101               	movlb	1	; () banked
+   572  00125C  0101               	movlb	1	; () banked
+   573  00125E  6B05               	clrf	((?_LCD_Out+2))&0ffh
+   574  001260  0101               	movlb	1	; () banked
+   575  001262  6B06               	clrf	((?_LCD_Out+3))&0ffh
+   576                           
+   577  001264  EC48  F00A         	call	_LCD_Out	;wreg free
+   578                           	line	109
+   579                           ;range.c: 109: LCD_Move(1,7); LCD_Out(PWM, 5, 2)
+                                 ;
+   580  001268  0101               	movlb	1	; () banked
+   581  00126A  6F01               	movwf	(??_main+1+0)&0ffh
+   582  00126C  0E07               	movlw	low(07h)
+   583  00126E  0101               	movlb	1	; () banked
+   584  001270  0101               	movlb	1	; () banked
+   585  001272  6F04               	movwf	(0+(?_LCD_Move+01h))&0ffh
+   586  001274  0101               	movlb	1	; () banked
+   587  001276  5101               	movf	(??_main+1+0)&0ffh,w
+   588  001278  0101               	movlb	1	; () banked
+   589  00127A  6F02               	movwf	(??_main+2+0)&0ffh
+   590  00127C  0E01               	movlw	low(01h)
+   591  00127E  0101               	movlb	1	; () banked
+   592  001280  0101               	movlb	1	; () banked
+   593  001282  6F03               	movwf	((?_LCD_Move))&0ffh
+   594  001284  0101               	movlb	1	; () banked
+   595  001286  5102               	movf	(??_main+2+0)&0ffh,w
+   596  001288  EC80  F00C         	call	_LCD_Move	;wreg free
+   597  00128C  0101               	movlb	1	; () banked
+   598  00128E  6F01               	movwf	(??_main+1+0)&0ffh
+   599  001290  0E02               	movlw	low(02h)
+   600  001292  0101               	movlb	1	; () banked
+   601  001294  0101               	movlb	1	; () banked
+   602  001296  6F08               	movwf	(0+(?_LCD_Out+05h))&0ffh
+   603  001298  0101               	movlb	1	; () banked
+   604  00129A  5101               	movf	(??_main+1+0)&0ffh,w
+   605  00129C  0101               	movlb	1	; () banked
+   606  00129E  6F02               	movwf	(??_main+2+0)&0ffh
+   607  0012A0  0E05               	movlw	low(05h)
+   608  0012A2  0101               	movlb	1	; () banked
+   609  0012A4  0101               	movlb	1	; () banked
+   610  0012A6  6F07               	movwf	(0+(?_LCD_Out+04h))&0ffh
+   611  0012A8  0101               	movlb	1	; () banked
+   612  0012AA  5102               	movf	(??_main+2+0)&0ffh,w
+   613  0012AC  0101               	movlb	1	; () banked
+   614  0012AE  C002 F103          	movff	(c:2),(?_LCD_Out)
+   615  0012B2  0101               	movlb	1	; () banked
+   616  0012B4  C003 F104          	movff	(c:2+1),(?_LCD_Out+1)
+   617  0012B8  0101               	movlb	1	; () banked
+   618  0012BA  0101               	movlb	1	; () banked
+   619  0012BC  6B05               	clrf	((?_LCD_Out+2))&0ffh
+   620  0012BE  0101               	movlb	1	; () banked
+   621  0012C0  6B06               	clrf	((?_LCD_Out+3))&0ffh
+   622                           
+   623  0012C2  EC48  F00A         	call	_LCD_Out	;wreg free
+   624                           	line	111
+   625                           	
+   626  0012C6                     l176:		; BSR set to: ?
+   627                           
+   628                           	line	98
+   629  0012C6  D761               	goto	l177
+   630                           	global	start
+   631  0012C8  EF0C  F004         	goto	start
+   632                           	opt stack 0
+   633                           GLOBAL __end_of_main
+   634  0012CC                     	__end_of_main:
+   635                           	FNSIZE	_main,3,0
+   636                           ; =============== function _main ends ==========
+                                 ==
+   637                           
+   638                                   psect   text1,class=CODE,space=0,reloc=2
+   639                           	line	114
+   640                           
+   641                           	opt lm
+   642                           	signat	_main,88
+   643                           	global	_LCD_Move
+   644                           	global	??_LCD_Move
+   645                           	global	?_LCD_Move
+   646                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+   647                           	line	54
+   648  000000                     	__size_of_LCD_Move	equ	__end_of_LCD_Move-_LCD_M
+                                 ove
+   649                           ;lcd_portd.c: 53: void LCD_Move(unsigned char Ro
+                                 w, unsigned char Col)
+   650                           ;lcd_portd.c: 54: {
+   651                           	
+   652  001900                     _LCD_Move:		; BSR set to: ?
+   653                           
+   654                           	opt stack 29
+   655                           	line	55
+   656                           ;lcd_portd.c: 55: if (Row == 0) LCD_Inst(0x80 + 
+                                 Col);
+   657  001900  0101               	movlb	1	; () banked
+   658  001902  0101               	movlb	1	; () banked
+   659  001904  6703               	tstfsz	((LCD_Move@Row))&0ffh
+   660  001906  D001               	goto	u1601
+   661  001908  D001               	goto	u1600
+   662  00190A                     u1601:
+   663  00190A  D009               	goto	l124
+   664  00190C                     u1600:
+   665  00190C  0101               	movlb	1	; () banked
+   666  00190E  0101               	movlb	1	; () banked
+   667  001910  5104               	movf	((LCD_Move@Col))&0ffh,w
+   668  001912  0F80               	addlw	low(080h)
+   669  001914  0101               	movlb	1	; () banked
+   670  001916  0101               	movlb	1	; () banked
+   671  001918  6F05               	movwf	((?_LCD_Inst))&0ffh
+   672  00191A  EC01  F00D         	call	_LCD_Inst	;wreg free
+   673                           	
+   674  00191E                     l124:		; BSR set to: ?
+   675                           
+   676                           	line	56
+   677                           ;lcd_portd.c: 56: if (Row == 1) LCD_Inst(0xC0 + 
+                                 Col);
+   678  00191E  0101               	movlb	1	; () banked
+   679  001920  0101               	movlb	1	; () banked
+   680  001922  0503               	decf	((LCD_Move@Row))&0ffh,w
+   681                           
+   682  001924  A4D8               	btfss	status,2
+   683  001926  D001               	goto	u1611
+   684  001928  D001               	goto	u1610
+   685  00192A                     u1611:
+   686  00192A  D009               	goto	l125
+   687  00192C                     u1610:
+   688  00192C  0101               	movlb	1	; () banked
+   689  00192E  0101               	movlb	1	; () banked
+   690  001930  5104               	movf	((LCD_Move@Col))&0ffh,w
+   691  001932  0FC0               	addlw	low(0C0h)
+   692  001934  0101               	movlb	1	; () banked
+   693  001936  0101               	movlb	1	; () banked
+   694  001938  6F05               	movwf	((?_LCD_Inst))&0ffh
+   695  00193A  EC01  F00D         	call	_LCD_Inst	;wreg free
+   696                           	
+   697  00193E                     l125:		; BSR set to: ?
+   698                           
+   699                           	line	57
+   700                           ;lcd_portd.c: 57: if (Row == 2) LCD_Inst(0x94 + 
+                                 Col);
+   701  00193E  0101               	movlb	1	; () banked
+   702  001940  0101               	movlb	1	; () banked
+   703  001942  5103               	movf	((LCD_Move@Row))&0ffh,w
+   704  001944  0A02               	xorlw	2
+   705                           
+   706  001946  A4D8               	btfss	status,2
+   707  001948  D001               	goto	u1621
+   708  00194A  D001               	goto	u1620
+   709  00194C                     u1621:
+   710  00194C  D009               	goto	l126
+   711  00194E                     u1620:
+   712  00194E  0101               	movlb	1	; () banked
+   713  001950  0101               	movlb	1	; () banked
+   714  001952  5104               	movf	((LCD_Move@Col))&0ffh,w
+   715  001954  0F94               	addlw	low(094h)
+   716  001956  0101               	movlb	1	; () banked
+   717  001958  0101               	movlb	1	; () banked
+   718  00195A  6F05               	movwf	((?_LCD_Inst))&0ffh
+   719  00195C  EC01  F00D         	call	_LCD_Inst	;wreg free
+   720                           	
+   721  001960                     l126:		; BSR set to: ?
+   722                           
+   723                           	line	58
+   724                           ;lcd_portd.c: 58: if (Row == 3) LCD_Inst(0xD4 + 
+                                 Col);
+   725  001960  0101               	movlb	1	; () banked
+   726  001962  0101               	movlb	1	; () banked
+   727  001964  5103               	movf	((LCD_Move@Row))&0ffh,w
+   728  001966  0A03               	xorlw	3
+   729                           
+   730  001968  A4D8               	btfss	status,2
+   731  00196A  D001               	goto	u1631
+   732  00196C  D001               	goto	u1630
+   733  00196E                     u1631:
+   734  00196E  D009               	goto	l127
+   735  001970                     u1630:
+   736  001970  0101               	movlb	1	; () banked
+   737  001972  0101               	movlb	1	; () banked
+   738  001974  5104               	movf	((LCD_Move@Col))&0ffh,w
+   739  001976  0FD4               	addlw	low(0D4h)
+   740  001978  0101               	movlb	1	; () banked
+   741  00197A  0101               	movlb	1	; () banked
+   742  00197C  6F05               	movwf	((?_LCD_Inst))&0ffh
+   743  00197E  EC01  F00D         	call	_LCD_Inst	;wreg free
+   744                           	
+   745  001982                     l127:		; BSR set to: ?
+   746                           
+   747                           	line	59
+   748                           ;lcd_portd.c: 59: }
+   749  001982                     l123:
+   750                           			; BSR set to: ?
+   751                           
+   752  001982  0012               	return
+   753                           	opt stack 0
+   754                           GLOBAL __end_of_LCD_Move
+   755  001984                     	__end_of_LCD_Move:
+   756                           	FNSIZE	_LCD_Move,0,2
+   757                           ; =============== function _LCD_Move ends ======
+                                 ======
+   758                           
+   759                           	signat	_LCD_Move,8312
+   760                           	global	_LCD_Out
+   761                           	global	??_LCD_Out
+   762                           	global	?_LCD_Out
+   763                                   psect   text2,class=CODE,space=0,reloc=2
+   764                           
+   765                           	opt lm
+   766                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+   767                           	line	87
+   768  000000                     	__size_of_LCD_Out	equ	__end_of_LCD_Out-_LCD_Out
+   769                           ;lcd_portd.c: 86: void LCD_Out(long int DATA, un
+                                 signed char D, unsigned char N)
+   770                           ;lcd_portd.c: 87: {
+   771                           	
+   772  001490                     _LCD_Out:		; BSR set to: ?
+   773                           
+   774                           	opt stack 29
+   775                           	line	90
+   776  001490  0101               	movlb	1	; () banked
+   777  001492  0101               	movlb	1	; () banked
+   778  001494  AF06               	btfss	((LCD_Out@DATA+3))&0ffh,7
+   779  001496  D001               	goto	u1641
+   780  001498  D001               	goto	u1640
+   781  00149A                     u1641:
+   782  00149A  D01B               	goto	l131
+   783  00149C                     u1640:
+   784                           	line	91
+   785                           ;lcd_portd.c: 91: LCD_Write('-');
+   786  00149C  0101               	movlb	1	; () banked
+   787  00149E  6F14               	movwf	(??_LCD_Out+11+0)&0ffh
+   788  0014A0  0E2D               	movlw	low(02Dh)
+   789  0014A2  0101               	movlb	1	; () banked
+   790  0014A4  0101               	movlb	1	; () banked
+   791  0014A6  6F15               	movwf	((?_LCD_Write))&0ffh
+   792  0014A8  0101               	movlb	1	; () banked
+   793  0014AA  5114               	movf	(??_LCD_Out+11+0)&0ffh,w
+   794  0014AC  EC28  F00D         	call	_LCD_Write	;wreg free
+   795                           	line	92
+   796                           ;lcd_portd.c: 92: DATA = -DATA;
+   797  0014B0  0101               	movlb	1	; () banked
+   798  0014B2  0101               	movlb	1	; () banked
+   799  0014B4  1F06               	comf	((LCD_Out@DATA+3))&0ffh
+   800  0014B6  0101               	movlb	1	; () banked
+   801  0014B8  1F05               	comf	((LCD_Out@DATA+2))&0ffh
+   802  0014BA  0101               	movlb	1	; () banked
+   803  0014BC  1F04               	comf	((LCD_Out@DATA+1))&0ffh
+   804  0014BE  0101               	movlb	1	; () banked
+   805  0014C0  6D03               	negf	((LCD_Out@DATA))&0ffh
+   806  0014C2  0E00               	movlw	0
+   807  0014C4  0101               	movlb	1	; () banked
+   808  0014C6  2304               	addwfc	((LCD_Out@DATA+1))&0ffh
+   809  0014C8  0101               	movlb	1	; () banked
+   810  0014CA  2305               	addwfc	((LCD_Out@DATA+2))&0ffh
+   811  0014CC  0101               	movlb	1	; () banked
+   812  0014CE  2306               	addwfc	((LCD_Out@DATA+3))&0ffh
+   813                           	line	93
+   814                           ;lcd_portd.c: 93: }
+   815  0014D0  D00A               	goto	l132
+   816                           	line	94
+   817                           	
+   818  0014D2                     l131:		; BSR set to: ?
+   819                           
+   820                           ;lcd_portd.c: 94: else LCD_Write(' ');
+   821  0014D2  0101               	movlb	1	; () banked
+   822  0014D4  6F14               	movwf	(??_LCD_Out+11+0)&0ffh
+   823  0014D6  0E20               	movlw	low(020h)
+   824  0014D8  0101               	movlb	1	; () banked
+   825  0014DA  0101               	movlb	1	; () banked
+   826  0014DC  6F15               	movwf	((?_LCD_Write))&0ffh
+   827  0014DE  0101               	movlb	1	; () banked
+   828  0014E0  5114               	movf	(??_LCD_Out+11+0)&0ffh,w
+   829  0014E2  EC28  F00D         	call	_LCD_Write	;wreg free
+   830                           	
+   831  0014E6                     l132:		; BSR set to: ?
+   832                           
+   833                           	line	95
+   834                           ;lcd_portd.c: 95: for (i=0; i<10; i++) {
+   835  0014E6  0101               	movlb	1	; () banked
+   836  0014E8  6F14               	movwf	(??_LCD_Out+11+0)&0ffh
+   837  0014EA  0E00               	movlw	low(0)
+   838  0014EC  0101               	movlb	1	; () banked
+   839  0014EE  0101               	movlb	1	; () banked
+   840  0014F0  6F09               	movwf	((LCD_Out@i))&0ffh
+   841  0014F2  0101               	movlb	1	; () banked
+   842  0014F4  5114               	movf	(??_LCD_Out+11+0)&0ffh,w
+   843  0014F6  0E09               	movlw	(0Ah-1)
+   844  0014F8  0101               	movlb	1	; () banked
+   845  0014FA  0101               	movlb	1	; () banked
+   846  0014FC  6509               	cpfsgt	((LCD_Out@i))&0ffh
+   847  0014FE  D001               	goto	u1651
+   848  001500  D001               	goto	u1650
+   849  001502                     u1651:
+   850  001502  D001               	goto	l133
+   851  001504                     u1650:
+   852  001504  D04E               	goto	l134
+   853                           	
+   854  001506                     l133:		; BSR set to: ?
+   855                           
+   856                           	line	96
+   857                           ;lcd_portd.c: 96: A[i] = DATA % 10;
+   858  001506  0101               	movlb	1	; () banked
+   859  001508  0E0A               	movlw	low(LCD_Out@A)
+   860  00150A  0101               	movlb	1	; () banked
+   861  00150C  0101               	movlb	1	; () banked
+   862  00150E  2509               	addwf	((LCD_Out@i))&0ffh,w
+   863  001510  6EE9               	movwf	c:fsr0l
+   864  001512  6AEA               	clrf	1+c:fsr0l
+   865  001514  0101               	movlb	1	; () banked
+   866  001516  0E01               	movlw	high(LCD_Out@A)
+   867  001518  22EA               	addwfc	1+c:fsr0l
+   868  00151A  0E0A               	movlw	low(0Ah)
+   869  00151C  0101               	movlb	1	; () banked
+   870  00151E  0101               	movlb	1	; () banked
+   871  001520  6F19               	movwf	(0+(?___almod+04h))&0ffh
+   872  001522  0E00               	movlw	high(0Ah)
+   873  001524  0101               	movlb	1	; () banked
+   874  001526  6F1A               	movwf	(1+(?___almod+04h))&0ffh
+   875  001528  0E00               	movlw	low highword(0Ah)
+   876  00152A  0101               	movlb	1	; () banked
+   877  00152C  6F1B               	movwf	(2+(?___almod+04h))&0ffh
+   878  00152E  0E00               	movlw	high highword(0Ah)
+   879  001530  0101               	movlb	1	; () banked
+   880  001532  6F1C               	movwf	(3+(?___almod+04h))&0ffh
+   881  001534  C103  F115         	movff	(LCD_Out@DATA),(?___almod)
+   882  001538  C104  F116         	movff	(LCD_Out@DATA+1),(?___almod+1)
+   883  00153C  C105  F117         	movff	(LCD_Out@DATA+2),(?___almod+2)
+   884  001540  C106  F118         	movff	(LCD_Out@DATA+3),(?___almod+3)
+   885  001544  EC0C  F00B         	call	___almod	;wreg free
+   886  001548  0101               	movlb	1	; () banked
+   887  00154A  0101               	movlb	1	; () banked
+   888  00154C  5115               	movf	(0+?___almod)&0ffh,w
+   889  00154E  6EEF               	movwf	indf0
+   890                           
+   891                           	line	97
+   892                           ;lcd_portd.c: 97: DATA = DATA / 10;
+   893  001550  0E0A               	movlw	low(0Ah)
+   894  001552  0101               	movlb	1	; () banked
+   895  001554  0101               	movlb	1	; () banked
+   896  001556  6F19               	movwf	(0+(?___aldiv+04h))&0ffh
+   897  001558  0E00               	movlw	high(0Ah)
+   898  00155A  0101               	movlb	1	; () banked
+   899  00155C  6F1A               	movwf	(1+(?___aldiv+04h))&0ffh
+   900  00155E  0E00               	movlw	low highword(0Ah)
+   901  001560  0101               	movlb	1	; () banked
+   902  001562  6F1B               	movwf	(2+(?___aldiv+04h))&0ffh
+   903  001564  0E00               	movlw	high highword(0Ah)
+   904  001566  0101               	movlb	1	; () banked
+   905  001568  6F1C               	movwf	(3+(?___aldiv+04h))&0ffh
+   906  00156A  C103  F115         	movff	(LCD_Out@DATA),(?___aldiv)
+   907  00156E  C104  F116         	movff	(LCD_Out@DATA+1),(?___aldiv+1)
+   908  001572  C105  F117         	movff	(LCD_Out@DATA+2),(?___aldiv+2)
+   909  001576  C106  F118         	movff	(LCD_Out@DATA+3),(?___aldiv+3)
+   910  00157A  EC66  F009         	call	___aldiv	;wreg free
+   911  00157E  C115  F103         	movff	0+?___aldiv,(LCD_Out@DATA)
+   912  001582  C116  F104         	movff	1+?___aldiv,(LCD_Out@DATA+1)
+   913  001586  C117  F105         	movff	2+?___aldiv,(LCD_Out@DATA+2)
+   914  00158A  C118  F106         	movff	3+?___aldiv,(LCD_Out@DATA+3)
+   915                           	line	95
+   916  00158E  0101               	movlb	1	; () banked
+   917  001590  0101               	movlb	1	; () banked
+   918  001592  2B09               	incf	((LCD_Out@i))&0ffh
+   919  001594  0E09               	movlw	(0Ah-1)
+   920  001596  0101               	movlb	1	; () banked
+   921  001598  0101               	movlb	1	; () banked
+   922  00159A  6509               	cpfsgt	((LCD_Out@i))&0ffh
+   923  00159C  D001               	goto	u1661
+   924  00159E  D001               	goto	u1660
+   925  0015A0                     u1661:
+   926  0015A0  D7B2               	goto	l133
+   927  0015A2                     u1660:
+   928                           	
+   929  0015A2                     l134:		; BSR set to: ?
+   930                           
+   931                           	line	99
+   932                           ;lcd_portd.c: 98: }
+   933                           ;lcd_portd.c: 99: for (i=D; i>0; i--) {
+   934  0015A2  C107  F109         	movff	(LCD_Out@D),(LCD_Out@i)
+   935  0015A6  0101               	movlb	1	; () banked
+   936  0015A8  0101               	movlb	1	; () banked
+   937  0015AA  6709               	tstfsz	((LCD_Out@i))&0ffh
+   938  0015AC  D001               	goto	u1671
+   939  0015AE  D001               	goto	u1670
+   940  0015B0                     u1671:
+   941  0015B0  D001               	goto	l136
+   942  0015B2                     u1670:
+   943  0015B2  D031               	goto	l137
+   944                           	
+   945  0015B4                     l136:		; BSR set to: ?
+   946                           
+   947                           	line	100
+   948                           ;lcd_portd.c: 100: if (i == N) LCD_Write('.');
+   949  0015B4  0101               	movlb	1	; () banked
+   950  0015B6  0101               	movlb	1	; () banked
+   951  0015B8  5108               	movf	((LCD_Out@N))&0ffh,w
+   952  0015BA  0101               	movlb	1	; () banked
+   953  0015BC  0101               	movlb	1	; () banked
+   954  0015BE  6309               	cpfseq	((LCD_Out@i))&0ffh
+   955  0015C0  D001               	goto	u1681
+   956  0015C2  D001               	goto	u1680
+   957  0015C4                     u1681:
+   958  0015C4  D00A               	goto	l139
+   959  0015C6                     u1680:
+   960  0015C6  0101               	movlb	1	; () banked
+   961  0015C8  6F14               	movwf	(??_LCD_Out+11+0)&0ffh
+   962  0015CA  0E2E               	movlw	low(02Eh)
+   963  0015CC  0101               	movlb	1	; () banked
+   964  0015CE  0101               	movlb	1	; () banked
+   965  0015D0  6F15               	movwf	((?_LCD_Write))&0ffh
+   966  0015D2  0101               	movlb	1	; () banked
+   967  0015D4  5114               	movf	(??_LCD_Out+11+0)&0ffh,w
+   968  0015D6  EC28  F00D         	call	_LCD_Write	;wreg free
+   969                           	
+   970  0015DA                     l139:		; BSR set to: ?
+   971                           
+   972                           	line	101
+   973                           ;lcd_portd.c: 101: LCD_Write(A[i-1] + '0');
+   974  0015DA  C109  F114         	movff	(LCD_Out@i),??_LCD_Out+11+0
+   975  0015DE  0EFF               	movlw	-1
+   976  0015E0  0101               	movlb	1	; () banked
+   977  0015E2  2714               	addwf	(??_LCD_Out+11+0)&0ffh
+   978  0015E4  0101               	movlb	1	; () banked
+   979  0015E6  0E0A               	movlw	low(LCD_Out@A)
+   980  0015E8  0101               	movlb	1	; () banked
+   981  0015EA  2514               	addwf	(??_LCD_Out+11+0)&0ffh,w
+   982  0015EC  6EE9               	movwf	c:fsr0l
+   983  0015EE  6AEA               	clrf	1+c:fsr0l
+   984  0015F0  0101               	movlb	1	; () banked
+   985  0015F2  0E01               	movlw	high(LCD_Out@A)
+   986  0015F4  22EA               	addwfc	1+c:fsr0l
+   987  0015F6  50EF               	movf	indf0,w
+   988  0015F8  0F30               	addlw	low(030h)
+   989  0015FA  0101               	movlb	1	; () banked
+   990  0015FC  0101               	movlb	1	; () banked
+   991  0015FE  6F15               	movwf	((?_LCD_Write))&0ffh
+   992  001600  EC28  F00D         	call	_LCD_Write	;wreg free
+   993                           	line	99
+   994  001604  0101               	movlb	1	; () banked
+   995  001606  0101               	movlb	1	; () banked
+   996  001608  0709               	decf	((LCD_Out@i))&0ffh
+   997  00160A  0101               	movlb	1	; () banked
+   998  00160C  0101               	movlb	1	; () banked
+   999  00160E  6709               	tstfsz	((LCD_Out@i))&0ffh
+  1000  001610  D001               	goto	u1691
+  1001  001612  D001               	goto	u1690
+  1002  001614                     u1691:
+  1003  001614  D7CF               	goto	l136
+  1004  001616                     u1690:
+  1005                           	
+  1006  001616                     l137:		; BSR set to: ?
+  1007                           
+  1008                           	line	103
+  1009                           ;lcd_portd.c: 102: }
+  1010                           ;lcd_portd.c: 103: }
+  1011  001616                     l130:
+  1012                           			; BSR set to: ?
+  1013                           
+  1014  001616  0012               	return
+  1015                           	opt stack 0
+  1016                           GLOBAL __end_of_LCD_Out
+  1017  001618                     	__end_of_LCD_Out:
+  1018                           	FNSIZE	_LCD_Out,12,6
+  1019                           ; =============== function _LCD_Out ends =======
+                                 =====
+  1020                           
+  1021                           	signat	_LCD_Out,12408
+  1022                           	global	_LCD_Init
+  1023                           	global	??_LCD_Init
+  1024                           	global	?_LCD_Init
+  1025                                   psect   text3,class=CODE,space=0,reloc=2
+  1026                           
+  1027                           	opt lm
+  1028                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  1029                           	line	73
+  1030  000000                     	__size_of_LCD_Init	equ	__end_of_LCD_Init-_LCD_I
+                                 nit
+  1031                           ;lcd_portd.c: 72: void LCD_Init(void)
+  1032                           ;lcd_portd.c: 73: {
+  1033                           	
+  1034  00186E                     _LCD_Init:		; BSR set to: ?
+  1035                           
+  1036                           	opt stack 29
+  1037                           	line	74
+  1038                           ;lcd_portd.c: 74: TRISD = 0;
+  1039  00186E  0E00               	movlw	low(0)
+  1040  001870  6E95               	movwf	((c:3989)),c	;volatile
+  1041                           	line	75
+  1042                           ;lcd_portd.c: 75: RD1 = 0;
+  1043  001872  9283               	bcf	c:(31769/8),(31769)&7	;volatile
+  1044                           	line	76
+  1045                           ;lcd_portd.c: 76: LCD_Inst(0x33);
+  1046  001874  0101               	movlb	1	; () banked
+  1047  001876  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1048  001878  0E33               	movlw	low(033h)
+  1049  00187A  0101               	movlb	1	; () banked
+  1050  00187C  0101               	movlb	1	; () banked
+  1051  00187E  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1052  001880  0101               	movlb	1	; () banked
+  1053  001882  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1054  001884  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1055                           	line	77
+  1056                           ;lcd_portd.c: 77: LCD_Inst(0x32);
+  1057  001888  0101               	movlb	1	; () banked
+  1058  00188A  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1059  00188C  0E32               	movlw	low(032h)
+  1060  00188E  0101               	movlb	1	; () banked
+  1061  001890  0101               	movlb	1	; () banked
+  1062  001892  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1063  001894  0101               	movlb	1	; () banked
+  1064  001896  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1065  001898  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1066                           	line	78
+  1067                           ;lcd_portd.c: 78: LCD_Inst(0x28);
+  1068  00189C  0101               	movlb	1	; () banked
+  1069  00189E  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1070  0018A0  0E28               	movlw	low(028h)
+  1071  0018A2  0101               	movlb	1	; () banked
+  1072  0018A4  0101               	movlb	1	; () banked
+  1073  0018A6  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1074  0018A8  0101               	movlb	1	; () banked
+  1075  0018AA  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1076  0018AC  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1077                           	line	79
+  1078                           ;lcd_portd.c: 79: LCD_Inst(0x0E);
+  1079  0018B0  0101               	movlb	1	; () banked
+  1080  0018B2  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1081  0018B4  0E0E               	movlw	low(0Eh)
+  1082  0018B6  0101               	movlb	1	; () banked
+  1083  0018B8  0101               	movlb	1	; () banked
+  1084  0018BA  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1085  0018BC  0101               	movlb	1	; () banked
+  1086  0018BE  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1087  0018C0  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1088                           	line	80
+  1089                           ;lcd_portd.c: 80: LCD_Inst(0x01);
+  1090  0018C4  0101               	movlb	1	; () banked
+  1091  0018C6  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1092  0018C8  0E01               	movlw	low(01h)
+  1093  0018CA  0101               	movlb	1	; () banked
+  1094  0018CC  0101               	movlb	1	; () banked
+  1095  0018CE  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1096  0018D0  0101               	movlb	1	; () banked
+  1097  0018D2  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1098  0018D4  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1099                           	line	81
+  1100                           ;lcd_portd.c: 81: LCD_Inst(0x06);
+  1101  0018D8  0101               	movlb	1	; () banked
+  1102  0018DA  6F03               	movwf	(??_LCD_Init+0+0)&0ffh
+  1103  0018DC  0E06               	movlw	low(06h)
+  1104  0018DE  0101               	movlb	1	; () banked
+  1105  0018E0  0101               	movlb	1	; () banked
+  1106  0018E2  6F05               	movwf	((?_LCD_Inst))&0ffh
+  1107  0018E4  0101               	movlb	1	; () banked
+  1108  0018E6  5103               	movf	(??_LCD_Init+0+0)&0ffh,w
+  1109  0018E8  EC01  F00D         	call	_LCD_Inst	;wreg free
+  1110                           	line	82
+  1111                           ;lcd_portd.c: 82: Wait_ms(100);
+  1112  0018EC  0E64               	movlw	low(064h)
+  1113  0018EE  0101               	movlb	1	; () banked
+  1114  0018F0  0101               	movlb	1	; () banked
+  1115  0018F2  6F07               	movwf	((?_Wait_ms))&0ffh
+  1116  0018F4  0E00               	movlw	high(064h)
+  1117  0018F6  0101               	movlb	1	; () banked
+  1118  0018F8  6F08               	movwf	((?_Wait_ms+1))&0ffh
+  1119  0018FA  ECC2  F00C         	call	_Wait_ms	;wreg free
+  1120                           	line	83
+  1121                           ;lcd_portd.c: 83: }
+  1122  0018FE                     l129:
+  1123                           			; BSR set to: ?
+  1124                           
+  1125  0018FE  0012               	return
+  1126                           	opt stack 0
+  1127                           GLOBAL __end_of_LCD_Init
+  1128  001900                     	__end_of_LCD_Init:
+  1129                           	FNSIZE	_LCD_Init,1,0
+  1130                           ; =============== function _LCD_Init ends ======
+                                 ======
+  1131                           
+  1132                           	signat	_LCD_Init,88
+  1133                           	global	_LCD_Write
+  1134                           	global	??_LCD_Write
+  1135                           	global	?_LCD_Write
+  1136                                   psect   text4,class=CODE,space=0,reloc=2
+  1137                           
+  1138                           	opt lm
+  1139                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  1140                           	line	62
+  1141  000000                     	__size_of_LCD_Write	equ	__end_of_LCD_Write-_LCD
+                                 _Write
+  1142                           ;lcd_portd.c: 61: void LCD_Write(unsigned char c
+                                 )
+  1143                           ;lcd_portd.c: 62: {
+  1144                           	
+  1145  001A50                     _LCD_Write:		; BSR set to: ?
+  1146                           
+  1147                           	opt stack 28
+  1148                           	line	63
+  1149  001A50  8483               	bsf	c:(31770/8),(31770)&7	;volatile
+  1150                           	line	64
+  1151                           ;lcd_portd.c: 64: PORTD = (PORTD & 0x0F) | (c & 
+                                 0xF0);
+  1152  001A52  C115  F116         	movff	(LCD_Write@c),??_LCD_Write+0+0
+  1153  001A56  0EF0               	movlw	0F0h
+  1154  001A58  0101               	movlb	1	; () banked
+  1155  001A5A  1716               	andwf	(??_LCD_Write+0+0)&0ffh
+  1156  001A5C  5083               	movf	((c:3971)),c,w	;volatile
+  1157  001A5E  0B0F               	andlw	low(0Fh)
+  1158  001A60  0101               	movlb	1	; () banked
+  1159  001A62  1116               	iorwf	(??_LCD_Write+0+0)&0ffh,w
+  1160  001A64  6E83               	movwf	((c:3971)),c	;volatile
+  1161                           	line	65
+  1162                           ;lcd_portd.c: 65: LCD_Strobe();
+  1163  001A66  EC61  F00D         	call	_LCD_Strobe	;wreg free
+  1164                           	line	66
+  1165                           ;lcd_portd.c: 66: PORTD = (PORTD & 0x0F) | ((c<<
+                                 4) & 0xF0);
+  1166  001A6A  C115  F116         	movff	(LCD_Write@c),??_LCD_Write+0+0
+  1167  001A6E  0101               	movlb	1	; () banked
+  1168  001A70  3B16               	swapf	(??_LCD_Write+0+0)&0ffh
+  1169  001A72  0EF0               	movlw	(0ffh shl 4) & 0ffh
+  1170  001A74  1716               	andwf	(??_LCD_Write+0+0)&0ffh
+  1171  001A76  0EF0               	movlw	0F0h
+  1172  001A78  0101               	movlb	1	; () banked
+  1173  001A7A  1716               	andwf	(??_LCD_Write+0+0)&0ffh
+  1174  001A7C  5083               	movf	((c:3971)),c,w	;volatile
+  1175  001A7E  0B0F               	andlw	low(0Fh)
+  1176  001A80  0101               	movlb	1	; () banked
+  1177  001A82  1116               	iorwf	(??_LCD_Write+0+0)&0ffh,w
+  1178  001A84  6E83               	movwf	((c:3971)),c	;volatile
+  1179                           	line	67
+  1180                           ;lcd_portd.c: 67: LCD_Strobe();
+  1181  001A86  EC61  F00D         	call	_LCD_Strobe	;wreg free
+  1182                           	line	69
+  1183                           ;lcd_portd.c: 69: }
+  1184  001A8A                     l128:
+  1185                           			; BSR set to: ?
+  1186                           
+  1187  001A8A  0012               	return
+  1188                           	opt stack 0
+  1189                           GLOBAL __end_of_LCD_Write
+  1190  001A8C                     	__end_of_LCD_Write:
+  1191                           	FNSIZE	_LCD_Write,1,1
+  1192                           ; =============== function _LCD_Write ends =====
+                                 =======
+  1193                           
+  1194                           	signat	_LCD_Write,4216
+  1195                           	global	_LCD_Inst
+  1196                           	global	??_LCD_Inst
+  1197                           	global	?_LCD_Inst
+  1198                                   psect   text5,class=CODE,space=0,reloc=2
+  1199                           
+  1200                           	opt lm
+  1201                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  1202                           	line	44
+  1203  000000                     	__size_of_LCD_Inst	equ	__end_of_LCD_Inst-_LCD_I
+                                 nst
+  1204                           ;lcd_portd.c: 43: void LCD_Inst(unsigned char c)
+  1205                           ;lcd_portd.c: 44: {
+  1206                           	
+  1207  001A02                     _LCD_Inst:		; BSR set to: ?
+  1208                           
+  1209                           	opt stack 28
+  1210                           	line	45
+  1211                           ;lcd_portd.c: 45: RD2 = 0;
+  1212  001A02  9483               	bcf	c:(31770/8),(31770)&7	;volatile
+  1213                           	line	46
+  1214                           ;lcd_portd.c: 46: PORTD = (PORTD & 0x0F) | (c & 
+                                 0xF0);
+  1215  001A04  C105  F106         	movff	(LCD_Inst@c),??_LCD_Inst+0+0
+  1216  001A08  0EF0               	movlw	0F0h
+  1217  001A0A  0101               	movlb	1	; () banked
+  1218  001A0C  1706               	andwf	(??_LCD_Inst+0+0)&0ffh
+  1219  001A0E  5083               	movf	((c:3971)),c,w	;volatile
+  1220  001A10  0B0F               	andlw	low(0Fh)
+  1221  001A12  0101               	movlb	1	; () banked
+  1222  001A14  1106               	iorwf	(??_LCD_Inst+0+0)&0ffh,w
+  1223  001A16  6E83               	movwf	((c:3971)),c	;volatile
+  1224                           	line	47
+  1225                           ;lcd_portd.c: 47: LCD_Strobe();
+  1226  001A18  EC61  F00D         	call	_LCD_Strobe	;wreg free
+  1227                           	line	48
+  1228                           ;lcd_portd.c: 48: PORTD = (PORTD & 0x0F) | ((c<<
+                                 4) & 0xF0);
+  1229  001A1C  C105  F106         	movff	(LCD_Inst@c),??_LCD_Inst+0+0
+  1230  001A20  0101               	movlb	1	; () banked
+  1231  001A22  3B06               	swapf	(??_LCD_Inst+0+0)&0ffh
+  1232  001A24  0EF0               	movlw	(0ffh shl 4) & 0ffh
+  1233  001A26  1706               	andwf	(??_LCD_Inst+0+0)&0ffh
+  1234  001A28  0EF0               	movlw	0F0h
+  1235  001A2A  0101               	movlb	1	; () banked
+  1236  001A2C  1706               	andwf	(??_LCD_Inst+0+0)&0ffh
+  1237  001A2E  5083               	movf	((c:3971)),c,w	;volatile
+  1238  001A30  0B0F               	andlw	low(0Fh)
+  1239  001A32  0101               	movlb	1	; () banked
+  1240  001A34  1106               	iorwf	(??_LCD_Inst+0+0)&0ffh,w
+  1241  001A36  6E83               	movwf	((c:3971)),c	;volatile
+  1242                           	line	49
+  1243                           ;lcd_portd.c: 49: LCD_Strobe();
+  1244  001A38  EC61  F00D         	call	_LCD_Strobe	;wreg free
+  1245                           	line	50
+  1246                           ;lcd_portd.c: 50: Wait_ms(10);
+  1247  001A3C  0E0A               	movlw	low(0Ah)
+  1248  001A3E  0101               	movlb	1	; () banked
+  1249  001A40  0101               	movlb	1	; () banked
+  1250  001A42  6F07               	movwf	((?_Wait_ms))&0ffh
+  1251  001A44  0E00               	movlw	high(0Ah)
+  1252  001A46  0101               	movlb	1	; () banked
+  1253  001A48  6F08               	movwf	((?_Wait_ms+1))&0ffh
+  1254  001A4A  ECC2  F00C         	call	_Wait_ms	;wreg free
+  1255                           	line	51
+  1256                           ;lcd_portd.c: 51: }
+  1257  001A4E                     l122:
+  1258                           			; BSR set to: ?
+  1259                           
+  1260  001A4E  0012               	return
+  1261                           	opt stack 0
+  1262                           GLOBAL __end_of_LCD_Inst
+  1263  001A50                     	__end_of_LCD_Inst:
+  1264                           	FNSIZE	_LCD_Inst,1,1
+  1265                           ; =============== function _LCD_Inst ends ======
+                                 ======
+  1266                           
+  1267                           	signat	_LCD_Inst,4216
+  1268                           	global	___aldiv
+  1269                           	global	??___aldiv
+  1270                           	global	?___aldiv
+  1271                                   psect   text6,class=CODE,space=0,reloc=2
+  1272                           
+  1273                           	opt lm
+  1274                           	file	"C:\Program Files (x86)\HI-TECH Software\P
+                                 ICC-18\PRO\9.63\sources\aldiv.c"
+  1275                           	line	5
+  1276  000000                     	__size_of___aldiv	equ	__end_of___aldiv-___aldiv
+  1277                           	
+  1278  0012CC                     ___aldiv:		; BSR set to: ?
+  1279                           
+  1280                           	opt stack 28
+  1281                           	line	9
+  1282  0012CC  0101               	movlb	1	; () banked
+  1283  0012CE  6F23               	movwf	(??___aldiv+6+0)&0ffh
+  1284  0012D0  0E00               	movlw	low(0)
+  1285  0012D2  0101               	movlb	1	; () banked
+  1286  0012D4  0101               	movlb	1	; () banked
+  1287  0012D6  6F1E               	movwf	((___aldiv@sign))&0ffh
+  1288  0012D8  0101               	movlb	1	; () banked
+  1289  0012DA  5123               	movf	(??___aldiv+6+0)&0ffh,w
+  1290                           	line	10
+  1291  0012DC  0101               	movlb	1	; () banked
+  1292  0012DE  0101               	movlb	1	; () banked
+  1293  0012E0  AF1C               	btfss	((___aldiv@divisor+3))&0ffh,7
+  1294  0012E2  D001               	goto	u1701
+  1295  0012E4  D001               	goto	u1700
+  1296  0012E6                     u1701:
+  1297  0012E6  D018               	goto	l212
+  1298  0012E8                     u1700:
+  1299                           	line	11
+  1300  0012E8  0101               	movlb	1	; () banked
+  1301  0012EA  0101               	movlb	1	; () banked
+  1302  0012EC  1F1C               	comf	((___aldiv@divisor+3))&0ffh
+  1303  0012EE  0101               	movlb	1	; () banked
+  1304  0012F0  1F1B               	comf	((___aldiv@divisor+2))&0ffh
+  1305  0012F2  0101               	movlb	1	; () banked
+  1306  0012F4  1F1A               	comf	((___aldiv@divisor+1))&0ffh
+  1307  0012F6  0101               	movlb	1	; () banked
+  1308  0012F8  6D19               	negf	((___aldiv@divisor))&0ffh
+  1309  0012FA  0E00               	movlw	0
+  1310  0012FC  0101               	movlb	1	; () banked
+  1311  0012FE  231A               	addwfc	((___aldiv@divisor+1))&0ffh
+  1312  001300  0101               	movlb	1	; () banked
+  1313  001302  231B               	addwfc	((___aldiv@divisor+2))&0ffh
+  1314  001304  0101               	movlb	1	; () banked
+  1315  001306  231C               	addwfc	((___aldiv@divisor+3))&0ffh
+  1316                           	line	12
+  1317  001308  0101               	movlb	1	; () banked
+  1318  00130A  6F23               	movwf	(??___aldiv+6+0)&0ffh
+  1319  00130C  0E01               	movlw	low(01h)
+  1320  00130E  0101               	movlb	1	; () banked
+  1321  001310  0101               	movlb	1	; () banked
+  1322  001312  6F1E               	movwf	((___aldiv@sign))&0ffh
+  1323  001314  0101               	movlb	1	; () banked
+  1324  001316  5123               	movf	(??___aldiv+6+0)&0ffh,w
+  1325                           	line	13
+  1326                           	
+  1327  001318                     l212:		; BSR set to: ?
+  1328                           
+  1329                           	line	14
+  1330  001318  0101               	movlb	1	; () banked
+  1331  00131A  0101               	movlb	1	; () banked
+  1332  00131C  AF18               	btfss	((___aldiv@dividend+3))&0ffh,7
+  1333  00131E  D001               	goto	u1711
+  1334  001320  D001               	goto	u1710
+  1335  001322                     u1711:
+  1336  001322  D014               	goto	l213
+  1337  001324                     u1710:
+  1338                           	line	15
+  1339  001324  0101               	movlb	1	; () banked
+  1340  001326  0101               	movlb	1	; () banked
+  1341  001328  1F18               	comf	((___aldiv@dividend+3))&0ffh
+  1342  00132A  0101               	movlb	1	; () banked
+  1343  00132C  1F17               	comf	((___aldiv@dividend+2))&0ffh
+  1344  00132E  0101               	movlb	1	; () banked
+  1345  001330  1F16               	comf	((___aldiv@dividend+1))&0ffh
+  1346  001332  0101               	movlb	1	; () banked
+  1347  001334  6D15               	negf	((___aldiv@dividend))&0ffh
+  1348  001336  0E00               	movlw	0
+  1349  001338  0101               	movlb	1	; () banked
+  1350  00133A  2316               	addwfc	((___aldiv@dividend+1))&0ffh
+  1351  00133C  0101               	movlb	1	; () banked
+  1352  00133E  2317               	addwfc	((___aldiv@dividend+2))&0ffh
+  1353  001340  0101               	movlb	1	; () banked
+  1354  001342  2318               	addwfc	((___aldiv@dividend+3))&0ffh
+  1355                           	line	16
+  1356  001344  0E01               	movlw	(01h)&0ffh
+  1357  001346  0101               	movlb	1	; () banked
+  1358  001348  0101               	movlb	1	; () banked
+  1359  00134A  1B1E               	xorwf	((___aldiv@sign))&0ffh
+  1360                           	line	17
+  1361                           	
+  1362  00134C                     l213:		; BSR set to: ?
+  1363                           
+  1364                           	line	18
+  1365  00134C  0E00               	movlw	low(0)
+  1366  00134E  0101               	movlb	1	; () banked
+  1367  001350  0101               	movlb	1	; () banked
+  1368  001352  6F1F               	movwf	((___aldiv@quotient))&0ffh
+  1369  001354  0E00               	movlw	high(0)
+  1370  001356  0101               	movlb	1	; () banked
+  1371  001358  6F20               	movwf	((___aldiv@quotient+1))&0ffh
+  1372  00135A  0E00               	movlw	low highword(0)
+  1373  00135C  0101               	movlb	1	; () banked
+  1374  00135E  6F21               	movwf	((___aldiv@quotient+2))&0ffh
+  1375  001360  0E00               	movlw	high highword(0)
+  1376  001362  0101               	movlb	1	; () banked
+  1377  001364  6F22               	movwf	((___aldiv@quotient+3))&0ffh
+  1378                           	line	19
+  1379  001366  0101               	movlb	1	; () banked
+  1380  001368  511C               	movf	((___aldiv@divisor+3))&0ffh,w
+  1381  00136A  1119               	iorwf ((___aldiv@divisor))&0ffh,w
+  1382  00136C  111A               	iorwf ((___aldiv@divisor+1))&0ffh,w
+  1383  00136E  111B               	iorwf ((___aldiv@divisor+2))&0ffh,w
+  1384                           
+  1385  001370  B4D8               	btfsc	status,2
+  1386  001372  D001               	goto	u1721
+  1387  001374  D001               	goto	u1720
+  1388  001376                     u1721:
+  1389  001376  D06B               	goto	l214
+  1390  001378                     u1720:
+  1391                           	line	20
+  1392  001378  0101               	movlb	1	; () banked
+  1393  00137A  6F23               	movwf	(??___aldiv+6+0)&0ffh
+  1394  00137C  0E01               	movlw	low(01h)
+  1395  00137E  0101               	movlb	1	; () banked
+  1396  001380  0101               	movlb	1	; () banked
+  1397  001382  6F1D               	movwf	((___aldiv@counter))&0ffh
+  1398  001384  0101               	movlb	1	; () banked
+  1399  001386  5123               	movf	(??___aldiv+6+0)&0ffh,w
+  1400                           	line	21
+  1401  001388  D00D               	goto	l215
+  1402                           	
+  1403  00138A                     l216:		; BSR set to: ?
+  1404                           
+  1405                           	line	22
+  1406  00138A  0101               	movlb	1	; () banked
+  1407  00138C  90D8               	bcf	status,0
+  1408  00138E  0101               	movlb	1	; () banked
+  1409  001390  3719               	rlcf	((___aldiv@divisor))&0ffh
+  1410  001392  0101               	movlb	1	; () banked
+  1411  001394  371A               	rlcf	((___aldiv@divisor+1))&0ffh
+  1412  001396  0101               	movlb	1	; () banked
+  1413  001398  371B               	rlcf	((___aldiv@divisor+2))&0ffh
+  1414  00139A  0101               	movlb	1	; () banked
+  1415  00139C  371C               	rlcf	((___aldiv@divisor+3))&0ffh
+  1416                           	line	23
+  1417  00139E  0101               	movlb	1	; () banked
+  1418  0013A0  0101               	movlb	1	; () banked
+  1419  0013A2  2B1D               	incf	((___aldiv@counter))&0ffh
+  1420                           	line	24
+  1421                           	
+  1422  0013A4                     l215:		; BSR set to: ?
+  1423                           
+  1424                           	line	21
+  1425  0013A4  0101               	movlb	1	; () banked
+  1426                           	
+  1427  0013A6  0101               	movlb	1	; () banked
+  1428  0013A8  AF1C               	btfss	((___aldiv@divisor+3))&0ffh,(31)&7
+  1429  0013AA  D001               	goto	u1731
+  1430  0013AC  D001               	goto	u1730
+  1431  0013AE                     u1731:
+  1432  0013AE  D7ED               	goto	l216
+  1433  0013B0                     u1730:
+  1434                           	
+  1435  0013B0                     l217:		; BSR set to: ?
+  1436                           
+  1437                           	line	25
+  1438                           	
+  1439  0013B0                     l220:		; BSR set to: ?
+  1440                           
+  1441                           	line	26
+  1442  0013B0  0101               	movlb	1	; () banked
+  1443  0013B2  90D8               	bcf	status,0
+  1444  0013B4  0101               	movlb	1	; () banked
+  1445  0013B6  371F               	rlcf	((___aldiv@quotient))&0ffh
+  1446  0013B8  0101               	movlb	1	; () banked
+  1447  0013BA  3720               	rlcf	((___aldiv@quotient+1))&0ffh
+  1448  0013BC  0101               	movlb	1	; () banked
+  1449  0013BE  3721               	rlcf	((___aldiv@quotient+2))&0ffh
+  1450  0013C0  0101               	movlb	1	; () banked
+  1451  0013C2  3722               	rlcf	((___aldiv@quotient+3))&0ffh
+  1452                           	line	27
+  1453  0013C4  0101               	movlb	1	; () banked
+  1454  0013C6  0101               	movlb	1	; () banked
+  1455  0013C8  5119               	movf	((___aldiv@divisor))&0ffh,w
+  1456  0013CA  0101               	movlb	1	; () banked
+  1457  0013CC  0101               	movlb	1	; () banked
+  1458  0013CE  5D15               	subwf	((___aldiv@dividend))&0ffh,w
+  1459  0013D0  0101               	movlb	1	; () banked
+  1460  0013D2  0101               	movlb	1	; () banked
+  1461  0013D4  511A               	movf	((___aldiv@divisor+1))&0ffh,w
+  1462  0013D6  0101               	movlb	1	; () banked
+  1463  0013D8  0101               	movlb	1	; () banked
+  1464  0013DA  5916               	subwfb	((___aldiv@dividend+1))&0ffh,w
+  1465  0013DC  0101               	movlb	1	; () banked
+  1466  0013DE  0101               	movlb	1	; () banked
+  1467  0013E0  511B               	movf	((___aldiv@divisor+2))&0ffh,w
+  1468  0013E2  0101               	movlb	1	; () banked
+  1469  0013E4  0101               	movlb	1	; () banked
+  1470  0013E6  5917               	subwfb	((___aldiv@dividend+2))&0ffh,w
+  1471  0013E8  0101               	movlb	1	; () banked
+  1472  0013EA  0101               	movlb	1	; () banked
+  1473  0013EC  511C               	movf	((___aldiv@divisor+3))&0ffh,w
+  1474  0013EE  0101               	movlb	1	; () banked
+  1475  0013F0  0101               	movlb	1	; () banked
+  1476  0013F2  5918               	subwfb	((___aldiv@dividend+3))&0ffh,w
+  1477  0013F4  A0D8               	btfss	status,0
+  1478  0013F6  D001               	goto	u1741
+  1479  0013F8  D001               	goto	u1740
+  1480  0013FA                     u1741:
+  1481  0013FA  D01B               	goto	l221
+  1482  0013FC                     u1740:
+  1483                           	line	28
+  1484  0013FC  0101               	movlb	1	; () banked
+  1485  0013FE  0101               	movlb	1	; () banked
+  1486  001400  5119               	movf	((___aldiv@divisor))&0ffh,w
+  1487  001402  0101               	movlb	1	; () banked
+  1488  001404  0101               	movlb	1	; () banked
+  1489  001406  5F15               	subwf	((___aldiv@dividend))&0ffh
+  1490  001408  0101               	movlb	1	; () banked
+  1491  00140A  0101               	movlb	1	; () banked
+  1492  00140C  511A               	movf	((___aldiv@divisor+1))&0ffh,w
+  1493  00140E  0101               	movlb	1	; () banked
+  1494  001410  0101               	movlb	1	; () banked
+  1495  001412  5B16               	subwfb	((___aldiv@dividend+1))&0ffh
+  1496  001414  0101               	movlb	1	; () banked
+  1497  001416  0101               	movlb	1	; () banked
+  1498  001418  511B               	movf	((___aldiv@divisor+2))&0ffh,w
+  1499  00141A  0101               	movlb	1	; () banked
+  1500  00141C  0101               	movlb	1	; () banked
+  1501  00141E  5B17               	subwfb	((___aldiv@dividend+2))&0ffh
+  1502  001420  0101               	movlb	1	; () banked
+  1503  001422  0101               	movlb	1	; () banked
+  1504  001424  511C               	movf	((___aldiv@divisor+3))&0ffh,w
+  1505  001426  0101               	movlb	1	; () banked
+  1506  001428  0101               	movlb	1	; () banked
+  1507  00142A  5B18               	subwfb	((___aldiv@dividend+3))&0ffh
+  1508                           	line	29
+  1509  00142C  0101               	movlb	1	; () banked
+  1510  00142E  0101               	movlb	1	; () banked
+  1511  001430  811F               	bsf	(0+(0/8)+(___aldiv@quotient))&0ffh,(0)&7
+  1512                           	line	30
+  1513                           	
+  1514  001432                     l221:		; BSR set to: ?
+  1515                           
+  1516                           	line	31
+  1517  001432  0101               	movlb	1	; () banked
+  1518  001434  90D8               	bcf	status,0
+  1519  001436  0101               	movlb	1	; () banked
+  1520  001438  331C               	rrcf	((___aldiv@divisor+3))&0ffh
+  1521  00143A  0101               	movlb	1	; () banked
+  1522  00143C  331B               	rrcf	((___aldiv@divisor+2))&0ffh
+  1523  00143E  0101               	movlb	1	; () banked
+  1524  001440  331A               	rrcf	((___aldiv@divisor+1))&0ffh
+  1525  001442  0101               	movlb	1	; () banked
+  1526  001444  3319               	rrcf	((___aldiv@divisor))&0ffh
+  1527                           	line	32
+  1528  001446  0101               	movlb	1	; () banked
+  1529  001448  0101               	movlb	1	; () banked
+  1530  00144A  2F1D               	decfsz	((___aldiv@counter))&0ffh
+  1531                           	
+  1532  00144C  D7B1               	goto	l220
+  1533                           	
+  1534  00144E                     l219:		; BSR set to: ?
+  1535                           
+  1536                           	line	33
+  1537                           	
+  1538  00144E                     l214:		; BSR set to: ?
+  1539                           
+  1540                           	line	34
+  1541  00144E  0101               	movlb	1	; () banked
+  1542  001450  0101               	movlb	1	; () banked
+  1543  001452  511E               	movf	((___aldiv@sign))&0ffh,w
+  1544  001454  B4D8               	btfsc	status,2
+  1545  001456  D001               	goto	u1751
+  1546  001458  D001               	goto	u1750
+  1547  00145A                     u1751:
+  1548  00145A  D010               	goto	l222
+  1549  00145C                     u1750:
+  1550                           	line	35
+  1551  00145C  0101               	movlb	1	; () banked
+  1552  00145E  0101               	movlb	1	; () banked
+  1553  001460  1F22               	comf	((___aldiv@quotient+3))&0ffh
+  1554  001462  0101               	movlb	1	; () banked
+  1555  001464  1F21               	comf	((___aldiv@quotient+2))&0ffh
+  1556  001466  0101               	movlb	1	; () banked
+  1557  001468  1F20               	comf	((___aldiv@quotient+1))&0ffh
+  1558  00146A  0101               	movlb	1	; () banked
+  1559  00146C  6D1F               	negf	((___aldiv@quotient))&0ffh
+  1560  00146E  0E00               	movlw	0
+  1561  001470  0101               	movlb	1	; () banked
+  1562  001472  2320               	addwfc	((___aldiv@quotient+1))&0ffh
+  1563  001474  0101               	movlb	1	; () banked
+  1564  001476  2321               	addwfc	((___aldiv@quotient+2))&0ffh
+  1565  001478  0101               	movlb	1	; () banked
+  1566  00147A  2322               	addwfc	((___aldiv@quotient+3))&0ffh
+  1567                           	
+  1568  00147C                     l222:		; BSR set to: ?
+  1569                           
+  1570                           	line	36
+  1571  00147C  C11F  F115         	movff	(___aldiv@quotient),(?___aldiv)
+  1572  001480  C120  F116         	movff	(___aldiv@quotient+1),(?___aldiv+1)
+  1573  001484  C121  F117         	movff	(___aldiv@quotient+2),(?___aldiv+2)
+  1574  001488  C122  F118         	movff	(___aldiv@quotient+3),(?___aldiv+3)
+  1575  00148C  D000               	goto	l211
+  1576                           	line	37
+  1577  00148E                     l211:
+  1578                           			; BSR set to: ?
+  1579                           
+  1580  00148E  0012               	return
+  1581                           	opt stack 0
+  1582                           GLOBAL __end_of___aldiv
+  1583  001490                     	__end_of___aldiv:
+  1584                           	FNSIZE	___aldiv,7,8
+  1585                           ; =============== function ___aldiv ends =======
+                                 =====
+  1586                           
+  1587                           	signat	___aldiv,8316
+  1588                           	global	___almod
+  1589                           	global	??___almod
+  1590                           	global	?___almod
+  1591                                   psect   text7,class=CODE,space=0,reloc=2
+  1592                           
+  1593                           	opt lm
+  1594                           	file	"C:\Program Files (x86)\HI-TECH Software\P
+                                 ICC-18\PRO\9.63\sources\almod.c"
+  1595                           	line	5
+  1596  000000                     	__size_of___almod	equ	__end_of___almod-___almod
+  1597                           	
+  1598  001618                     ___almod:		; BSR set to: ?
+  1599                           
+  1600                           	opt stack 28
+  1601                           	line	8
+  1602  001618  0101               	movlb	1	; () banked
+  1603  00161A  6F1F               	movwf	(??___almod+2+0)&0ffh
+  1604  00161C  0E00               	movlw	low(0)
+  1605  00161E  0101               	movlb	1	; () banked
+  1606  001620  0101               	movlb	1	; () banked
+  1607  001622  6F1D               	movwf	((___almod@sign))&0ffh
+  1608  001624  0101               	movlb	1	; () banked
+  1609  001626  511F               	movf	(??___almod+2+0)&0ffh,w
+  1610                           	line	9
+  1611  001628  0101               	movlb	1	; () banked
+  1612  00162A  0101               	movlb	1	; () banked
+  1613  00162C  AF18               	btfss	((___almod@dividend+3))&0ffh,7
+  1614  00162E  D001               	goto	u1761
+  1615  001630  D001               	goto	u1760
+  1616  001632                     u1761:
+  1617  001632  D018               	goto	l224
+  1618  001634                     u1760:
+  1619                           	line	10
+  1620  001634  0101               	movlb	1	; () banked
+  1621  001636  0101               	movlb	1	; () banked
+  1622  001638  1F18               	comf	((___almod@dividend+3))&0ffh
+  1623  00163A  0101               	movlb	1	; () banked
+  1624  00163C  1F17               	comf	((___almod@dividend+2))&0ffh
+  1625  00163E  0101               	movlb	1	; () banked
+  1626  001640  1F16               	comf	((___almod@dividend+1))&0ffh
+  1627  001642  0101               	movlb	1	; () banked
+  1628  001644  6D15               	negf	((___almod@dividend))&0ffh
+  1629  001646  0E00               	movlw	0
+  1630  001648  0101               	movlb	1	; () banked
+  1631  00164A  2316               	addwfc	((___almod@dividend+1))&0ffh
+  1632  00164C  0101               	movlb	1	; () banked
+  1633  00164E  2317               	addwfc	((___almod@dividend+2))&0ffh
+  1634  001650  0101               	movlb	1	; () banked
+  1635  001652  2318               	addwfc	((___almod@dividend+3))&0ffh
+  1636                           	line	11
+  1637  001654  0101               	movlb	1	; () banked
+  1638  001656  6F1F               	movwf	(??___almod+2+0)&0ffh
+  1639  001658  0E01               	movlw	low(01h)
+  1640  00165A  0101               	movlb	1	; () banked
+  1641  00165C  0101               	movlb	1	; () banked
+  1642  00165E  6F1D               	movwf	((___almod@sign))&0ffh
+  1643  001660  0101               	movlb	1	; () banked
+  1644  001662  511F               	movf	(??___almod+2+0)&0ffh,w
+  1645                           	line	12
+  1646                           	
+  1647  001664                     l224:		; BSR set to: ?
+  1648                           
+  1649                           	line	13
+  1650  001664  0101               	movlb	1	; () banked
+  1651  001666  0101               	movlb	1	; () banked
+  1652  001668  AF1C               	btfss	((___almod@divisor+3))&0ffh,7
+  1653  00166A  D001               	goto	u1771
+  1654  00166C  D001               	goto	u1770
+  1655  00166E                     u1771:
+  1656  00166E  D010               	goto	l225
+  1657  001670                     u1770:
+  1658                           	line	14
+  1659  001670  0101               	movlb	1	; () banked
+  1660  001672  0101               	movlb	1	; () banked
+  1661  001674  1F1C               	comf	((___almod@divisor+3))&0ffh
+  1662  001676  0101               	movlb	1	; () banked
+  1663  001678  1F1B               	comf	((___almod@divisor+2))&0ffh
+  1664  00167A  0101               	movlb	1	; () banked
+  1665  00167C  1F1A               	comf	((___almod@divisor+1))&0ffh
+  1666  00167E  0101               	movlb	1	; () banked
+  1667  001680  6D19               	negf	((___almod@divisor))&0ffh
+  1668  001682  0E00               	movlw	0
+  1669  001684  0101               	movlb	1	; () banked
+  1670  001686  231A               	addwfc	((___almod@divisor+1))&0ffh
+  1671  001688  0101               	movlb	1	; () banked
+  1672  00168A  231B               	addwfc	((___almod@divisor+2))&0ffh
+  1673  00168C  0101               	movlb	1	; () banked
+  1674  00168E  231C               	addwfc	((___almod@divisor+3))&0ffh
+  1675                           	
+  1676  001690                     l225:		; BSR set to: ?
+  1677                           
+  1678                           	line	15
+  1679  001690  0101               	movlb	1	; () banked
+  1680  001692  511C               	movf	((___almod@divisor+3))&0ffh,w
+  1681  001694  1119               	iorwf ((___almod@divisor))&0ffh,w
+  1682  001696  111A               	iorwf ((___almod@divisor+1))&0ffh,w
+  1683  001698  111B               	iorwf ((___almod@divisor+2))&0ffh,w
+  1684                           
+  1685  00169A  B4D8               	btfsc	status,2
+  1686  00169C  D001               	goto	u1781
+  1687  00169E  D001               	goto	u1780
+  1688  0016A0                     u1781:
+  1689  0016A0  D05E               	goto	l226
+  1690  0016A2                     u1780:
+  1691                           	line	16
+  1692  0016A2  0101               	movlb	1	; () banked
+  1693  0016A4  6F1F               	movwf	(??___almod+2+0)&0ffh
+  1694  0016A6  0E01               	movlw	low(01h)
+  1695  0016A8  0101               	movlb	1	; () banked
+  1696  0016AA  0101               	movlb	1	; () banked
+  1697  0016AC  6F1E               	movwf	((___almod@counter))&0ffh
+  1698  0016AE  0101               	movlb	1	; () banked
+  1699  0016B0  511F               	movf	(??___almod+2+0)&0ffh,w
+  1700                           	line	17
+  1701  0016B2  D00D               	goto	l227
+  1702                           	
+  1703  0016B4                     l228:		; BSR set to: ?
+  1704                           
+  1705                           	line	18
+  1706  0016B4  0101               	movlb	1	; () banked
+  1707  0016B6  90D8               	bcf	status,0
+  1708  0016B8  0101               	movlb	1	; () banked
+  1709  0016BA  3719               	rlcf	((___almod@divisor))&0ffh
+  1710  0016BC  0101               	movlb	1	; () banked
+  1711  0016BE  371A               	rlcf	((___almod@divisor+1))&0ffh
+  1712  0016C0  0101               	movlb	1	; () banked
+  1713  0016C2  371B               	rlcf	((___almod@divisor+2))&0ffh
+  1714  0016C4  0101               	movlb	1	; () banked
+  1715  0016C6  371C               	rlcf	((___almod@divisor+3))&0ffh
+  1716                           	line	19
+  1717  0016C8  0101               	movlb	1	; () banked
+  1718  0016CA  0101               	movlb	1	; () banked
+  1719  0016CC  2B1E               	incf	((___almod@counter))&0ffh
+  1720                           	line	20
+  1721                           	
+  1722  0016CE                     l227:		; BSR set to: ?
+  1723                           
+  1724                           	line	17
+  1725  0016CE  0101               	movlb	1	; () banked
+  1726                           	
+  1727  0016D0  0101               	movlb	1	; () banked
+  1728  0016D2  AF1C               	btfss	((___almod@divisor+3))&0ffh,(31)&7
+  1729  0016D4  D001               	goto	u1791
+  1730  0016D6  D001               	goto	u1790
+  1731  0016D8                     u1791:
+  1732  0016D8  D7ED               	goto	l228
+  1733  0016DA                     u1790:
+  1734                           	
+  1735  0016DA                     l229:		; BSR set to: ?
+  1736                           
+  1737                           	line	21
+  1738                           	
+  1739  0016DA                     l232:		; BSR set to: ?
+  1740                           
+  1741                           	line	22
+  1742  0016DA  0101               	movlb	1	; () banked
+  1743  0016DC  0101               	movlb	1	; () banked
+  1744  0016DE  5119               	movf	((___almod@divisor))&0ffh,w
+  1745  0016E0  0101               	movlb	1	; () banked
+  1746  0016E2  0101               	movlb	1	; () banked
+  1747  0016E4  5D15               	subwf	((___almod@dividend))&0ffh,w
+  1748  0016E6  0101               	movlb	1	; () banked
+  1749  0016E8  0101               	movlb	1	; () banked
+  1750  0016EA  511A               	movf	((___almod@divisor+1))&0ffh,w
+  1751  0016EC  0101               	movlb	1	; () banked
+  1752  0016EE  0101               	movlb	1	; () banked
+  1753  0016F0  5916               	subwfb	((___almod@dividend+1))&0ffh,w
+  1754  0016F2  0101               	movlb	1	; () banked
+  1755  0016F4  0101               	movlb	1	; () banked
+  1756  0016F6  511B               	movf	((___almod@divisor+2))&0ffh,w
+  1757  0016F8  0101               	movlb	1	; () banked
+  1758  0016FA  0101               	movlb	1	; () banked
+  1759  0016FC  5917               	subwfb	((___almod@dividend+2))&0ffh,w
+  1760  0016FE  0101               	movlb	1	; () banked
+  1761  001700  0101               	movlb	1	; () banked
+  1762  001702  511C               	movf	((___almod@divisor+3))&0ffh,w
+  1763  001704  0101               	movlb	1	; () banked
+  1764  001706  0101               	movlb	1	; () banked
+  1765  001708  5918               	subwfb	((___almod@dividend+3))&0ffh,w
+  1766  00170A  A0D8               	btfss	status,0
+  1767  00170C  D001               	goto	u1801
+  1768  00170E  D001               	goto	u1800
+  1769  001710                     u1801:
+  1770  001710  D018               	goto	l233
+  1771  001712                     u1800:
+  1772                           	line	23
+  1773  001712  0101               	movlb	1	; () banked
+  1774  001714  0101               	movlb	1	; () banked
+  1775  001716  5119               	movf	((___almod@divisor))&0ffh,w
+  1776  001718  0101               	movlb	1	; () banked
+  1777  00171A  0101               	movlb	1	; () banked
+  1778  00171C  5F15               	subwf	((___almod@dividend))&0ffh
+  1779  00171E  0101               	movlb	1	; () banked
+  1780  001720  0101               	movlb	1	; () banked
+  1781  001722  511A               	movf	((___almod@divisor+1))&0ffh,w
+  1782  001724  0101               	movlb	1	; () banked
+  1783  001726  0101               	movlb	1	; () banked
+  1784  001728  5B16               	subwfb	((___almod@dividend+1))&0ffh
+  1785  00172A  0101               	movlb	1	; () banked
+  1786  00172C  0101               	movlb	1	; () banked
+  1787  00172E  511B               	movf	((___almod@divisor+2))&0ffh,w
+  1788  001730  0101               	movlb	1	; () banked
+  1789  001732  0101               	movlb	1	; () banked
+  1790  001734  5B17               	subwfb	((___almod@dividend+2))&0ffh
+  1791  001736  0101               	movlb	1	; () banked
+  1792  001738  0101               	movlb	1	; () banked
+  1793  00173A  511C               	movf	((___almod@divisor+3))&0ffh,w
+  1794  00173C  0101               	movlb	1	; () banked
+  1795  00173E  0101               	movlb	1	; () banked
+  1796  001740  5B18               	subwfb	((___almod@dividend+3))&0ffh
+  1797                           	
+  1798  001742                     l233:		; BSR set to: ?
+  1799                           
+  1800                           	line	24
+  1801  001742  0101               	movlb	1	; () banked
+  1802  001744  90D8               	bcf	status,0
+  1803  001746  0101               	movlb	1	; () banked
+  1804  001748  331C               	rrcf	((___almod@divisor+3))&0ffh
+  1805  00174A  0101               	movlb	1	; () banked
+  1806  00174C  331B               	rrcf	((___almod@divisor+2))&0ffh
+  1807  00174E  0101               	movlb	1	; () banked
+  1808  001750  331A               	rrcf	((___almod@divisor+1))&0ffh
+  1809  001752  0101               	movlb	1	; () banked
+  1810  001754  3319               	rrcf	((___almod@divisor))&0ffh
+  1811                           	line	25
+  1812  001756  0101               	movlb	1	; () banked
+  1813  001758  0101               	movlb	1	; () banked
+  1814  00175A  2F1E               	decfsz	((___almod@counter))&0ffh
+  1815                           	
+  1816  00175C  D7BE               	goto	l232
+  1817                           	
+  1818  00175E                     l231:		; BSR set to: ?
+  1819                           
+  1820                           	line	26
+  1821                           	
+  1822  00175E                     l226:		; BSR set to: ?
+  1823                           
+  1824                           	line	27
+  1825  00175E  0101               	movlb	1	; () banked
+  1826  001760  0101               	movlb	1	; () banked
+  1827  001762  511D               	movf	((___almod@sign))&0ffh,w
+  1828  001764  B4D8               	btfsc	status,2
+  1829  001766  D001               	goto	u1811
+  1830  001768  D001               	goto	u1810
+  1831  00176A                     u1811:
+  1832  00176A  D010               	goto	l234
+  1833  00176C                     u1810:
+  1834                           	line	28
+  1835  00176C  0101               	movlb	1	; () banked
+  1836  00176E  0101               	movlb	1	; () banked
+  1837  001770  1F18               	comf	((___almod@dividend+3))&0ffh
+  1838  001772  0101               	movlb	1	; () banked
+  1839  001774  1F17               	comf	((___almod@dividend+2))&0ffh
+  1840  001776  0101               	movlb	1	; () banked
+  1841  001778  1F16               	comf	((___almod@dividend+1))&0ffh
+  1842  00177A  0101               	movlb	1	; () banked
+  1843  00177C  6D15               	negf	((___almod@dividend))&0ffh
+  1844  00177E  0E00               	movlw	0
+  1845  001780  0101               	movlb	1	; () banked
+  1846  001782  2316               	addwfc	((___almod@dividend+1))&0ffh
+  1847  001784  0101               	movlb	1	; () banked
+  1848  001786  2317               	addwfc	((___almod@dividend+2))&0ffh
+  1849  001788  0101               	movlb	1	; () banked
+  1850  00178A  2318               	addwfc	((___almod@dividend+3))&0ffh
+  1851                           	
+  1852  00178C                     l234:		; BSR set to: ?
+  1853                           
+  1854                           	line	29
+  1855  00178C  C115  F115         	movff	(___almod@dividend),(?___almod)
+  1856  001790  C116  F116         	movff	(___almod@dividend+1),(?___almod+1)
+  1857  001794  C117  F117         	movff	(___almod@dividend+2),(?___almod+2)
+  1858  001798  C118  F118         	movff	(___almod@dividend+3),(?___almod+3)
+  1859  00179C  D000               	goto	l223
+  1860                           	line	30
+  1861  00179E                     l223:
+  1862                           			; BSR set to: ?
+  1863                           
+  1864  00179E  0012               	return
+  1865                           	opt stack 0
+  1866                           GLOBAL __end_of___almod
+  1867  0017A0                     	__end_of___almod:
+  1868                           	FNSIZE	___almod,3,8
+  1869                           ; =============== function ___almod ends =======
+                                 =====
+  1870                           
+  1871                           	signat	___almod,8316
+  1872                           	global	_LCD_Strobe
+  1873                           	global	??_LCD_Strobe
+  1874                           	global	?_LCD_Strobe
+  1875                                   psect   text8,class=CODE,space=0,reloc=2
+  1876                           
+  1877                           	opt lm
+  1878                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  1879                           	line	32
+  1880  000000                     	__size_of_LCD_Strobe	equ	__end_of_LCD_Strobe-_L
+                                 CD_Strobe
+  1881                           ;lcd_portd.c: 31: void LCD_Strobe(void)
+  1882                           ;lcd_portd.c: 32: {
+  1883                           	
+  1884  001AC2                     _LCD_Strobe:		; BSR set to: ?
+  1885                           
+  1886                           	opt stack 27
+  1887                           	line	33
+  1888                           ;lcd_portd.c: 33: RD3 = 0;
+  1889  001AC2  9683               	bcf	c:(31771/8),(31771)&7	;volatile
+  1890                           	line	34
+  1891                           ;lcd_portd.c: 34: LCD_Pause();
+  1892  001AC4  EC46  F00D         	call	_LCD_Pause	;wreg free
+  1893                           	line	35
+  1894                           ;lcd_portd.c: 35: RD3 = 1;
+  1895  001AC8  8683               	bsf	c:(31771/8),(31771)&7	;volatile
+  1896                           	line	36
+  1897                           ;lcd_portd.c: 36: LCD_Pause();
+  1898  001ACA  EC46  F00D         	call	_LCD_Pause	;wreg free
+  1899                           	line	37
+  1900                           ;lcd_portd.c: 37: RD3 = 0;
+  1901  001ACE  9683               	bcf	c:(31771/8),(31771)&7	;volatile
+  1902                           	line	38
+  1903                           ;lcd_portd.c: 38: LCD_Pause();
+  1904  001AD0  EC46  F00D         	call	_LCD_Pause	;wreg free
+  1905                           	line	39
+  1906                           ;lcd_portd.c: 39: }
+  1907  001AD4                     l121:
+  1908                           			; BSR set to: ?
+  1909                           
+  1910  001AD4  0012               	return
+  1911                           	opt stack 0
+  1912                           GLOBAL __end_of_LCD_Strobe
+  1913  001AD6                     	__end_of_LCD_Strobe:
+  1914                           	FNSIZE	_LCD_Strobe,0,0
+  1915                           ; =============== function _LCD_Strobe ends ====
+                                 ========
+  1916                           
+  1917                           	signat	_LCD_Strobe,88
+  1918                           	global	_Wait_ms
+  1919                           	global	??_Wait_ms
+  1920                           	global	?_Wait_ms
+  1921                                   psect   text9,class=CODE,space=0,reloc=2
+  1922                           
+  1923                           	opt lm
+  1924                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  1925                           	line	16
+  1926  000000                     	__size_of_Wait_ms	equ	__end_of_Wait_ms-_Wait_ms
+  1927                           ;lcd_portd.c: 15: void Wait_ms(unsigned int X)
+  1928                           ;lcd_portd.c: 16: {
+  1929                           	
+  1930  001984                     _Wait_ms:		; BSR set to: ?
+  1931                           
+  1932                           	opt stack 27
+  1933                           	line	19
+  1934                           ;lcd_portd.c: 17: unsigned int i, j;
+  1935                           ;lcd_portd.c: 19: for (i=0; i<X; i++)
+  1936  001984  0E00               	movlw	low(0)
+  1937  001986  0101               	movlb	1	; () banked
+  1938  001988  0101               	movlb	1	; () banked
+  1939  00198A  6F09               	movwf	((Wait_ms@i))&0ffh
+  1940  00198C  0E00               	movlw	high(0)
+  1941  00198E  0101               	movlb	1	; () banked
+  1942  001990  6F0A               	movwf	((Wait_ms@i+1))&0ffh
+  1943  001992  D026               	goto	l113
+  1944                           	line	20
+  1945                           	
+  1946  001994                     l110:		; BSR set to: ?
+  1947                           
+  1948                           ;lcd_portd.c: 20: for (j=0; j<617; j++);
+  1949  001994  0E00               	movlw	low(0)
+  1950  001996  0101               	movlb	1	; () banked
+  1951  001998  0101               	movlb	1	; () banked
+  1952  00199A  6F0B               	movwf	((Wait_ms@j))&0ffh
+  1953  00199C  0E00               	movlw	high(0)
+  1954  00199E  0101               	movlb	1	; () banked
+  1955  0019A0  6F0C               	movwf	((Wait_ms@j+1))&0ffh
+  1956  0019A2  0E69               	movlw	069h
+  1957  0019A4  0101               	movlb	1	; () banked
+  1958  0019A6  0101               	movlb	1	; () banked
+  1959  0019A8  5D0B               	subwf	((Wait_ms@j))&0ffh,w
+  1960  0019AA  0E02               	movlw	02h
+  1961  0019AC  0101               	movlb	1	; () banked
+  1962  0019AE  590C               	subwfb	((Wait_ms@j+1))&0ffh,w
+  1963  0019B0  A0D8               	btfss	status,0
+  1964  0019B2  D001               	goto	u1821
+  1965  0019B4  D001               	goto	u1820
+  1966  0019B6                     u1821:
+  1967  0019B6  D001               	goto	l114
+  1968  0019B8                     u1820:
+  1969  0019B8  D00F               	goto	l115
+  1970                           	
+  1971  0019BA                     l114:		; BSR set to: ?
+  1972                           
+  1973  0019BA  0101               	movlb	1	; () banked
+  1974  0019BC  0101               	movlb	1	; () banked
+  1975  0019BE  4B0B               	infsnz	((Wait_ms@j))&0ffh
+  1976  0019C0  2B0C               	incf	((Wait_ms@j+1))&0ffh
+  1977  0019C2  0E69               	movlw	069h
+  1978  0019C4  0101               	movlb	1	; () banked
+  1979  0019C6  0101               	movlb	1	; () banked
+  1980  0019C8  5D0B               	subwf	((Wait_ms@j))&0ffh,w
+  1981  0019CA  0E02               	movlw	02h
+  1982  0019CC  0101               	movlb	1	; () banked
+  1983  0019CE  590C               	subwfb	((Wait_ms@j+1))&0ffh,w
+  1984  0019D0  A0D8               	btfss	status,0
+  1985  0019D2  D001               	goto	u1831
+  1986  0019D4  D001               	goto	u1830
+  1987  0019D6                     u1831:
+  1988  0019D6  D7F1               	goto	l114
+  1989  0019D8                     u1830:
+  1990                           	
+  1991  0019D8                     l115:		; BSR set to: ?
+  1992                           
+  1993                           	line	19
+  1994  0019D8  0101               	movlb	1	; () banked
+  1995  0019DA  0101               	movlb	1	; () banked
+  1996  0019DC  4B09               	infsnz	((Wait_ms@i))&0ffh
+  1997  0019DE  2B0A               	incf	((Wait_ms@i+1))&0ffh
+  1998                           	
+  1999  0019E0                     l113:		; BSR set to: ?
+  2000                           
+  2001  0019E0  0101               	movlb	1	; () banked
+  2002  0019E2  0101               	movlb	1	; () banked
+  2003  0019E4  5107               	movf	((Wait_ms@X))&0ffh,w
+  2004  0019E6  0101               	movlb	1	; () banked
+  2005  0019E8  0101               	movlb	1	; () banked
+  2006  0019EA  5D09               	subwf	((Wait_ms@i))&0ffh,w
+  2007  0019EC  0101               	movlb	1	; () banked
+  2008  0019EE  0101               	movlb	1	; () banked
+  2009  0019F0  5108               	movf	((Wait_ms@X+1))&0ffh,w
+  2010  0019F2  0101               	movlb	1	; () banked
+  2011  0019F4  0101               	movlb	1	; () banked
+  2012  0019F6  590A               	subwfb	((Wait_ms@i+1))&0ffh,w
+  2013  0019F8  A0D8               	btfss	status,0
+  2014  0019FA  D001               	goto	u1841
+  2015  0019FC  D001               	goto	u1840
+  2016  0019FE                     u1841:
+  2017  0019FE  D7CA               	goto	l110
+  2018  001A00                     u1840:
+  2019                           	
+  2020  001A00                     l111:		; BSR set to: ?
+  2021                           
+  2022                           	line	21
+  2023                           ;lcd_portd.c: 21: }
+  2024  001A00                     l109:
+  2025                           			; BSR set to: ?
+  2026                           
+  2027  001A00  0012               	return
+  2028                           	opt stack 0
+  2029                           GLOBAL __end_of_Wait_ms
+  2030  001A02                     	__end_of_Wait_ms:
+  2031                           	FNSIZE	_Wait_ms,4,2
+  2032                           ; =============== function _Wait_ms ends =======
+                                 =====
+  2033                           
+  2034                           	signat	_Wait_ms,4216
+  2035                           	global	_LCD_Pause
+  2036                           	global	??_LCD_Pause
+  2037                           	global	?_LCD_Pause
+  2038                                   psect   text10,class=CODE,space=0,reloc=
+                                 2
+  2039                           
+  2040                           	opt lm
+  2041                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\lcd_portd.c"
+  2042                           	line	25
+  2043  000000                     	__size_of_LCD_Pause	equ	__end_of_LCD_Pause-_LCD
+                                 _Pause
+  2044                           ;lcd_portd.c: 24: void LCD_Pause(void)
+  2045                           ;lcd_portd.c: 25: {
+  2046                           	
+  2047  001A8C                     _LCD_Pause:		; BSR set to: ?
+  2048                           
+  2049                           	opt stack 26
+  2050                           	line	27
+  2051  001A8C  0101               	movlb	1	; () banked
+  2052  001A8E  6F18               	movwf	(??_LCD_Pause+1+0)&0ffh
+  2053  001A90  0E00               	movlw	low(0)
+  2054  001A92  0101               	movlb	1	; () banked
+  2055  001A94  0101               	movlb	1	; () banked
+  2056  001A96  6F17               	movwf	((LCD_Pause@x))&0ffh
+  2057  001A98  0101               	movlb	1	; () banked
+  2058  001A9A  5118               	movf	(??_LCD_Pause+1+0)&0ffh,w
+  2059  001A9C  0E13               	movlw	(014h-1)
+  2060  001A9E  0101               	movlb	1	; () banked
+  2061  001AA0  0101               	movlb	1	; () banked
+  2062  001AA2  6517               	cpfsgt	((LCD_Pause@x))&0ffh
+  2063  001AA4  D001               	goto	u1851
+  2064  001AA6  D001               	goto	u1850
+  2065  001AA8                     u1851:
+  2066  001AA8  D001               	goto	l118
+  2067  001AAA                     u1850:
+  2068  001AAA  D00A               	goto	l119
+  2069                           	
+  2070  001AAC                     l118:		; BSR set to: ?
+  2071                           
+  2072  001AAC  0101               	movlb	1	; () banked
+  2073  001AAE  0101               	movlb	1	; () banked
+  2074  001AB0  2B17               	incf	((LCD_Pause@x))&0ffh
+  2075  001AB2  0E13               	movlw	(014h-1)
+  2076  001AB4  0101               	movlb	1	; () banked
+  2077  001AB6  0101               	movlb	1	; () banked
+  2078  001AB8  6517               	cpfsgt	((LCD_Pause@x))&0ffh
+  2079  001ABA  D001               	goto	u1861
+  2080  001ABC  D001               	goto	u1860
+  2081  001ABE                     u1861:
+  2082  001ABE  D7F6               	goto	l118
+  2083  001AC0                     u1860:
+  2084                           	
+  2085  001AC0                     l119:		; BSR set to: ?
+  2086                           
+  2087                           	line	28
+  2088                           ;lcd_portd.c: 28: }
+  2089  001AC0                     l117:
+  2090                           			; BSR set to: ?
+  2091                           
+  2092  001AC0  0012               	return
+  2093                           	opt stack 0
+  2094                           GLOBAL __end_of_LCD_Pause
+  2095  001AC2                     	__end_of_LCD_Pause:
+  2096                           	FNSIZE	_LCD_Pause,2,0
+  2097                           ; =============== function _LCD_Pause ends =====
+                                 =======
+  2098                           
+  2099                           	signat	_LCD_Pause,88
+  2100                           	global	_IntServe
+  2101                           	global	??_IntServe
+  2102                           	global	?_IntServe
+  2103                                   psect   text11,class=CODE,space=0,reloc=
+                                 2
+  2104                           
+  2105                           	opt lm
+  2106                           	file	"A:\OneDrive\School\College\Junior\Fa23\Em
+                                 b Sys\c\hw10\range.c"
+  2107                           	line	18
+  2108  000000                     	__size_of_IntServe	equ	__end_of_IntServe-_IntSe
+                                 rve
+  2109                           ;range.c: 17: void interrupt IntServe(void)
+  2110                           ;range.c: 18: {
+  2111                           	
+  2112  0017A0                     _IntServe:		; BSR set to: ?
+  2113                           
+  2114  0017A0  0006               	pop	; remove dummy address from shadow register
+                                  refresh
+  2115                           
+  2116                           	opt stack 31
+  2117                                   psect   intcode,class=CODE,space=0,reloc
+                                 =2
+  2118                           	global	int_func
+  2119  000808                     int_func:
+  2120                                   psect   intcode
+  2121  000808  CFFA F126          	movff	pclat+0,??_IntServe+2
+  2122  00080C  CFFB F127          	movff	pclat+1,??_IntServe+3
+  2123  000810  CFE9 F128          	movff	fsr0l+0,??_IntServe+4
+  2124  000814  EDD0  F00B         	call	_IntServe,f	;refresh shadow registers
+  2125                                   psect   text11
+  2126  0017A2  CFEA F129          	movff	fsr0h+0,??_IntServe+5
+  2127  0017A6  CFE1 F12A          	movff	fsr1l+0,??_IntServe+6
+  2128  0017AA  CFE2 F12B          	movff	fsr1h+0,??_IntServe+7
+  2129  0017AE  CFD9 F12C          	movff	fsr2l+0,??_IntServe+8
+  2130  0017B2  CFDA F12D          	movff	fsr2h+0,??_IntServe+9
+  2131  0017B6  CFF3 F12E          	movff	prodl+0,??_IntServe+10
+  2132  0017BA  CFF4 F12F          	movff	prodh+0,??_IntServe+11
+  2133  0017BE  CFF6 F130          	movff	tblptrl+0,??_IntServe+12
+  2134  0017C2  CFF7 F131          	movff	tblptrh+0,??_IntServe+13
+  2135  0017C6  CFF8 F132          	movff	tblptru+0,??_IntServe+14
+  2136                           	line	19
+  2137                           ;range.c: 19: if (TMR0IF) {
+  2138  0017CA  A4F2               	btfss	c:(32658/8),(32658)&7	;volatile
+  2139  0017CC  D001               	goto	i2u1871
+  2140  0017CE  D001               	goto	i2u1870
+  2141  0017D0                     i2u1871:
+  2142  0017D0  D021               	goto	i2l167
+  2143  0017D2                     i2u1870:
+  2144                           	line	20
+  2145                           ;range.c: 20: TMR0 = -10000;
+  2146  0017D2  0EF0               	movlw	low(0D8F0h)
+  2147  0017D4  6ED6               	movwf	((c:4054)),c	;volatile
+  2148  0017D6  0ED8               	movlw	high(0D8F0h)
+  2149  0017D8  6ED7               	movwf	((c:4054+1)),c	;volatile
+  2150                           	line	21
+  2151                           ;range.c: 21: TMR1 = -PWM;
+  2152  0017DA  C002 F124          	movff	(c:2),??_IntServe+0+0
+  2153  0017DE  C003 F125          	movff	(c:2+1),??_IntServe+0+0+1
+  2154  0017E2  0101               	movlb	1	; () banked
+  2155  0017E4  1F24               	comf	(??_IntServe+0+0)&0ffh
+  2156  0017E6  1F25               	comf	(??_IntServe+0+1)&0ffh
+  2157  0017E8  4B24               	infsnz	(??_IntServe+0+0)&0ffh
+  2158  0017EA  2B25               	incf	(??_IntServe+0+1)&0ffh
+  2159  0017EC  C124  FFCE         	movff	??_IntServe+0+0,(c:4046)	;volatile
+  2160  0017F0  C125  FFCF         	movff	??_IntServe+0+1,(c:4046+1)	;volatile
+  2161                           	line	22
+  2162                           ;range.c: 22: TIME += 1;
+  2163  0017F4  4A00               	infsnz	((c:0)),c
+  2164  0017F6  2A01               	incf	((c:0+1)),c
+  2165                           	line	23
+  2166                           ;range.c: 23: RA0 = 1;
+  2167  0017F8  8080               	bsf	c:(31744/8),(31744)&7	;volatile
+  2168                           	line	24
+  2169                           ;range.c: 24: RA1 = 1;
+  2170  0017FA  8280               	bsf	c:(31745/8),(31745)&7	;volatile
+  2171                           	line	25
+  2172                           ;range.c: 25: RA2 = 1;
+  2173  0017FC  8480               	bsf	c:(31746/8),(31746)&7	;volatile
+  2174                           	line	26
+  2175                           ;range.c: 26: RA3 = 1;
+  2176  0017FE  8680               	bsf	c:(31747/8),(31747)&7	;volatile
+  2177                           	line	27
+  2178                           ;range.c: 27: RA4 = 1;
+  2179  001800  8880               	bsf	c:(31748/8),(31748)&7	;volatile
+  2180                           	line	28
+  2181                           ;range.c: 28: RA5 = 1;
+  2182  001802  8A80               	bsf	c:(31749/8),(31749)&7	;volatile
+  2183                           	line	29
+  2184                           ;range.c: 29: RD0 = 1;
+  2185  001804  8083               	bsf	c:(31768/8),(31768)&7	;volatile
+  2186                           	line	30
+  2187                           ;range.c: 30: RD1 = 1;
+  2188  001806  8283               	bsf	c:(31769/8),(31769)&7	;volatile
+  2189                           	line	31
+  2190                           ;range.c: 31: RD2 = 1;
+  2191  001808  8483               	bsf	c:(31770/8),(31770)&7	;volatile
+  2192                           	line	32
+  2193                           ;range.c: 32: RD3 = 1;
+  2194  00180A  8683               	bsf	c:(31771/8),(31771)&7	;volatile
+  2195                           	line	33
+  2196                           ;range.c: 33: RD4 = 1;
+  2197  00180C  8883               	bsf	c:(31772/8),(31772)&7	;volatile
+  2198                           	line	34
+  2199                           ;range.c: 34: RD5 = 1;
+  2200  00180E  8A83               	bsf	c:(31773/8),(31773)&7	;volatile
+  2201                           	line	35
+  2202                           ;range.c: 35: RD6 = 1;
+  2203  001810  8C83               	bsf	c:(31774/8),(31774)&7	;volatile
+  2204                           	line	37
+  2205                           ;range.c: 37: TMR0IF = 0;
+  2206  001812  94F2               	bcf	c:(32658/8),(32658)&7	;volatile
+  2207                           	line	38
+  2208                           	
+  2209  001814                     i2l167:		; BSR set to: ?
+  2210                           
+  2211                           	line	39
+  2212                           ;range.c: 38: }
+  2213                           ;range.c: 39: if (TMR1IF) {
+  2214  001814  A09E               	btfss	c:(31984/8),(31984)&7	;volatile
+  2215  001816  D001               	goto	i2u1881
+  2216  001818  D001               	goto	i2u1880
+  2217  00181A                     i2u1881:
+  2218  00181A  D00E               	goto	i2l168
+  2219  00181C                     i2u1880:
+  2220                           	line	40
+  2221                           ;range.c: 40: RA0 = 0;
+  2222  00181C  9080               	bcf	c:(31744/8),(31744)&7	;volatile
+  2223                           	line	41
+  2224                           ;range.c: 41: RA1 = 0;
+  2225  00181E  9280               	bcf	c:(31745/8),(31745)&7	;volatile
+  2226                           	line	42
+  2227                           ;range.c: 42: RA2 = 0;
+  2228  001820  9480               	bcf	c:(31746/8),(31746)&7	;volatile
+  2229                           	line	43
+  2230                           ;range.c: 43: RA3 = 0;
+  2231  001822  9680               	bcf	c:(31747/8),(31747)&7	;volatile
+  2232                           	line	44
+  2233                           ;range.c: 44: RA4 = 0;
+  2234  001824  9880               	bcf	c:(31748/8),(31748)&7	;volatile
+  2235                           	line	45
+  2236                           ;range.c: 45: RA5 = 0;
+  2237  001826  9A80               	bcf	c:(31749/8),(31749)&7	;volatile
+  2238                           	line	46
+  2239                           ;range.c: 46: RD0 = 0;
+  2240  001828  9083               	bcf	c:(31768/8),(31768)&7	;volatile
+  2241                           	line	47
+  2242                           ;range.c: 47: RD1 = 0;
+  2243  00182A  9283               	bcf	c:(31769/8),(31769)&7	;volatile
+  2244                           	line	48
+  2245                           ;range.c: 48: RD2 = 0;
+  2246  00182C  9483               	bcf	c:(31770/8),(31770)&7	;volatile
+  2247                           	line	49
+  2248                           ;range.c: 49: RD3 = 0;
+  2249  00182E  9683               	bcf	c:(31771/8),(31771)&7	;volatile
+  2250                           	line	50
+  2251                           ;range.c: 50: RD4 = 0;
+  2252  001830  9883               	bcf	c:(31772/8),(31772)&7	;volatile
+  2253                           	line	51
+  2254                           ;range.c: 51: RD5 = 0;
+  2255  001832  9A83               	bcf	c:(31773/8),(31773)&7	;volatile
+  2256                           	line	52
+  2257                           ;range.c: 52: RD6 = 0;
+  2258  001834  9C83               	bcf	c:(31774/8),(31774)&7	;volatile
+  2259                           	line	53
+  2260                           ;range.c: 53: TMR1IF = 0;
+  2261  001836  909E               	bcf	c:(31984/8),(31984)&7	;volatile
+  2262                           	line	54
+  2263                           	
+  2264  001838                     i2l168:		; BSR set to: ?
+  2265                           
+  2266                           	line	56
+  2267                           ;range.c: 54: }
+  2268                           ;range.c: 56: }
+  2269  001838                     i2l166:
+  2270                           			; BSR set to: ?
+  2271                           
+  2272  001838  C132  FFF8         	movff	??_IntServe+14,tblptru+0
+  2273  00183C  C131  FFF7         	movff	??_IntServe+13,tblptrh+0
+  2274  001840  C130  FFF6         	movff	??_IntServe+12,tblptrl+0
+  2275  001844  C12F  FFF4         	movff	??_IntServe+11,prodh+0
+  2276  001848  C12E  FFF3         	movff	??_IntServe+10,prodl+0
+  2277  00184C  C12D  FFDA         	movff	??_IntServe+9,fsr2h+0
+  2278  001850  C12C  FFD9         	movff	??_IntServe+8,fsr2l+0
+  2279  001854  C12B  FFE2         	movff	??_IntServe+7,fsr1h+0
+  2280  001858  C12A  FFE1         	movff	??_IntServe+6,fsr1l+0
+  2281  00185C  C129  FFEA         	movff	??_IntServe+5,fsr0h+0
+  2282  001860  C128  FFE9         	movff	??_IntServe+4,fsr0l+0
+  2283  001864  C127  FFFB         	movff	??_IntServe+3,pclat+1
+  2284  001868  C126  FFFA         	movff	??_IntServe+2,pclat+0
+  2285  00186C  0011               	retfie f
+  2286                           	opt stack 0
+  2287                           GLOBAL __end_of_IntServe
+  2288  00186E                     	__end_of_IntServe:
+  2289                           	FNSIZE	_IntServe,15,0
+  2290                           ; =============== function _IntServe ends ======
+                                 ======
+  2291                           
+  2292                           	signat	_IntServe,88
+  2293                           	FNCALL	_main,_LCD_Init
+  2294                           	FNCALL	_main,_LCD_Move
+  2295                           	FNCALL	_main,_LCD_Write
+  2296                           	FNCALL	_main,_Wait_ms
+  2297                           	FNCALL	_main,_LCD_Out
+  2298                           	FNCALL	_LCD_Move,_LCD_Inst
+  2299                           	FNCALL	_LCD_Out,_LCD_Write
+  2300                           	FNCALL	_LCD_Out,___almod
+  2301                           	FNCALL	_LCD_Out,___aldiv
+  2302                           	FNCALL	_LCD_Init,_LCD_Inst
+  2303                           	FNCALL	_LCD_Init,_Wait_ms
+  2304                           	FNCALL	_LCD_Write,_LCD_Strobe
+  2305                           	FNCALL	_LCD_Inst,_LCD_Strobe
+  2306                           	FNCALL	_LCD_Inst,_Wait_ms
+  2307                           	FNCALL	_LCD_Strobe,_LCD_Pause
+  2308                           	FNROOT	_main
+  2309                           	FNCALL	intlevel2,_IntServe
+  2310                           	global	intlevel2
+  2311                           	FNROOT	intlevel2
+  2312                                   psect   smallconst,class=SMALLCONST,spac
+                                 e=0,reloc=2
+  2313  001000  00                 	db	0	;reserve
+  2314                           	global	_MSG0
+  2315                           	line	4
+  2316  001001                     _MSG0:
+  2317  001001  50                 	db	low(050h)
+  2318  001002  57                 	db	low(057h)
+  2319  001003  4D                 	db	low(04Dh)
+  2320  001004  2E                 	db	low(02Eh)
+  2321  001005  43                 	db	low(043h)
+  2322  001006  20                 	db	low(020h)
+  2323  001007  20                 	db	low(020h)
+  2324  001008  20                 	db	low(020h)
+  2325  001009  20                 	db	low(020h)
+  2326  00100A  20                 	db	low(020h)
+  2327  00100B  20                 	db	low(020h)
+  2328  00100C  20                 	db	low(020h)
+  2329  00100D  20                 	db	low(020h)
+  2330  00100E  20                 	db	low(020h)
+  2331  00100F  20                 	db	low(020h)
+  2332  001010  20                 	db	low(020h)
+  2333  001011  20                 	db	low(020h)
+  2334  001012  20                 	db	low(020h)
+  2335  001013  20                 	db	low(020h)
+  2336  001014  20                 	db	low(020h)
+  2337  001015  00                 	db	low(0)
+  2338                           	global	_MSG1
+  2339                           	line	5
+  2340  001016                     _MSG1:
+  2341  001016  50                 	db	low(050h)
+  2342  001017  57                 	db	low(057h)
+  2343  001018  4D                 	db	low(04Dh)
+  2344  001019  20                 	db	low(020h)
+  2345  00101A  20                 	db	low(020h)
+  2346  00101B  20                 	db	low(020h)
+  2347  00101C  20                 	db	low(020h)
+  2348  00101D  20                 	db	low(020h)
+  2349  00101E  20                 	db	low(020h)
+  2350  00101F  20                 	db	low(020h)
+  2351  001020  20                 	db	low(020h)
+  2352  001021  20                 	db	low(020h)
+  2353  001022  20                 	db	low(020h)
+  2354  001023  20                 	db	low(020h)
+  2355  001024  20                 	db	low(020h)
+  2356  001025  20                 	db	low(020h)
+  2357  001026  20                 	db	low(020h)
+  2358  001027  20                 	db	low(020h)
+  2359  001028  20                 	db	low(020h)
+  2360  001029  20                 	db	low(020h)
+  2361  00102A  00                 	db	low(0)
+  2362                           	global	_MSG0
+  2363                           	global	_MSG1
+  2364                           	global	_PWM
+  2365                           	global	_PWM
+  2366  000000                     _PWM  equ     2
+  2367                           
+  2368                           	DABS	1,2,2	;_PWM
+  2369                           	global	_TIME
+  2370                           	global	_TIME
+  2371  000000                     _TIME  equ     0
+  2372                           
+  2373                           	DABS	1,0,2	;_TIME
+  2374                           	global	_TMR0
+  2375  000000                     _TMR0	equ	0xFD6
+  2376                           	global	_TMR1
+  2377  000000                     _TMR1	equ	0xFCE
+  2378                           	global	_ADCON1
+  2379  000000                     _ADCON1	equ	0xFC1
+  2380                           	global	_PORTD
+  2381  000000                     _PORTD	equ	0xF83
+  2382                           	global	_T0CON
+  2383  000000                     _T0CON	equ	0xFD5
+  2384                           	global	_T1CON
+  2385  000000                     _T1CON	equ	0xFCD
+  2386                           	global	_TRISA
+  2387  000000                     _TRISA	equ	0xF92
+  2388                           	global	_TRISB
+  2389  000000                     _TRISB	equ	0xF93
+  2390                           	global	_TRISC
+  2391  000000                     _TRISC	equ	0xF94
+  2392                           	global	_TRISD
+  2393  000000                     _TRISD	equ	0xF95
+  2394                           	global	_TRISE
+  2395  000000                     _TRISE	equ	0xF96
+  2396                           	global	_TXREG
+  2397  000000                     _TXREG	equ	0xFAD
+  2398                           	global	_GIE
+  2399  000000                     _GIE	equ	0x7F97
+  2400                           	global	_PEIE
+  2401  000000                     _PEIE	equ	0x7F96
+  2402                           	global	_RA0
+  2403  000000                     _RA0	equ	0x7C00
+  2404                           	global	_RA1
+  2405  000000                     _RA1	equ	0x7C01
+  2406                           	global	_RA2
+  2407  000000                     _RA2	equ	0x7C02
+  2408                           	global	_RA3
+  2409  000000                     _RA3	equ	0x7C03
+  2410                           	global	_RA4
+  2411  000000                     _RA4	equ	0x7C04
+  2412                           	global	_RA5
+  2413  000000                     _RA5	equ	0x7C05
+  2414                           	global	_RB0
+  2415  000000                     _RB0	equ	0x7C08
+  2416                           	global	_RB1
+  2417  000000                     _RB1	equ	0x7C09
+  2418                           	global	_RB2
+  2419  000000                     _RB2	equ	0x7C0A
+  2420                           	global	_RB3
+  2421  000000                     _RB3	equ	0x7C0B
+  2422                           	global	_RB4
+  2423  000000                     _RB4	equ	0x7C0C
+  2424                           	global	_RB5
+  2425  000000                     _RB5	equ	0x7C0D
+  2426                           	global	_RB6
+  2427  000000                     _RB6	equ	0x7C0E
+  2428                           	global	_RB7
+  2429  000000                     _RB7	equ	0x7C0F
+  2430                           	global	_RD0
+  2431  000000                     _RD0	equ	0x7C18
+  2432                           	global	_RD1
+  2433  000000                     _RD1	equ	0x7C19
+  2434                           	global	_RD2
+  2435  000000                     _RD2	equ	0x7C1A
+  2436                           	global	_RD3
+  2437  000000                     _RD3	equ	0x7C1B
+  2438                           	global	_RD4
+  2439  000000                     _RD4	equ	0x7C1C
+  2440                           	global	_RD5
+  2441  000000                     _RD5	equ	0x7C1D
+  2442                           	global	_RD6
+  2443  000000                     _RD6	equ	0x7C1E
+  2444                           	global	_T0CS
+  2445  000000                     _T0CS	equ	0x7EAD
+  2446                           	global	_TMR0IE
+  2447  000000                     _TMR0IE	equ	0x7F95
+  2448                           	global	_TMR0IF
+  2449  000000                     _TMR0IF	equ	0x7F92
+  2450                           	global	_TMR0IP
+  2451  000000                     _TMR0IP	equ	0x7F8A
+  2452                           	global	_TMR0ON
+  2453  000000                     _TMR0ON	equ	0x7EAF
+  2454                           	global	_TMR1CS
+  2455  000000                     _TMR1CS	equ	0x7E69
+  2456                           	global	_TMR1IE
+  2457  000000                     _TMR1IE	equ	0x7CE8
+  2458                           	global	_TMR1IF
+  2459  000000                     _TMR1IF	equ	0x7CF0
+  2460                           	global	_TMR1IP
+  2461  000000                     _TMR1IP	equ	0x7CF8
+  2462                           	global	_TMR1ON
+  2463  000000                     _TMR1ON	equ	0x7E68
+  2464                           	global	_TRMT
+  2465  000000                     _TRMT	equ	0x7D61
+  2466  00102B  00                 	db 0	; dummy byte at the end
+  2467                           	psect	intsave_regs,class=BIGRAM,space=1
+  2468                           	PSECT	param1,class=BANK1,space=1
+  2469                           	GLOBAL	__Lparam1
+  2470                           	FNCONF	param1,??,?
+  2471                           	GLOBAL	__Labsbss0
+  2472  000000                     __Labsbss0	EQU	0
+  2473                           	GLOBAL	__Habsbss0
+  2474  000000                     __Habsbss0	EQU	4
+  2475                           GLOBAL	__Lparam, __Hparam
+  2476                           GLOBAL	__Lparam1, __Hparam1
+  2477  000000                     __Lparam	EQU	__Lparam1
+  2478  000000                     __Hparam	EQU	__Hparam1
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Mon Dec 11 15:32:54 2023
+
+        ?_LCD_Strobe 0117                  l110 1994  
+                l111 1A00                  l113 19E0  
+                l121 1AD4                  l114 19BA  
+                l122 1A4E                  l130 1616  
+                l115 19D8                  l211 148E  
+                l131 14D2                  l123 1982  
+                l220 13B0                  l212 1318  
+                l132 14E6                  l124 191E  
+                l117 1AC0                  l109 1A00  
+                l221 1432                  l213 134C  
+                l133 1506                  l125 193E  
+                l118 1AAC                  l222 147C  
+                l214 144E                  l134 15A2  
+                l126 1960                  l119 1AC0  
+                l223 179E                  l231 175E  
+                l215 13A4                  l127 1982  
+                l232 16DA                  l224 1664  
+                l216 138A                  l128 1A8A  
+                l136 15B4                  l233 1742  
+                l225 1690                  l217 13B0  
+                l129 18FE                  l137 1616  
+                l234 178C                  l226 175E  
+                l170 1092                  l227 16CE  
+                l219 144E                  l139 15DA  
+                l171 10C8                  l228 16B4  
+                l180 11AA                  l229 16DA  
+                l181 11BA                  l173 110C  
+                l182 11CA                  l174 1142  
+                l183 11DA                  l176 12C6  
+                l184 11EA                  l185 11FA  
+                l177 118A                  l186 120A  
+                l179 119A                  _GIE 007F97  
+                _RA0 007C00                  _RA1 007C01  
+                _RB0 007C08                  _RA2 007C02  
+                _RB1 007C09                  _RA3 007C03  
+                _RB2 007C0A                  _RA4 007C04  
+                _RB3 007C0B                  _RA5 007C05  
+                _RD0 007C18                  _RB4 007C0C  
+                _RD1 007C19                  _RB5 007C0D  
+                _RD2 007C1A                  _RB6 007C0E  
+                _RD3 007C1B                  _RB7 007C0F  
+                _RD4 007C1C                  _RD5 007C1D  
+                _RD6 007C1E                  _PWM 000002  
+    __end_of_LCD_Out 1618                 _T0CS 007EAD  
+               u1500 110A                 u1501 1108  
+               u1510 1142                 u1511 1140  
+               u1600 190C                 u1520 1192  
+               u1601 190A                 u1521 1190  
+               u1610 192C                 u1530 11A2  
+               u1611 192A                 u1531 11A0  
+               u1700 12E8                 u1620 194E  
+               u1540 11B2                 u1701 12E6  
+               u1621 194C                 u1541 11B0  
+               u1710 1324                 u1630 1970  
+               u1550 11C2                 u1711 1322  
+               u1631 196E                 u1551 11C0  
+               u1800 1712                 u1720 1378  
+               u1640 149C                 u1560 11D2  
+               u1480 1090                 u1801 1710  
+               u1721 1376                 u1641 149A  
+               u1561 11D0                 u1481 108E  
+               u1810 176C                 u1730 13B0  
+               u1650 1504                 u1570 11E2  
+               u1490 10C8                 u1811 176A  
+               u1731 13AE                 u1651 1502  
+               u1571 11E0                 u1491 10C6  
+               u1820 19B8                 u1740 13FC  
+               u1660 15A2                 u1580 11F2  
+               u1821 19B6                 u1741 13FA  
+               u1661 15A0                 u1581 11F0  
+               u1830 19D8                 u1750 145C  
+               u1670 15B2                 u1590 1202  
+               u1831 19D6                 u1751 145A  
+               u1671 15B0                 u1591 1200  
+               u1840 1A00                 u1760 1634  
+               u1680 15C6                 u1841 19FE  
+               u1761 1632                 u1681 15C4  
+               u1850 1AAA                 u1770 1670  
+               u1690 1616                 u1851 1AA8  
+               u1771 166E                 u1691 1614  
+               u1860 1AC0                 u1780 16A2  
+               u1861 1ABE                 u1781 16A0  
+               u1790 16DA                 u1791 16D8  
+               _PEIE 007F96                 _MSG0 1001  
+               _MSG1 1016                 _TIME 000000  
+               _TMR0 000FD6                 _TMR1 000FCE  
+               _TRMT 007D61                 _main 102C  
+               fsr0h 000FEA                 fsr1h 000FE2  
+               indf0 000FEF                 fsr0l 000FE9  
+               fsr2h 000FDA                 fsr1l 000FE1  
+               fsr2l 000FD9                 pclat 000FFA  
+               prodh 000FF4                 prodl 000FF3  
+               start 0818          LCD_Out@DATA 0103  
+        LCD_Move@Col 0104          LCD_Move@Row 0103  
+   __end_of_LCD_Init 1900     __end_of_LCD_Inst 1A50  
+   __end_of_LCD_Move 1984      __end_of_Wait_ms 1A02  
+    __end_of___aldiv 1490      __end_of___almod 17A0  
+              ?_main 0100                _T0CON 000FD5  
+              _T1CON 000FCD                i2l166 1838  
+              i2l167 1814                i2l168 1838  
+              _PORTD 000F83                _TRISA 000F92  
+              _TRISB 000F93                _TRISC 000F94  
+              _TRISD 000F95                _TRISE 000F96  
+              _TXREG 000FAD                main@i 0100  
+              tablat 000FF5                status 000FD8  
+       __end_of_main 12CC     __end_of_IntServe 186E  
+             ??_main 0100        __activetblptr 000003  
+  __end_of_LCD_Pause 1AC2            ??_LCD_Out 0109  
+  __end_of_LCD_Write 1A8C               _ADCON1 000FC1  
+             i2u1870 17D2               i2u1871 17D0  
+             i2u1880 181C               i2u1881 181A  
+             _TMR0IE 007F95               _TMR0IF 007F92  
+             _TMR1IE 007CE8               _TMR1IF 007CF0  
+             _TMR1CS 007E69               _TMR0IP 007F8A  
+             _TMR1IP 007CF8               _TMR0ON 007EAF  
+             _TMR1ON 007E68               __Ldata 000000  
+          ??_Wait_ms 0109            ??___aldiv 011D  
+          ??___almod 011D         __mediumconst 102C  
+             tblptrh 000FF7               tblptrl 000FF6  
+             tblptru 000FF8           __accesstop 0080  
+          ?_LCD_Init 0103            ?_LCD_Inst 0105  
+          ?_LCD_Move 0103            LCD_Inst@c 0105  
+       ??_LCD_Strobe 0117            ?_IntServe 0124  
+         ??_LCD_Init 0103           ??_LCD_Inst 0106  
+         ??_LCD_Move 0105   __end_of_LCD_Strobe 1AD6  
+            _LCD_Out 1490           ??_IntServe 0124  
+            __Hparam 0133              __Lparam 0100  
+            _Wait_ms 1984              ___aldiv 12CC  
+            ___almod 1618              __ramtop 1000  
+   ___aldiv@dividend 0115            _LCD_Pause 1A8C  
+          _LCD_Write 1A50        __Lmediumconst 102C  
+            int_func 0808     ___aldiv@quotient 011F  
+         ?_LCD_Pause 0117           ?_LCD_Write 0115  
+         LCD_Pause@x 0117           LCD_Write@c 0115  
+          __Habsbss0 000004            __Labsbss0 000000  
+           ?_LCD_Out 0103             LCD_Out@A 010A  
+           LCD_Out@D 0107             LCD_Out@N 0108  
+           LCD_Out@i 0109          ??_LCD_Pause 0117  
+        ??_LCD_Write 0116             ?_Wait_ms 0107  
+           ?___aldiv 0115             ?___almod 0115  
+   ___almod@dividend 0115          __smallconst 1000  
+    ___aldiv@divisor 0119      ___aldiv@counter 011D  
+           _LCD_Init 186E             _LCD_Inst 1A02  
+           _LCD_Move 1900             _IntServe 17A0  
+           __Hparam1 0133             __Lparam1 0100  
+           Wait_ms@X 0107             Wait_ms@i 0109  
+           Wait_ms@j 010B         __Lsmallconst 1000  
+    ___almod@divisor 0119      ___almod@counter 011E  
+         _LCD_Strobe 1AC2             intlevel2 1AD6  
+       ___aldiv@sign 011E         ___almod@sign 011D  

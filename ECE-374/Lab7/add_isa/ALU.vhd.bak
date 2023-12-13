@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.components.all;
+
+entity ALU is
+	port( clock, reset : in std_logic;
+	current_pc, result : out std_logic_vector(3 downto 0));
+end ALU;
+
+architecture behaviour of ALU is
+
+
+end behaviour;
